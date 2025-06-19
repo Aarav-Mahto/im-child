@@ -1,0 +1,18 @@
+.subtask-header {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5px;
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+  
+  .subtask-header h1 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .subtask-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }

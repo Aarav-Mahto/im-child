@@ -1,0 +1,78 @@
+.results-overview-container {
+    padding: 2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .results-title {
+    font-size: 1.5rem;
+    color: gray;
+  }
+
+  .results-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: gray;
+  }
+  
+  .results-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 2rem;
+  }
+  
+  .results-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .results-table th,
+  .results-table td {
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .results-table th {
+    background-color: #645394;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .results-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .results-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Space buttons on both ends */
+    align-items: center; /* Center vertically */
+    margin: 20px 0;
+    padding: 0 20px; /* Optional: Adds padding for spacing */
+  }
+  
+  
+  .retry-button,
+  .finish-button {
+    width: 15%;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: #645394;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }

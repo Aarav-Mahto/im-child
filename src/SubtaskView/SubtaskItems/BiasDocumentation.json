@@ -1,0 +1,274 @@
+[
+    {
+        "parentTaskName": "ISO/IEC TR 12791 - Treatment of unwanted bias in classification and regression machine learning tasks",
+        "taskName": "ISO/IEC DTR 12791 Subtask 1: Bias Documentation",
+        "taskDescription": "Documenting key aspects of stakeholder identification, system requirements, data sources, and mitigation of unwanted bias in AI systems.",
+        "taskItems": [
+            {
+                "id": 0,
+                "title": "1. Stakeholder Identification",
+                "description": "Identify stakeholders. Consider any individuals or groups affected by the system, not only those directly using it.",
+                "tag": "ODD",
+                "implementationGuidance": "**Stakeholder identification** shall be conducted throughout the development of an AI system. This can include:\n\n- Users who are front-line workers who operate or interface with an AI system\n- AI partners (including AI auditors) who are required to perform conformity assessment on an AI system\n- Regulators including bodies that are required to review conformity assessment results in relation to an AI system\n\nIf you are responsible for the deployment or operation of an AI system additionally consider:\n\n- AI subjects that are subject to an automated decision or who share an operating environment with an AI system\n- Data subjects who do not directly interact with an AI system but are vulnerable to harm due to their presence in training data\n- Data subjects whose data is used in training but do not interact with the AI system\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document stakeholders here."
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "title": "2. Requirements",
+                "description": "Identify requirements that relate to unwanted bias within an AI system.",
+                "tag": "ODD",
+                "implementationGuidance": "The level of definition and documentation should be commensurate with the role of the organization within the AI life cycle.\n\nConsidered sources of **bias-related requirements** can include:\n\n- Applicable legal requirements\n- Customer expectations, internal goals, strategies and policies (e.g. an ethics policy).\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document requirements here."
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "3. Operating Conditions",
+                "description": "Define and document operating conditions under which an AI system is intended to be used and be evaluated for bias.",
+                "tag": "ODD",
+                "implementationGuidance": "The level of definition and documentation should be commensurate with the role of the organization within the AI life cycle.\n\nOperational conditions can include, but are not limited to:\n\n- Resource usage\n- Environmental factors\n- Geographic location of use\n- Time of use\n- Training provided to operators and the target population\n- Relevant groups of stakeholders or users\n- The geographical or cultural context of deployment\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document operating conditions here."
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "4. Data Source Documentation",
+                "description": "Document the sources of data used by the AI system and consider bias in relation to each source.",
+                "tag": "Data Documentation",
+                "implementationGuidance": "Examples of sources of data considerations include data provenance and records of transactions.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document data sources here."
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "5. Feature Representation",
+                "description": "Document the rationale for how you represent features in a way that the ML model can interpret during training.",
+                "tag": "Data Documentation",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document feature representation here."
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "title": "6. Labelling Sufficiency",
+                "description": "Provide evidence that you ensured that labelling is sufficient to identify potential sources of unwanted bias.",
+                "tag": "Data Documentation",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document labelling sufficiency here."
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "title": "7. Data Techniques",
+                "description": "Document the data techniques used. These can include up-sampling and down-sampling, data augmentation techniques, data silos, creating a separate biased data set to test and validate the AI system on unwanted bias.",
+                "tag": "Data Documentation",
+                "implementationGuidance": "Treatment of unwanted bias can include techniques that combine algorithmic interventions and data handling, and that can be applied across the AI system life cycle. A list of such techniques is provided below. Guidance on the AI system life cycle stage to which the specified technique is applicable is also provided. However, applicable techniques should be selected during the life cycle inception stage.\n\nData techniques can apply to both data collection and augmentation requirements. The techniques apply at both design and development stages as well as verification and validation stages of AI system life cycle. Data collection involves identifying the right data sources, preparing the data set, and then moving the data to where the model training is done. However, obtaining the desired data distribution as defined by the AI system design objectives and target user base is a significant challenge. It is important to adopt techniques that address the data distribution challenge. Some of the techniques are:\n\n- Up-sampling and down-sampling depending on the distribution of samples across classes\n- Data augmentation techniques to artificially increase the data set while reusing the existing data set\n- In combination with training techniques such as federated learning, access to data silos enables access to a larger data set that can be more representative of the target user base\n- Creating a separate biased data set that is customized to test and validate the AI system on unwanted bias. In combination with the appropriate metrics, this approach provides a view on the boundary conditions with respect to unwanted bias for the given AI system\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document data techniques here."
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "title": "8. Training Data Adjustment",
+                "description": "If data bias was identified during the training process, provide evidence that you considered adjusting the data to treat the risk of unwanted bias.",
+                "tag": "Data Documentation",
+                "implementationGuidance": "For example by:\n\n- Creating a more even distribution of examples in each category being represented, or\n- Investigating before discarding feature(s) by doing sufficient analysis on them for training data that identify (or are correlated with membership of) a group at-risk of unwanted bias.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document training data adjustment here."
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "title": "9. General Algorithmic and Training Techniques",
+                "description": "Document the algorithmic and training techniques used. These can include regularization techniques, decoupled classifiers, explainable AI techniques, training over a distributed data set.",
+                "tag": "System Documentation",
+                "implementationGuidance": "Treatment of unwanted bias can include techniques that combine algorithmic interventions and data handling, and that can be applied across the AI system life cycle. A list of such techniques is provided below. Guidance on the AI system life cycle stage to which the specified technique is applicable is also provided. However, applicable techniques should be selected during the life cycle inception stage.\n\nAn ML system is composed of multiple ML algorithms (regression or classification) either used independently or in combination. When used in combination, data bias can get amplified at a system level. Some of the techniques that can be used during the design and development stage of AI system life cycle are listed below.\n\n- Application of regularization techniques can ensure predictions are not extreme or overfitting. It can be important to document the details of such techniques applied, especially the mathematical restrictions enforced.\n- Application of a decoupled classifiers technique using different classifiers for diverse groups based on the requirements to address unwanted bias.\n- Introducing explainable AI techniques during training to aid post-hoc explanations of predictions, both in a model-specific and model-agnostic mode, helps explain the predictions output by the AI model.\n- Training over a distributed data set using methodologies such as federated learning helps get access to previously unavailable data sets.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document general algorithmic and training techniques here."
+                    }
+                ]
+            },
+            {
+                "id": 9,
+                "title": "10. Algorithmic and Training Techniques for Pretrained Models",
+                "description": "If you used training techniques on a model that has already been trained, provide documentation of it. These techniques can include continuous learning and transfer learning.",
+                "tag": "System Documentation",
+                "implementationGuidance": "There are training techniques that can be applied to a model that has already been trained. These techniques ensure that a pre-trained AI model is customized to a given deployment so that the AI system results are adapted to the deployment.\n\n- Customization at deployment: Even with attention to creating an AI system with minimal unwanted bias, it is not possible to anticipate all the diverse scenarios in real-world deployment.\n- Re-training at deployment: Techniques including continuous learning and transfer learning apply to a specific deployment site. In certain cases, the deployment can be spread across multiple sites.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document algorithmic and training techniques for pretrained models here."
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "title": "11. Procurement - Commercial Agreements",
+                "description": "If your system or its elements (including data) are procured, provide evidence that you ensured that commercial agreements with third parties include appropriate measures to treat the risk of bias, in particular where an organization is unable to obtain full transparency on technical aspects of the system.",
+                "tag": "Procurement",
+                "implementationGuidance": "ML algorithms can be procured or developed in-house or a combination of the two. It is important to have visibility of the kind of techniques used during ML algorithm development to treat unwanted bias.",
+                "optional": true,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document commercial agreements here."
+                    }
+                ]
+            },
+            {
+                "id": 11,
+                "title": "12. Procurement Information Provision - General",
+                "description": "If you build your system or its elements (including data) for procurement, make information available regarding system aspects that can affect unwanted bias.",
+                "tag": "Procurement",
+                "implementationGuidance": "Details are provided in ISO/IEC TR 24027.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": true,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document general procurement information provisions here."
+                    }
+                ]
+            },
+            {
+                "id": 12,
+                "title": "13. Procurement Information Provision - Data Provider",
+                "description": "If you are a data provider, make information available about:\n\n- Data provenance (including for training, validation and testing data)\n- Data quality management policy and data quality check assessment results\n- Data quality model and processing aspects (e.g. labelling processes used, types of machine learning models or algorithms used)\n- Information on the relevant working conditions for data labelling workers\n- The geographic locations in which the data labelling was undertaken\n- Salient aggregated demographic patterns of the data labelling workforce\n\nAdditionally, provide evidence that you ensured that privacy of individual workforce members is maintained in accordance with this guidance.",
+                "tag": "Procurement",
+                "optional": true,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document model monitoring here."
+                    }
+                ]
+            },
+            {
+                "id": 13,
+                "title": "14. Procurement Information Provision - AI Technology Provider",
+                "description": "If you are an AI technology provider, make information available about:\n\n- Trade-offs in ML algorithm development\n- Data quality processes that can relate to bias such as imputation or augmentation\n- Testing strategies used during the verification and validation stage of the system development (including acceptance criteria)",
+                "tag": "Procurement",
+                "optional": true,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document model monitoring here."
+                    }
+                ]
+            },
+            {
+                "id": 14,
+                "title": "15. Distributed AI System Provisions",
+                "description": "If your AI system involves training across a cloud or edge setup:\n\n- Provide evidence that you considered harmonization approaches to ensure that no additional bias is introduced due to variability in the development process.\n- Provide evidence that you considered the data distribution across the participating nodes when selecting an appropriate aggregation approach for the orchestrating entity of the training to avoid under-sampling or over-sampling.\n- Address unwanted bias at each of the training nodes and at the orchestrating entity, using the guidance provided in this document.\n- Identify appropriate metrics and collect the same metrics across the distributed training network.",
+                "tag": "Distributed AI System",
+                "implementationGuidance": "ISO/IEC 22989:2022, 8.6.2 documents the different combinations of training in terms of cloud or edge training. Additionally, with emerging application of methodologies such as federated learning, edge training need not be at a single edge location but can be distributed over a network of edge devices. The AI system life cycle as shown in ISO/IEC 22989:2022, Figure 3 can be applied to such a distributed training deployment, at each of the training edge nodes on the distributed network and to the orchestrating entity managing the overall training, possibly on the cloud.\n\nAs these distributed entities are not homogenous in terms of implementation details of the AI system life cycle, additional considerations are needed to address the potential for increase in unwanted bias due to varying practices and implementation details across this distributed network. These considerations include:\n\n- Harmonization of the AI development process across the participating nodes ensures no additional bias is introduced due to variability in the development process.\n- Training methodologies such as federated learning require one orchestrating entity to combine the individual training at each distributed training node by using a specific aggregation algorithm.\n- As the data distribution across the distributed network varies, it is essential that the verification and validation of the developed AI system be adapted as necessary.\n- Managing a distributed AI system life cycle is extremely challenging. To ease this challenge, it is recommended to identify the appropriate metrics and collect the same metrics across the distributed training network.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": true,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document distributed AI system provisions here."
+                    }
+                ]
+            },
+            {
+                "id": 15,
+                "title": "16. Disposal Process",
+                "description": "Document the disposal process in place. It should include the disposal of data.",
+                "tag": "Disposal",
+                "implementationGuidance": "ISO/IEC 52288:-[2], 6.4.17 specifies the final process in the life cycle as disposal.\n\nISO/IEC 5338 explains the purpose of the disposal process as to end the existence of a system or component appropriately. This can require consideration of contracts, policies, and environmental, legal, safety or security aspects.\n\nData are important to ML-based AI systems. ISO/IEC/IEEE 12207[10] recommends that the disposal process is extended to consider the disposal of data. Disposal of data can introduce new issues in relation to retention, security and privacy.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document disposal process here."
+                    }
+                ]
+            },
+            {
+                "id": 16,
+                "title": "17. Disposition Process",
+                "description": "Document the disposition process in place.",
+                "tag": "Disposal",
+                "implementationGuidance": "ISO 15489-1:2016[11], 8.5 contains recommendations to establish disposition authorities to govern disposition, and ISO 15489-1:2016, 9.9 contains recommendations for the disposition process.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document disposition process here."
+                    }
+                ]
+            },
+            {
+                "id": 17,
+                "title": "18. Document Retention",
+                "description": "Provide evidence that you ensure that documentation and data are retained to support repurposing of the training data or ML model, or investigating historical incidents or potential unwanted bias after disposal.",
+                "tag": "Disposal",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document document retention here."
+                    }
+                ]
+            }
+        ]
+    }
+]

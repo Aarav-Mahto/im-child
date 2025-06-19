@@ -1,0 +1,24 @@
+[
+    {
+        "parentTaskName": "ISO/IEC TR 12791 - Treatment of unwanted bias in classification and regression machine learning tasks",
+        "taskName": "ISO/IEC DTR 12791 Subtask 4: Bias Mitigation",
+        "taskDescription": "Documenting methods to prevent and mitigate risks related to unwanted bias in AI systems.",
+        "taskItems": [
+            {
+                "id": 0,
+                "title": "1. Risk Prevention Mechanisms",
+                "description": "When unwanted bias remains, implement and document mechanisms to prevent identified risks from occurring. Consider further data-based methods, model-based methods, and post-hoc methods.",
+                "tag": "Bias Mitigation",
+                "implementationGuidance": "## Bias Mitigation Methods\n\n### Algorithmic and Training Techniques\n- **Regularization Techniques:** Ensures predictions are not extreme or overfitting. Prioritizes learning from under-sampled data in non-IID distributions by adding a regularization term to the cost function.\n- **Decoupled Classifiers:** Uses different classifiers for diverse groups to address unwanted bias.\n- **Explainable AI Techniques:** Provides post-hoc explanations of predictions to detect and monitor unwanted bias. Can be combined with MLOps to automate bias monitoring and corrective actions.\n- **Distributed Training:**\n  - **Federated Learning:** Accesses more representative data sets to improve accuracy and reduce non-IID challenges.\n  - Other distributed methods include incremental learning, cyclic learning, or their combinations.\n\n### Pre-Trained Models Techniques\n- **Customization at Deployment:** Uses techniques like continuous learning and transfer learning to adapt pre-trained models to diverse real-world scenarios and reduce unwanted bias.\n- **Re-Training at Deployment:** Combines continuous learning and transfer learning with federated learning for multi-site deployments, enabling distributed and per-site customization.\n\n### Data Techniques\n- **Up-Sampling and Down-Sampling:** Adjusts class distributions to balance data representation.\n- **Data Augmentation:** Artificially increases the dataset size using existing data to create more representative training samples.\n- **Access to Data Silos:** Combines data silos with federated learning to build a larger and more representative dataset.\n- **Biased Dataset Creation:** Creates a separate biased dataset for testing and validating the AI system against unwanted bias. Uses appropriate metrics to evaluate the system's boundary conditions.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document risk prevention mechanisms here or upload documentation."
+                    }
+                ]
+            }
+        ]
+    }
+]

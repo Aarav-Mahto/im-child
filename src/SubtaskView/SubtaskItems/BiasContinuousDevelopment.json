@@ -1,0 +1,51 @@
+[   {
+        "parentTaskName": "ISO/IEC TR 12791 - Treatment of unwanted bias in classification and regression machine learning tasks",
+        "taskName": "ISO/IEC DTR 12791 Subtask 5: Continuous Development",
+        "taskDescription": "The goal of this subtask is to document and provide evidence of measures taken to address and monitor unwanted bias in AI systems, ensuring continuous evaluation and adaptation to external changes, ongoing risk treatment, and appropriate logging mechanisms.",
+        "taskItems": [
+            {
+                "id": 0,
+                "title": "1. External Change",
+                "description": "Provide evidence that you considered how external change can occur in the use of the developed or procured AI system.",
+                "tag": "Continuous Development",
+                "implementationGuidance": "The implementation of techniques of evaluation for bias should consider:\n\n- Relevant groups of identified stakeholders and users\n- Geographical or cultural contexts\n- The operational conditions of the AI system\n\nFor an organization, this can provide relevant information about how external changes can occur in the use of the developed or procured AI system. This can also provide relevant information about when the external change can require an internal reassessment for unwanted bias by the organization.\n\n- Deployment of an existing AI system to a different environment, including different users, target markets, or data sources, can change the risks and require the AI system to be reassessed for unwanted bias.\n- Over time, the relationship between inputs and outputs of the system can change. For example, the performance of a system using an ML model to make decisions based on correlations established during the initial ML model training can deteriorate and become more biased if those correlations change over time.\n- New use cases for the system can develop, either deliberately or organically, with an impact on the assessment of risks related to bias.\n- Societal norms change over time (for example, attitudes towards gender behavioral norms, ideal body shape, or smoking). Bias in an AI system should be re-evaluated to consider resulting changes (such as to metrics, risks, stakeholders, or requirements) and addressed accordingly.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document external change here or upload documentation."
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "title": "2. Ongoing Basis Documentation",
+                "description": "Document your approach to ensuring that the risk treatments identified to address unwanted bias continue to have the desired effect on an ongoing basis.\n\nProvide appropriate methods to treat the risks of unwanted bias occurring without detection:\n\n- Include criteria for when all verification activities shall be conducted again.\n- Consider any continuous learning or model retraining, and changes in surrounding data pipelines and user interfaces.\n- Consider the following in your approach:\n  - Monitoring of unwanted bias during operation\n  - Monitoring of changes in the training data profile where model retraining occurs\n  - Technical mechanisms to alert operators if processing is outside of defined usage limits\n  - Technical mechanisms to identify if production data contains inputs that are outside of those assessed in verification activities\n  - Mechanism for end users to identify potential unwanted bias and bring it to the attention of operators\n  - Human-in-the-loop mechanisms",
+                "tag": "Continuous Development",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document approach to ongoing basis documentation here or upload documentation."
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "3. Logging",
+                "description": "Provide evidence that you ensured there is appropriate logging to support and monitor the selected unwanted bias risk treatments.",
+                "tag": "Continuous Development",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document logging mechanisms here or upload documentation."
+                    }
+                ]            
+            }
+        ]
+    }
+]

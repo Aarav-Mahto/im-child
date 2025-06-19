@@ -1,0 +1,226 @@
+/* src/Login.css */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* padding: 0 50px; */
+    /* background-color: #f3eaff; */
+    background-color: #645394;
+  }
+
+  .login-container {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: #ede5f0; */
+  }
+
+  .login-left {
+    flex: 1;
+    width: 50%;
+    background-image: url('assets/login_image_alt.png'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    /* border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; */
+  }
+  
+  .login-left h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .login-left p {
+    font-size: 18px;
+  }
+  
+  .login-right {
+    flex: 1;
+    width: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    /* border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    margin:50px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* .login-right::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    right: 0;
+    top:0;
+  } */
+   .login-right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 50px solid #645394;        /* Color of the fold */
+  border-left: 50px solid black;
+  z-index: 1;
+}
+  
+  .login-right h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #645394;
+  }
+
+  .login-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: fit-content;
+    padding: 80px;
+    border-radius: 8px;
+    max-width: 400px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 10px 15px;
+    width: 25vw;
+    height: 30px;
+  }
+  
+  .login-icon {
+    color: #645394;
+    margin-right: 10px;
+  }
+  
+  input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+  }
+  
+  .login-button {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #645394;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #4e3d74;
+  }
+  
+  .signup-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #645394;
+  }
+  
+  .signup-text a {
+    color: #645394;
+    text-decoration: underline;
+  }
+  
+  .signup-text a:hover {
+    color: #4e3d74;
+  }
+
+  .login-error-message {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-error-message p {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c43b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #56368f;
+  }
+
+  button:disabled {
+    background-color: #645394;
+    cursor: not-allowed;
+  }
+  
+  .spinner-icon, .check-icon {
+    font-size: 24px;
+    animation: spin 1s linear infinite;
+  }
+  
+  .check-icon {
+    color: #f3eaff;
+    animation: none;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .signup-link {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .signup-link a {
+    color: #6c43b4;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }

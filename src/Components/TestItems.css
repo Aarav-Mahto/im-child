@@ -1,0 +1,155 @@
+/* Container for all test items */
+.test-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Each test item card */
+  .test-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  
+  /* Header section */
+  .test-item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .expand-icon {
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  /* Hexagonal tags */
+.test-standard,
+.test-automated {
+  position: relative;
+  padding: 5px 10px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f0f0f0;
+  clip-path: polygon(5% 0, 95% 0, 100% 48%, 95% 100%, 5% 100%, 0% 50%);
+  font-size: 16px;
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+  /* Tags for standard, automated, and measure */
+  .test-standard {
+    background-color: #e0e0e0;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .test-automated {
+    background-color: #ffd54f;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .test-measure {
+    background-color: #c5cae9;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Body content for name, measure, result, and status */
+  .test-item-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px 0;
+  }
+
+  .test-details {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .test-meta {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .test-meta-label {
+    width: 100px; /* Set a fixed width to align all labels */
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .test-meta-value {
+    text-align: center;
+  }
+  
+  
+  .test-name {
+    font-weight: 600;
+    width: 400px;
+  }
+  
+  .test-metric {
+    font-size: 18px;
+    color: #555;
+  }
+
+  .test-result {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6c43b4;
+  }
+
+  /* Status styling for PASS and FAIL */
+  .test-status {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .test-status.pass {
+    color: #4caf50; /* Green for pass */
+  }
+  
+  .test-status.fail {
+    color: #f44336; /* Red for fail */
+  }
+
+  .test-status.running {
+    color: orange; /* Blue for running */
+  }
+
+  .test-action {
+    padding: 5px 10px;
+    width: 500px;
+    height: 50px;
+    background-color: #f3eaff;
+    color: #6c43b4;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+    .test-action:hover {
+    background-color: #6c43b4;
+    color: white;
+    }

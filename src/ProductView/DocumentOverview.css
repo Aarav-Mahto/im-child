@@ -1,0 +1,128 @@
+.file-management {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .folder-section {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .folder-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .folder-header h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .folder-header span {
+    font-size: 18px;
+  }
+  
+  .folder-content {
+    display: none; /* Fully remove collapsed content */
+  }
+  
+  .folder-section.expanded .folder-content {
+    display: flex; /* Only display when expanded */
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+    align-items: flex-start; /* Prevent stretching */
+  }
+  
+  .file-card {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    height: 150px;
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .file-div {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: 150px;
+    justify-content: center;
+    cursor: pointer;
+    gap: 5%;
+    background-color: white;
+    padding: 10px;
+  }
+  .file-div.expanded-background {
+    background-color: #f4f4f4;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+  }
+    .file-div.expanded-background::after {
+        content: '';
+        position: absolute;
+        top: 10%; /* Adjust based on how much shorter you want the border */
+        right: 0; /* Position it at the right edge */
+        width: 3px; /* Border thickness */
+        height: 80%; /* Adjust the height of the border */
+        background-color: #ccc; /* Border color */
+    }
+  
+  .file-icon {
+    font-size: 60px;
+    color: #888;
+  }
+  
+  .file-name {
+    text-align: center;
+    font-size: 14px;
+    text-wrap: nowrap;
+    color: #555;
+    line-height: 14px; /* Match the font size to avoid extra height */
+  }
+  
+  .file-meta {
+    flex-direction: column;
+    background-color: #f4f4f4;
+    border-radius: 0 10px 10px 0;
+    text-align: left;
+    height: 150px;
+    font-size: 11px;
+    padding: 10px;
+    white-space: nowrap;
+  }
+  .open-file-button {
+    padding: 8px 16px;
+    background-color: #645394;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .open-file-button:hover {
+    background-color: #56368f;
+  }
+
+  .no-files-message {
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+    margin-top: 20px;
+  }

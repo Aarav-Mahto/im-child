@@ -1,0 +1,483 @@
+[
+    {
+        "parentTaskName": "ISO/IEC TR 12791 - Treatment of unwanted bias in classification and regression machine learning tasks",
+        "taskName": "ISO/IEC DTR 12791 Subtask 3: Bias Testing",
+        "taskDescription": "Documenting methods to prevent and mitigate risks related to unwanted bias in AI systems.",
+        "taskItems": [
+            {
+                "id": 0,
+                "title": "1. Acceptance Criteria Definition",
+                "description": "Before evaluating an AI system, determine appropriate acceptance criteria, including tolerances for functional correctness for different at-risk groups.",
+                "tag": "Testing",
+                "implementationGuidance": "Functional correctness is understood as the degree to which a product or system provides the correct results with the needed degree of precision.\n\n Relevant AI stakeholders should be included in the definition process.\n\n For more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document acceptance criteria here."
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "title": "2. Acceptance Criteria Justification",
+                "description": "Justify the choice of acceptance criteria in consideration of the risk management process.",
+                "tag": "Testing",
+                "implementationGuidance": "Acceptance criteria should be documented in the context of the intended use and operating conditions. Acceptance criteria for the system should be testable. Where acceptance criteria are specified in relation to ML model outputs, they shall be specified in a quantitative manner. For example, AI stakeholders can specify a limit for false positive or false negative predictions. These predictions can form failure criteria that are the lower bound of acceptance. \n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document acceptance criteria justification here."
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "3. Labelling Sufficiency for Evaluation",
+                "description": "Provide evidence that you ensured that data labels or documentation of a data set enable data to be evaluated for unwanted bias.",
+                "placeholder": "Document labelling sufficiency for evaluation here.",
+                "tag": "Testing",
+                "optional": false,
+                "SDK": true,
+                "components":[
+                    {
+                        "type": "ODD",
+                        "label": "",
+                        "highlightKeys": ["odd_params", "risks"],
+                        "content": {
+                            "odd_version": "1.0",
+                            "name": "CV_CA",
+                            "endpoint": "https://api.odd.vision.com",
+                            "version": "1.0.2",
+                            "odd_params": {
+                                "image_formats": ["JPEG", "PNG", "TIFF"],
+                                "resolutions": ["720p", "1080p", "4K"],
+                                "object_categories": ["Vehicles", "Animals", "Buildings", "People"]
+                            },
+                            "ai_tasks": ["Object Detection", "Image Classification", "Scene Recognition", "Anomaly Detection"],
+                            "risks": [
+                                { 
+                                    "id": "1",
+                                    "risk_score": "20",
+                                    "risk_date": "2023-11-15",
+                                    "name": "Type 1 Bias in Object Detection",
+                                    "description": "Inconsistent detection accuracy across different image resolutions and formats for specific object categories.",
+                                    "risk_task_prompt_template": "Identify and label all objects in the provided {} image at resolution {}. Output should include bounding boxes and labels.",
+                                    "prompt_ordered_params": ["image_formats", "resolutions"],
+                                    "supporting_files": ["data/sample_images.zip"],
+                                    "input_params": {
+                                        "image_formats": ["JPEG", "PNG"],
+                                        "resolutions": ["1080p"]
+                                    },
+                                    "metric": "Detection Accuracy",
+                                    "threshold": ["0.6", "0.95"],
+                                    "dataset_name": "Object Detection Benchmark Dataset",
+                                    "dataset_version": "2.0.0"
+                                },
+                                { 
+                                    "id": "2",
+                                    "risk_score": "18",
+                                    "risk_date": "2023-11-20",
+                                    "name": "Type 2 Bias in Image Classification",
+                                    "description": "Reduced classification accuracy for certain object categories across diverse lighting conditions.",
+                                    "risk_task_prompt_template": "Classify objects in the provided {} image under {} lighting. Output should be a list of detected categories with confidence scores.",
+                                    "prompt_ordered_params": ["image_formats", "object_categories"],
+                                    "supporting_files": ["data/classification_images.zip"],
+                                    "input_params": {
+                                        "image_formats": ["PNG"],
+                                        "object_categories": ["Animals", "Vehicles"]
+                                    },
+                                    "metric": "Classification Accuracy",
+                                    "threshold": ["0.7", "0.9"],
+                                    "dataset_name": "Image Classification Benchmark Dataset",
+                                    "dataset_version": "1.1.0"
+                                }
+                            ]
+                        }
+                    }
+                ]  
+            },
+            {
+                "id": 3,
+                "title": "4. Metadata",
+                "description": "If the training data does not directly contain an identifier that explicitly links each record to an at-risk group, provide metadata to the data quality checking process if the group is identifiable. In that case, upload the metadata here.",
+                "placeholder": "Upload meta data here.",
+                "tag": "Testing",
+                "optional": false,
+                "components": []
+            },
+            {
+                "id": 4,
+                "title": "5. Test Completion Report",
+                "description": "Document the test approaches used in a test completion report in accordance with ISO/IEC/IEEE 29119-3:2021, 7.4.",
+                "tag": "Testing",
+                "implementationGuidance": "The test completion report shall include criteria for when verification and validation activities are repeated, including continuous monitoring.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document test completion here or upload your own report."
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "title": "6. Data Source Evaluation",
+                "description": "Where appropriate, evaluate and document the following aspects of each data source: completeness, accuracy, collection procedures, timeliness, consistency.",
+                "placeholder": "Document test results here.",
+                "tag": "Testing",
+                "implementationGuidance": "Where appropriate for the use case, the following aspects of each data source shall be evaluated and documented:\n\n- Completeness, including the number of missing features for each group of relevant stakeholders.\n- Accuracy, including the amount of inaccurate data contained within the data set, and the amount of inaccuracy for each group of relevant stakeholders.\n- Collection procedures, including the lineage of the data, and the collection, input or labelling mechanism.\n- Timeliness, including the effect of the time of collection on accuracy.\n- Consistency, including labels.\n\nFurther information on data quality measures can be found in ISO/IEC 5259-2.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "SDK": true,
+                "components": [
+                    {
+                        "type": "DataTable",
+                        "label": "",
+                        "content": [{
+                            "Dataset/Data Source Name": "Dataset_id",
+                            "Completeness": "70% (from ODD coverage results)",
+                            "Accuracy": "98% (from ODD performance results)",
+                            "Collection Metadata": "Campaign 120",
+                            "Date Collected": "01.12.2024",
+                            "Data Consistency Notes": "Mix of synthetic and real data"
+                        }]
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "title": "7. Mechanisms for Labelling Quality",
+                "description": "Implement mechanisms to ensure labelling or annotation is of sufficient quality to meet AI system objectives, including where it is performed by humans. Please upload your annotation guidelines or other labelling quality assurance mechanisms here.",
+                "tag": "Testing",
+                "implementationGuidance": "This can include:\n\n- Developing questions with known answers to provide a quality measure.\n- Conducting sample checks.\n- Providing clear instructions or training to humans.\n- Mechanisms for humans to provide feedback.\n- Evaluating statistical bias in automatically produced labels or annotations.\n- Comparing labels created by multiple humans on the same data.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document mechanisms for labelling quality here."
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "title": "8. Static Testing",
+                "description": "Conduct data quality evaluation in accordance with ISO/IEC 5259-4:-, 6.3, including measuring training data quality for each at-risk group that has been identified in relation to unwanted bias.",
+                "tag": "Testing",
+                "implementationGuidance": "Organizations can identify the profile of the available training data and validate whether the distribution of a specific variable is accurate. An example of this is identifying that records of a certain age group have been used for training, when a different spread of ages is expected in production data.\n\nThis activity can aim to validate the potential for selection bias, sampling bias, and coverage bias, but cannot do so exhaustively, as it is limited by the knowledge of the evaluator.\n\nOrganizations can identify stages in the data preparation process that can potentially introduce bias through 'missing data'. For example, if specific data items are not available consistently across an input data set, organizations can impute that information for the remaining records or they can remove it. If the absence of that data item is correlated with specific groups of records, this can result in unwanted bias that would not normally be detected in machine learning model testing.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "SDK": true,
+                "components": [
+                    {
+                        "type": "DataTable",
+                        "label": "Training Data Quality Evaluation",
+                        "content": [
+                            {
+                                "At-Risk Group": "Group A",
+                                "Auditability": "High",
+                                "Balance": "Balanced",
+                                "Currentness": "Up-to-date",
+                                "Completeness (%)": 95,
+                                "Accuracy (%)": 98,
+                                "Consistency": "Consistent",
+                                "Diversity": "High",
+                                "Effectiveness": "Effective",
+                                "Precision (%)": 97,
+                                "Relevance": "High",
+                                "Representativeness": "Representative",
+                                "Similarity to Production Data (%)": 92,
+                                "Timeliness": "Timely",
+                                "Potential Bias Observed": "None"
+                            },
+                            {
+                                "At-Risk Group": "Group B",
+                                "Auditability": "Moderate",
+                                "Balance": "Slightly Imbalanced",
+                                "Currentness": "Partially Outdated",
+                                "Completeness (%)": 85,
+                                "Accuracy (%)": 90,
+                                "Consistency": "Minor Label Issues",
+                                "Diversity": "Moderate",
+                                "Effectiveness": "Moderately Effective",
+                                "Precision (%)": 88,
+                                "Relevance": "Moderate",
+                                "Representativeness": "Partially Representative",
+                                "Similarity to Production Data (%)": 78,
+                                "Timeliness": "Moderately Timely",
+                                "Potential Bias Observed": "Sampling Bias"
+                            },
+                            {
+                                "At-Risk Group": "Group C",
+                                "Auditability": "Low",
+                                "Balance": "Imbalanced",
+                                "Currentness": "Outdated",
+                                "Completeness (%)": 70,
+                                "Accuracy (%)": 75,
+                                "Consistency": "Significant Label Issues",
+                                "Diversity": "Low",
+                                "Effectiveness": "Ineffective",
+                                "Precision (%)": 72,
+                                "Relevance": "Low",
+                                "Representativeness": "Unrepresentative",
+                                "Similarity to Production Data (%)": 65,
+                                "Timeliness": "Not Timely",
+                                "Potential Bias Observed": "Selection & Coverage Bias"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 9,
+                "title": "10. Dynamic Testing of AI System",
+                "description": "Conduct dynamic testing of the AI system to determine if it exhibits unwanted bias and evaluate functional correctness for at-risk groups.",
+                "tag": "Testing",
+                "implementationGuidance": "Dynamic testing in this context comprises both conventional techniques, where given inputs generate expected outputs, and measurement approaches that show whether the system is behaving statistically as expected or as intended. These tests are designed based on the expected input data.\n\nThe degree to which test data are representative of the expected variety of input data provides a measurement of test coverage.\n\nIt is important that the system is considered as a whole, and it is not solely the ML component that is identified. This is because bias can be introduced in the data preparation and data processing steps, as well as in the user interface.\n\nThe testing should be comprehensive enough to be representative of the expected input data in production usage.\n\nDeploying an AI system to a different environment or a different target population can change the degree to which it exhibits unwanted bias.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "SDK": true,
+                "components": [
+                    {
+                        "type": "DataTable",
+                        "label": "Dynamic Testing Metrics",
+                        "content": [
+                            {
+                                "Metric": "Disparate Impact Ratio (DIR)",
+                                "Definition": "Measures the ratio of positive outcomes for one group compared to another.",
+                                "Use": "Indicates whether certain groups are unfairly disadvantaged.",
+                                "Justification": "Reflects fairness in the AI system's decision-making; aligns with ISO/IEC TR 24027."
+                            },
+                            {
+                                "Metric": "Equal Opportunity Difference (EOD)",
+                                "Definition": "Measures the difference in true positive rates across groups.",
+                                "Use": "Evaluates whether all groups have equal access to positive outcomes.",
+                                "Justification": "Ensures fairness in the system’s predictive performance across at-risk groups."
+                            },
+                            {
+                                "Metric": "Predictive Parity",
+                                "Definition": "Compares the positive predictive value (PPV) across groups.",
+                                "Use": "Ensures consistent reliability of predictions across groups.",
+                                "Justification": "Essential to assess whether predictions are equitable."
+                            },
+                            {
+                                "Metric": "Bias Amplification Index",
+                                "Definition": "Quantifies how biases in the training data are amplified in outputs.",
+                                "Use": "Evaluates systemic bias propagation.",
+                                "Justification": "Important for systems trained on imbalanced or historical data."
+                            },
+                            {
+                                "Metric": "Accuracy by Group",
+                                "Definition": "Measures the percentage of correct predictions for each at-risk group.",
+                                "Use": "Evaluates the overall correctness of the AI system.",
+                                "Justification": "Establishes a baseline for comparative functional correctness."
+                            },
+                            {
+                                "Metric": "Precision, Recall, and F1-Score by Group",
+                                "Definition": "Standard classification metrics applied per group.",
+                                "Use": "Captures nuances in correctness, especially when data is imbalanced.",
+                                "Justification": "Aligns with ISO/IEC standards for evaluating functional correctness."
+                            },
+                            {
+                                "Metric": "Mean Absolute Error (MAE) or RMSE by Group",
+                                "Definition": "Measures the error in continuous predictions, group-wise.",
+                                "Use": "Evaluates differences in functional accuracy for regression-based systems.",
+                                "Justification": "Necessary for regression-based systems where group-level performance matters."
+                            },
+                            {
+                                "Metric": "Consistency Score",
+                                "Definition": "Measures the stability of outputs across similar inputs within and across groups.",
+                                "Use": "Detects operational inconsistencies that may indicate bias.",
+                                "Justification": "Critical for ensuring fairness in dynamic conditions."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "DataTable",
+                        "label": "Dynamic Testing Results",
+                        "content": [
+                            {
+                                "At-Risk Group": "Group A",
+                                "Accuracy (%)": 92,
+                                "Precision (%)": 90,
+                                "Recall (%)": 88,
+                                "F1-Score (%)": 89.0,
+                                "MAE": 0.08,
+                                "Consistency Score": 95,
+                                "Disparate Impact Ratio": 1.0,
+                                "Equal Opportunity Diff.": 0.02,
+                                "Predictive Parity": 0.92,
+                                "Bias Amplification Index": 1.1
+                            },
+                            {
+                                "At-Risk Group": "Group B",
+                                "Accuracy (%)": 85,
+                                "Precision (%)": 82,
+                                "Recall (%)": 83,
+                                "F1-Score (%)": 82.5,
+                                "MAE": 0.15,
+                                "Consistency Score": 88,
+                                "Disparate Impact Ratio": 0.85,
+                                "Equal Opportunity Diff.": -0.05,
+                                "Predictive Parity": 0.85,
+                                "Bias Amplification Index": 1.4
+                            },
+                            {
+                                "At-Risk Group": "Group C",
+                                "Accuracy (%)": 78,
+                                "Precision (%)": 75,
+                                "Recall (%)": 76,
+                                "F1-Score (%)": 75.5,
+                                "MAE": 0.22,
+                                "Consistency Score": 82,
+                                "Disparate Impact Ratio": 0.75,
+                                "Equal Opportunity Diff.": -0.1,
+                                "Predictive Parity": 0.78,
+                                "Bias Amplification Index": 1.8
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "title": "11. Dynamic Testing of the Model",
+                "description": "Conduct model testing on the ML model, including data pre-processing, to evaluate functional correctness. Test extreme data inputs for each at-risk group in order to identify variations in the robustness of the ML model that can result in unwanted bias.",
+                "tag": "Testing",
+                "implementationGuidance": "Dynamic testing in this context comprises both conventional techniques, where given inputs generate expected outputs, and measurement approaches that show whether the system is behaving statistically as expected or as intended. These tests are designed based on the expected input data.\n\nThe degree to which test data are representative of the expected variety of input data provides a measurement of test coverage.\n\nThe process of obtaining the extreme data inputs can benefit from the participation of AI customers and AI users in test design, test execution, results assessment and interpretation.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "SDK": true,
+                "components": [
+                    {
+                        "type": "DataTable",
+                        "label": "Extreme Data Input Testing",
+                        "content": [
+                            {
+                                "At-Risk Group": "Group A",
+                                "Extreme Input Type": "Maximum Value",
+                                "Accuracy (%)": 89,
+                                "Precision (%)": 87,
+                                "Recall (%)": 85,
+                                "F1-Score (%)": 86,
+                                "Robustness Score (%)": 92,
+                                "Observed Bias": "None",
+                                "Pre-processing Adjustment": "None required"
+                            },
+                            {
+                                "At-Risk Group": "Group B",
+                                "Extreme Input Type": "Minimum Value",
+                                "Accuracy (%)": 75,
+                                "Precision (%)": 72,
+                                "Recall (%)": 70,
+                                "F1-Score (%)": 71,
+                                "Robustness Score (%)": 80,
+                                "Observed Bias": "Higher False Negatives",
+                                "Pre-processing Adjustment": "Modified normalization for low-value data"
+                            },
+                            {
+                                "At-Risk Group": "Group C",
+                                "Extreme Input Type": "Outlier Values",
+                                "Accuracy (%)": 68,
+                                "Precision (%)": 65,
+                                "Recall (%)": 63,
+                                "F1-Score (%)": 64,
+                                "Robustness Score (%)": 70,
+                                "Observed Bias": "Inconsistent Predictions",
+                                "Pre-processing Adjustment": "Outlier removal applied"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 11,
+                "title": "12. Component Testing",
+                "description": "Conduct component testing on the automated data pre-processing steps (see ISO/IEC 23053:2022[8], 8.3) as part of the development process.",
+                "tag": "Testing",
+                "implementationGuidance": "Dynamic testing in this context comprises both conventional techniques, where given inputs generate expected outputs, and measurement approaches that show whether the system is behaving statistically as expected or as intended. These tests are designed based on the expected input data.\n\nThe degree to which test data are representative of the expected variety of input data provides a measurement of test coverage.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "SDK": true,
+                "components": [
+                    {
+                        "type": "DataTable",
+                        "label": "Component Testing",
+                        "content": [
+                            {
+                                "Pre-processing Step": "Data Normalization",
+                                "Test Cases": "Normalization across range [0,1]",
+                                "Test Metrics": "Normalization Error (%)",
+                                "Metric Value": 1.2,
+                                "Observed Issues": "Scaling issue with outliers",
+                                "Recommended Fixes": "Review and adjust scaling algorithm"
+                            },
+                            {
+                                "Pre-processing Step": "Missing Value Imputation",
+                                "Test Cases": "Impute with median for numerical values",
+                                "Test Metrics": "Imputation Error Rate (%)",
+                                "Metric Value": 2.5,
+                                "Observed Issues": "Imputation slightly skewed distributions",
+                                "Recommended Fixes": "Evaluate alternative imputation methods"
+                            },
+                            {
+                                "Pre-processing Step": "Outlier Detection",
+                                "Test Cases": "Identify data points >3 standard deviations",
+                                "Test Metrics": "Outlier Detection Accuracy (%)",
+                                "Metric Value": 98.7,
+                                "Observed Issues": "False positives for borderline values",
+                                "Recommended Fixes": "Refine threshold for outlier detection"
+                            },
+                            {
+                                "Pre-processing Step": "Feature Encoding",
+                                "Test Cases": "One-hot encoding for categorical variables",
+                                "Test Metrics": "Encoding Consistency (%)",
+                                "Metric Value": 99.8,
+                                "Observed Issues": "No issues observed",
+                                "Recommended Fixes": "None"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 12,
+                "title": "13. User Testing",
+                "description": "Conduct testing with users to determine if user interface design choices or automation bias in users reinforce bias in the system.",
+                "tag": "Testing",
+                "implementationGuidance": "Dynamic testing in this context comprises both conventional techniques, where given inputs generate expected outputs, and measurement approaches that show whether the system is behaving statistically as expected or as intended. These tests are designed based on the expected input data.\n\nThe degree to which test data are representative of the expected variety of input data provides a measurement of test coverage.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "SDK": true,
+                "components": [
+                    {
+                        "type": "DataTable",
+                        "label": "User Testing Results",
+                        "content": [
+                            {
+                                "Test Scenario": "Decision Support Automation",
+                                "Observed Bias": "Over-reliance on system recommendations",
+                                "Impact on Bias": "Reinforced bias in critical decision-making",
+                                "User Feedback": "System recommendations seem authoritative",
+                                "Suggested Improvements": "Add confidence levels to recommendations"
+                            },
+                            {
+                                "Test Scenario": "Error Messaging Clarity",
+                                "Observed Bias": "Error interpretation varies by user expertise",
+                                "Impact on Bias": "Inconsistent corrective actions taken",
+                                "User Feedback": "Error messages are too technical",
+                                "Suggested Improvements": "Simplify and contextualize error messages"
+                            },
+                            {
+                                "Test Scenario": "UI Accessibility Evaluation",
+                                "Observed Bias": "Lower usability for visually impaired users",
+                                "Impact on Bias": "Reduced participation from underrepresented groups",
+                                "User Feedback": "Font size and contrast are inadequate",
+                                "Suggested Improvements": "Enhance accessibility features like screen reader compatibility"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

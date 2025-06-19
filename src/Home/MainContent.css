@@ -1,0 +1,34 @@
+/* src/MainContent.css */
+.main-content {
+    background-color: #fff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ensures the main content takes the remaining space */
+    height: 100vh;
+    overflow-y: auto; /* Enable scrolling within the main content */
+  }
+
+.chart-row {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center; 
+    gap: 10px; /* Spacing between charts */
+    flex-wrap: nowrap; 
+}
+
+.pie-chart-container,
+.bar-chart-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    position: relative;
+}
+
+.certif-ai-logo {
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}

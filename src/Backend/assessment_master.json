@@ -1,0 +1,300 @@
+{   
+    "assessments" : [
+        {
+            "name": "EU AI Act (Regulation EU) 2024/1689",
+            "description": "Obligations of the EU AI Act supported by relevant industry standards",
+            "taskCategories": [
+                {"name": "Risk Management System",  "description": "Article 9", "sections": [
+                    {"name": "General Clause", "tasks": [
+                        {"name": "Risk Management System", "id": "Art. 9(1)", "description": "Establish, Implement, Document and Maintain the risk management system", "status": "Not Started", "owner": "", "lifecycle": "Research"}
+                    ]},
+                    {
+                        "name": "Risk Identification and Analysis", "tasks": [
+                            {"name": "Risk Indentification and Analysis", "id": "Art. 9(2)(a)", "description": "Identify and Analyze known and foreseeable risks in case of appropriate use", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                            {"name": "Risk Estimation and Evaluation", "id": "Art. 9(2)(b)", "description": "Estimate and Evaluate risks in case of appropriate use and foreseeable misuse", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                            {"name": "Post-Market Risk Evaluation", "id": "Art. 9(2)(c)", "description": "Evaluate risks based on post-market monitoring data", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                            {"name": "Impact on Vulnerable Groups", "id": "Art. 9(9)", "description": "Consider adverse impact on vulnerable groups (esp. minors)", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                            {"name": "Risk Exclusions", "id": "Art. 9(3)", "description": "Exclude risks which cannot reasonably be addressed by measures in Art. 9(5)", "status": "Not Started", "owner": "", "lifecycle": "Pre-Launch"}
+                        ]
+                    },
+                    {
+                        "name": "Adoption of Risk Management Measures", "tasks": [
+                            {"name": "Risk Appriopriateness and Targetedness", "id": "Art. 9(2)(d)", "description": "Appropriateness and targetedness for identified risks", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                            {"name": "Risk Interaction", "id": "Art. 9(4)", "description": "Consideration of interaction with other requirements", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                            {"name": "Risk Elimination or Reduction", "id": "Art. 9(5)(a)", "description": "Where possible, eliminate or reduce risks through design or development", "status": "Not Started", "owner": "", "lifecycle": "Design"},
+                            {"name": "Risk Mitigation", "id": "Art. 9(5)(b)", "description": "Where appropriate, implement mitigation and control measures", "status": "Not Started", "owner": "", "lifecycle": "Development"},
+                            {"name": "Provision of Information and Training", "id": "Art. 9(5)(c)", "description": "Provide information pursuant to Art. 13 and training to deploy", "status": "Not Started", "owner": "", "lifecycle": "Pre-Launch"}
+                        ]
+                    },
+                    {
+                        "name": "Testing Procedures", "tasks": [
+                            {"name": "Testing for Risk Management", "id": "Art. 9(6)", "description": "Testing to identify targeted risk management measures, ensure consistent performance, and compliance", "status": "Not Started", "owner": "", "lifecycle": "QA & Testing"},
+                            {"name": "Lifecycle Testing", "id": "Art. 9(8)", "description": "Testing throughout development and carry out against defined metrics and appropriate thresholds", "status": "Not Started", "owner": "", "lifecycle": "Development"}
+                        ]
+                    }
+                
+                ]},
+                {
+                    "name": "Data and Data Governance",
+                    "description": "Article 10",
+                    "sections": [
+                        {
+                            "name": "Data Governance for Data Sets",
+                            "tasks": [
+                                {"name": "Design Choices", "id": "Art. 10(2)(a)", "description": "Consider relevant design choices", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "Data Collection", "id": "Art. 10(2)(b)", "description": "Consider data collection processes, data origin, and the original purpose of personal data collection", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "Data Preperation", "id": "Art. 10(2)(c)", "description": "Consider relevant data-preparation processing operations", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "Data Assumptions", "id": "Art. 10(2)(d)", "description": "Formulate assumptions.", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "Availability, Quantity, Suitability Assessment", "id": "Art. 10(2)(e)", "description": "Assess availability, quantity and suitability of data sets needed", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "Bias Examination, Detection, Prevention and Mitigation", "id": "Art. 10(2)(f+g)", "description": "Examine the data sets in view of possible biases. Take appropriate measures to detect, prevent and mitigate them.", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "Data Gap Analysis", "id": "Art. 10(2)(h)", "description": "Identify relevant data gaps / shortcomings to compliance and how to address them", "status": "Not Started", "owner": "", "lifecycle": "Research"}
+                            ]
+                        },
+                        {
+                            "name": "Characteristics of Data Sets",
+                            "tasks": [
+                                {"name": "Data Relevancy and Representativeness", "id": "Art. 10(3)", "description": "Assessing Data for Relevance, Representativeness, Correctness and Completeness", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "Consideration of Specific Settings", "id": "Art. 10(4)", "description": "Consideration of elements particular to intended setting", "status": "Not Started", "owner": "", "lifecycle": "Research"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Technical Documentation",
+                    "description": "Article 11 (in conj. with Annex IV)",
+                    "sections": [
+                        {
+                            "name": "General Description of AI System",
+                            "tasks": [
+                                {"name": "Intended Purpose, Provider and Version", "id": "IV.1(a)", "description": "Describe the intended purpose, the provider and the verions of the system", "status": "Not Started", "owner": "", "lifecycle": "Not Started"},
+                                {"name": "System Interaction", "id": "IV.1(b)", "description": "Describe how the system interacts or can interact with hardware and software", "status": "Not Started", "owner": "", "lifecycle": "Not Started"},
+                                {"name": "Software or Firmware Version and Updates", "id": "IV.1(c)", "description": "Describe the version of relevant software / firmware and requirements related to version updates", "status": "Not Started", "owner": "", "lifecycle": "Development"}
+                            ]
+                        },
+                        {
+                            "name": "System Elements and Development Process",
+                            "tasks": [
+                                {"name": "System Development", "id": "IV.2(a)", "description": "Describe the methods and steps for the development of the system", "status": "Not Started", "owner": "", "lifecycle": "Development"},
+                                {"name": "System Design and General Logic", "id": "IV.2(b)-1", "description": "Describe the design specifications, design choices and the general logic of the system and algorithms", "status": "Not Started", "owner": "", "lifecycle": "Design"},
+                                {"name": "System Optimization", "id": "IV.2(b)-2", "description": "Describe what the system is designed to optimize for and the relevance of different Parameters.", "status": "Not Started", "owner": "", "lifecycle": "Development"},
+                                {"name": "System Output", "id": "IV.2(b)-3", "description": "Describe the expected output and output quality of the system", "status": "Not Started", "owner": "", "lifecycle": "Development"},
+                                {"name": "Trade-Offs", "id": "IV.2(b)-4", "description": "Describe decisions about trade-offs re: technical solutions for compliance", "status": "Not Started", "owner": "", "lifecycle": "Development"},
+                                {"name": "System Architecture and Resources", "id": "Art. 11(2)(c)", "description": "Describe the system architecture and he computational resources to develop, train, test and validate the system", "status": "Not Started", "owner": "", "lifecycle": "Development"},
+                                {"name": "Data Requirements", "id": "Art. 11(2)(d)-1", "description": "Describe the data requirements re: training methodologies / techniques and training datas sets used", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "Training Data", "id": "Art. 11(2)(d)-2", "description": "Describe how the training data was obtained and selected, labelling and data cleaning methods", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "Assessment of Human Oversight Measures", "id": "Art. 11(2)(e)", "description": "Describe the assessment of the human oversight measures", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "Pre-determined Changes and Continuous Compliance", "id": "Art. 11(2)(f)", "description": "Describe pre-determined changes to the system and its performance and technical solutions adopted to ensure continuous compliance", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "Validation, Testing and Compliance Measure", "id": "Art. 11(2)(g)", "description": "Describe the validation and testing procedures used, the metrics used to measue compliance and test logs and reports", "status": "Not Started", "owner": "", "lifecycle": "QA & Testing"},
+                                {"name": "Cybersecurity Measures", "id": "Art. 11(2)(h)", "description": "Describe the cybersecurity measures put in place", "status": "Not Started", "owner": "", "lifecycle": "QA & Testing"}
+                            ]
+                        },
+                        {
+                            "name": "Monitoring, Functioning and Control",
+                            "tasks": [
+                                {"name": "System Monitoring", "id": "IV.3-1", "description": "Provide information about the monitoring of the system", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "System Functioning", "id": "IV.3-2", "description": "Provide information about the functioning of the system", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "System Control", "id": "IV.3-3", "description": "Provide information about the control of the system", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "Performance Capabilities and Limitations", "id": "IV.3-4", "description": "Provide information re: capabilities and limitations in performance", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "Unintended Outcomes and Risk Sources", "id": "IV.3-5", "description": "Provide information re: foreseeable unintended outcomes and risk sources", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "Human Oversight Measures", "id": "IV.3-6", "description": "Provide information re: human oversight measures", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "Input Data Specifications", "id": "IV.3-7", "description": "Provide information re: input data", "status": "Not Started", "owner": "", "lifecycle": "Research"}
+                            ]
+                        },
+                        {
+                            "name": "Additional Information",
+                            "tasks": [
+                                {"name": "Appropriateness of Performance Metrics", "id": "IV.4", "description": "Describe the appropriateness of the system's performance metrics", "status": "Not Started", "owner": "", "lifecycle": "Not Started"},
+                                {"name": "Risk Management System", "id": "IV.5", "description": "Describe the risk management system", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "Relevant Changes", "id": "IV.6", "description": "Describe relevant changes made by provider through system's lifecycle", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "Harmonized Standards", "id": "IV.7", "description": "Provide a list of harmonized standards applied / solutions adopted for compliance", "status": "Not Started", "owner": "", "lifecycle": "Research"},
+                                {"name": "EU Declaration of Conformity", "id": "IV.8", "description": "Provide a copy of the EU declaration of conformity", "status": "Not Started", "owner": "", "lifecycle": "Pre-Launch"},
+                                {"name": "Post-Market Performance Evaluation", "id": "IV.9", "description": "Describe the post-market performance evaluation system", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Record Keeping",
+                    "description": "Article 12",
+                    "sections": [
+                        {
+                            "name": "Automatic Record-Keeping",
+                            "tasks": [
+                                {"name": "Automatic Event Recording", "id": "Art. 12(1)", "description": "Ensure the system automatically records events throughout its lifetime.", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "Recording of Events relevant for Specific Purposes", "id": "Art. 12(2)", "description": "Enable recording of events to support risk identification, substantial modifications, post-market monitoring, and operational monitoring.", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"}
+                            ]
+                        },
+                        {
+                            "name": "For Remote Biometric Identification Systems",
+                            "tasks": [
+                                {"name": "Usage Period Recording", "id": "Art. 12(3)(a)", "description": "Provide recording of the period of each use of the system", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "Reference Database", "id": "Art. 12(3)(b)", "description": "Provide the reference database used", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "Input Data", "id": "Art. 12(3)(c)", "description": "Provide input data that resulted in a match during the system's operation.", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"},
+                                {"name": "Natural Persons Involved in Verification", "id": "Art. 12(3)(d)", "description": "Provide the identification of natural persons involved in the verification of results.", "status": "Not Started", "owner": "", "lifecycle": "Post-Launch"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Transparency and Provision of Information",
+                    "description": "Article 13",
+                    "sections": [
+                        {
+                            "name": "Transparency Requirements",
+                            "tasks": [
+                                {
+                                    "name": "Design for Transparency",
+                                    "id": "Art. 13(1)",
+                                    "description": "Ensure the system's design and development incorporate sufficient transparency measures",
+                                    "status": "Not Started",
+                                    "owner": "",
+                                    "lifecycle": "Design"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Qualities of Information Provided",
+                            "tasks": [
+                                {
+                                    "name": "Accompanying Instructions",
+                                    "id": "Art. 13(2)",
+                                    "description": "Provide instructions for use in an appropriate digital format. Ensure information is concise, complete, correct, clear, relevant, accessible, and comprehensible",
+                                    "status": "Not Started",
+                                    "owner": "",
+                                    "lifecycle": "Pre-Launch"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Contents of Information Provided",
+                            "tasks": [
+                                {"name": "Provider Indentity", "id": "Art. 13(3)(a)", "description": "Provide the identity and contact details of the provider and information on the authorized representative", "status": "Not Started", "owner": "", "lifecycle": "Pre-Launch"},
+                                {"name": "Characteristics, Capabilities, and Limitations of Performance", "id": "Art. 13(3)(b)", "description": "Detail characteristics, capabilities, and limitations of performance, including the intended purpose, expected levels of accuracy, robustness, cybersecurity, and known risks", "status": "Not Started", "owner": "", "lifecycle": "Pre-Launch"},
+                                {"name": "Pre-determined Changes", "id": "Art. 13(3)(c)", "description": "Detail the pre-determined changes to the system and its performance over time", "status": "Not Started", "owner": "", "lifecycle": "Pre-Launch"},
+                                {"name": "Human Oversight Measures", "id": "Art. 13(3)(d)", "description": "Detail the human oversight measures included in the system", "status": "Not Started", "owner": "", "lifecycle": "Pre-Launch"},
+                                {"name": "Computational and Hardware Resources", "id": "Art. 13(3)(e)", "description": "Include details about computational and hardware resources, expected lifetime, and maintenance required for proper functioning", "status": "Not Started", "owner": "", "lifecycle": "Pre-Launch"},
+                                {"name": "Log Collection", "id": "Art. 13(3)(f)", "description": "Provide information on the mechanisms for deployers to collect, store, and interpret logs generated by the system", "status": "Not Started", "owner": "", "lifecycle": "Pre-Launch"}
+                            ]
+                        }
+                    ]
+                },
+                {"name": "Human Oversight", "description": "Article 14", "sections": [
+                    {"name": "General Obligations",
+                        "tasks": [
+                            {"name": "Design for Human Oversight", "id": "Art. 14(1)", "description": "Development and design of the system to enable effective human oversight", "status": "In Progress", "owner": "", "lifecycle": "Design"},
+                            {"name": "Objectives of Human Oversight", "id": "Art. 14(2)", "description": "Prevention / minimization of risks to protected assets for usual use or foreseeable misuse.", "status": "In Progress", "owner": "", "lifecycle": "Design"}
+                        ]
+                    },
+                    {"name": "Oversight Measures",
+                        "tasks": [
+                            {"name": "Measures for Human Oversigth", "id": "Art. 14(3)", "description": "Commensurateness of measures with risks, level of autonomy and context of use", "status": "In Progress", "owner": "", "lifecycle": "Design"},
+                            {"name": "Verification of Identification - special requirements for certain AI Systems", "id": "Art. 14(5)", "description": "For Annex III (1)(a) systems, measures shall ensure separate verification by at least two natural persons", "status": "In Progress", "owner": "", "lifecycle": "Not Started"}
+                        ]
+                    },
+                    {"name": "Enablement of Deployers",
+                        "tasks": [
+                            {"name": "Understanding Capacities and Limitations", "id": "Art. 14(4)(a)", "description": "Enable overseer to understand the capacities and limitations of the system and monitor its operation", "status": "In Progress", "owner": "", "lifecycle": "Not Started"},
+                            {"name": "Awareness of Automation Bias", "id": "Art. 14(4)(b)", "description": "Enable overseer to remain aware of the automation bias", "status": "In Progress", "owner": "", "lifecycle": "Not Started"},
+                            {"name": "Correct Interpretation of Output", "id": "Art. 14(4)(c)", "description": "Enable overseer to interpret the system's output", "status": "In Progress", "owner": "", "lifecycle": "Not Started"},
+                            {"name": "Decision to Override or Disregard AI Output", "id": "Art. 14(4)(d)", "description": "Enable overseer to decide to override or disregard the system's output", "status": "In Progress", "owner": "", "lifecycle": "Not Started"},
+                            {"name": "Intervention and Stop Mechanism", "id": "Art. 14(4)(e)", "description": "Enable overseer to intervene in the operation of the system or interrupt it.", "status": "In Progress", "owner": "", "lifecycle": "Not Started"}
+                        ]
+                    }
+                ]},
+                {"name": "Accuracy, Robustness, Cybersecurity", "description": "Article 15", "sections": [
+                    {"name": "General Obligation",
+                    "tasks": [
+                        {"name": "Design for Accuracy, Robustness, and Cybersecurity", "id": "Art. 15(1)", "description": "Ensure AI system maintains accuracy, robustness, and cybersecurity throughout lifecycle", "status": "In Progress", "owner": "", "lifecycle": "Design"}
+                    ]},
+                    {"name": "Accuracy",
+                    "tasks": [
+                        {"name": "Declaration of Accuracy Metrics", "id": "Art. 15(3)", "description": "Declare the levels and metric for accuracy in instructions of use", "status": "In Progress", "owner": "", "lifecycle": "Pre-Launch"}
+                    ]},
+                    {"name": "Robustness",
+                    "tasks":[
+                        {"name": "Robustness Measures", "id": "Art. 15(4.1)", "description": "Take technical and organisational measures to ensure robustness", "status": "In Progress", "owner": "", "lifecycle": "Development"},
+                        {"name": "Feedback Loop Mitigation", "id": "Art. 15(4.3)", "description": "Eliminate or reduce the risk of feedback loops when developing self-learning systems", "status": "In Progress", "owner": "", "lifecycle": "Development"}
+                        ]},
+                    {"name": "Cybersecurity",
+                    "tasks":[
+                        {"name": "Cybersecurity Measures", "id": "Art. 15(5.1)", "description": "Implement technical solutions to ensure cybersecurity", "status": "In Progress", "owner": "", "lifecycle": "Design"},
+                        {"name": "Measure Appropriateness", "id": "Art. 15(5.2)", "description": "Ensure appropriateness of technical solutions to circumstances and risks", "status": "In Progress", "owner": "", "lifecycle": "Design"},
+                        {"name": "Measures for AI-specific Vulnerabilities", "id": "Art. 15(5.3)", "description": "Address data and model poisoning, adversarial examples, model evasion, confidentiality attacks, model flaws", "status": "In Progress", "owner": "", "lifecycle": "Development"}
+                    ]}
+                ]}
+            ]
+        },
+
+        {
+            "name": "ISO/IEC TR 24029-1 - AI Assessment of the Robustness of Neural Networks",
+            "description": "Assessment of the robustness of neural networks",
+            "taskCategories": [
+                {"name": "Robustness", "description": "", "sections": [
+                    {"name": "Robustness Testing",
+                    "tasks": [
+                        {"name": "Robustness", "id": "1", "description": "Assess the robustness of the neural network", "status": "In Progress", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Adversarial Attacks", "id": "2", "description": "Assess the neural network's vulnerability to adversarial attacks", "status": "Complete", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Data Augmentation", "id": "3", "description": "Assess the neural network's performance with data augmentation", "status": "Complete", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Noise Robustness", "id": "4", "description": "Assess the neural network's performance with noise robustness", "status": "Complete", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Model Robustness", "id": "5", "description": "Assess the neural network's model robustness", "status": "Complete", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Adversarial Training", "id": "6", "description": "Assess the neural network's performance with adversarial training", "status": "Complete", "owner": "", "lifecycle": "Not Started"}
+                    ]}
+                ]}
+            ]
+        },
+
+        {
+            "name": "ISO/IEC TR 24027 - Bias in AI systems and AI aided decision making",
+            "description": "Assess the Seven Dimensions of Trustworthiness of your AI System",
+            "taskCategories": [
+                {"name": "Bias", "description": "", "sections": [
+                    {"name": "Bias Assessment",
+                    "tasks": [
+                        {"name": "Bias", "id": "1", "description": "Assess the bias in the AI system", "status": "In Progress", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Data Bias", "id": "2", "description": "Assess the data bias in the AI system", "status": "Complete", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Algorithmic Bias", "id": "3", "description": "Assess the algorithmic bias in the AI system", "status": "Complete", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Model Bias", "id": "4", "description": "Assess the model bias in the AI system", "status": "Complete", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Output Bias", "id": "5", "description": "Assess the output bias in the AI system", "status": "Complete", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Bias Mitigation", "id": "6", "description": "Assess the bias mitigation in the AI system", "status": "Complete", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Data Bias", "id": "7", "description": "Assess the data bias in the AI system", "status": "Complete", "owner": "", "lifecycle": "Not Started"}
+                    ]}
+                ]
+                } 
+            ]
+        },
+
+        {
+            "name": "CAI Trustworthy AI Risk Assessment",
+            "description": "Risk assessment framework for AI systems",
+            "taskCategories": [
+                {"name": "Placeholder Category 1", "description": "", "sections": [
+                    {"name": "Placeholder Section 1", "tasks": [
+                        {"name": "Item 1", "id": "1", "description": "Item Short Description", "status": "In Progress", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Item 2", "id": "2","description": "Item Short Description", "status": "Complete", "owner": "", "lifecycle": "Not Started"}
+                    ]},
+                    {"name": "Placeholder Section 2", "tasks": [
+                        {"name": "Item 1", "id": "1", "description": "Item Short Description", "status": "In Progress", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Item 2", "id": "2","description": "Item Short Description", "status": "Complete", "owner": "", "lifecycle": "Not Started"}
+                    ]}
+                ]}
+            ] 
+        },
+
+        {
+            "name": "CAI LLM Quality Assessment",
+            "description": "Focus on the quality of your LLM-based product",
+            "taskCategories": [
+                {"name": "Placeholder Category 1", "description": "", "sections": [
+                    {"name": "Placeholder Section 1", "tasks": [
+                        {"name": "Item 1", "id": "1", "description": "Item Short Description", "status": "In Progress", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Item 2", "id": "2","description": "Item Short Description", "status": "Complete", "owner": "", "lifecycle": "Not Started"}
+                    ]},
+                    {"name": "Placeholder Section 2", "tasks": [
+                        {"name": "Item 1", "id": "1", "description": "Item Short Description", "status": "In Progress", "owner": "", "lifecycle": "Not Started"},
+                        {"name": "Item 2", "id": "2","description": "Item Short Description", "status": "Complete", "owner": "", "lifecycle": "Not Started"}
+                    ]}
+                ]}
+            ] 
+        }
+    ]
+}

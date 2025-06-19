@@ -1,0 +1,122 @@
+.testing-requirements-container {
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .testing-content {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .metrics,
+  .robustness-requirements {
+    flex: 1;
+  }
+  
+  h3 {
+    margin-bottom: 15px;
+  }
+  
+  .metric-item,
+  .requirement-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    height: 50px;
+  }
+  
+  .metric-icon,
+  .requirement-icon {
+    color: #f4b400; /* Yellow for metrics icon */
+    margin-right: 10px;
+  }
+  
+  .metric-name {
+    flex: 1;
+  }
+  
+  .metric-tags {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .tag {
+    padding: 4px 8px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .statistical {
+    background-color: #f4b400;
+  }
+  
+  .classification {
+    background-color: #4285f4;
+  }
+  
+  .interpolation {
+    background-color: #1e88e5;
+  }
+  
+  .requirement-text {
+    flex: 1;
+    font-size: 16px;
+  }
+  
+  .add-button {
+    width: fit-content;
+    height: 50px;
+    padding: 8px 12px;
+    background-color: #b39ddb;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-button:hover {
+    background-color: #6c43b4;
+  }
+
+  .requirement-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .requirement-card {
+    display: flex;
+    height: 15vh;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+  }
+
+  .requirement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .empty-requirements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    color: #645394;
+  }

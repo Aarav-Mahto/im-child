@@ -1,0 +1,53 @@
+[
+    {
+        "parentTaskName": "ISO/IEC TR 12791 - Treatment of unwanted bias in classification and regression machine learning tasks",
+        "taskName": "ISO/IEC DTR 12791 Subtask 2: Bias Risk Assessment",
+        "taskDescription": "Documenting risks associated with unwanted bias that may occur during design, development, deployment, and use of AI systems.",
+        "taskItems": [
+            {
+                "id": 0,
+                "title": "1. Risk Identification and Assessment",
+                "description": "Identify and assess risks related to unwanted bias that can occur during the design, development, deployment and use of an AI system. Consider at-risk groups that are not explicitly identified as belonging to any group in the training data or production data.",
+                "tag": "Risk Assessment",
+                "implementationGuidance": "ISO/IEC 23894 should be used in conjunction with this ISO Standard. The following documents should also be used:\n\n- ISO/IEC 25059 to identify quality measures that can vary by at-risk group\n- ISO/IEC 5259-2 to identify data quality measures that can vary by at-risk group\n- The documentation of data sources referenced in 5.1.4.\n\nRisks can arise from data, an AI system’s mission and goals, and when internal and external requirements are not fully met. These risks can materially affect a particular group of stakeholders.\n\nA list of examples of types of bias that can be present in data and types of cognitive bias can be found in ISO/IEC TR 24027:2021, 6.3.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document risk identification and assessment here."
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "title": "2. Multiple Data Sources",
+                "description": "If multiple data sources are used to achieve a sufficient level of representation across stakeholder groups, provide evidence that you considered whether such combination introduces additional risks relating to data bias.",
+                "tag": "Risk Assessment",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document multiple data sources here."
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "3. Data Representation Bias Consideration",
+                "description": "Where you have identified risks related to unwanted bias, provide evidence that you considered:\n\n- The types of data biases that can be present and the effect of feature selection\n- The types of cognitive biases that can be present in the humans selecting features or labelling and annotating data\n- Missing or unexpected feature values and data skew\n- Interactions between multiple ML models or system components\n- Biases that result from the disproportionate availability of data sets, features, labels or annotations of data\n- Types of cognitive biases that can be present in the humans involved in selecting features or labelling and annotating data\n- Biases that can be embedded in processes involved in selecting features or labelling and annotating of data",
+                "tag": "Risk Assessment",
+                "implementationGuidance": "Functional correctness is understood as the degree to which a product or system provides the correct results with the needed degree of precision.\n\nRelevant AI stakeholders should be included in the definition process.\n\nFor more information, see [ISO/IEC DTS 12791](#).",
+                "optional": false,
+                "components": [
+                    {
+                        "type": "TextArea",
+                        "label": "",
+                        "content": "Document data representation bias consideration here."
+                    }
+                ]
+            }
+        ]
+    }
+]

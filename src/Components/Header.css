@@ -1,0 +1,173 @@
+/* src/Header.css */
+.main-header {
+    position: relative;
+    height: 15%;
+    margin-top: 10px;
+    margin-bottom: 6%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .header-center {
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .header-center h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 10px 0 5px;
+  }
+  
+  .header-center p {
+    font-size: 1.5rem;
+    margin-top: 3%;
+    margin: 0;
+    color: gray;
+  }
+  
+  .header-right {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    gap: 15px;
+  }
+
+  .header-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 2rem;
+    color: black;
+    border: black;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .header-button:hover {
+    background-color: #eaeaea;
+    color: #5a4b81; /* Turn purple on hover */
+    border-radius: 4px;
+  }
+
+  .header-button:active {
+    background-color: #eaeaea;
+    color: #5a4b81; 
+  }
+
+  .header-button.selected {
+    background-color: #eaeaea;
+    color: #5a4b81; /* Keep purple color when selected */
+    border-radius: 4px;
+  }
+  
+  /* Dropdown Menu Styles */
+  .dropdown-menu {
+    position: absolute;
+    top: 60px; /* Adjust position below the button */
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1000;
+    width: 200px; /* Adjust width to align with the design */
+  }
+  
+  .dropdown-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: black; /* Default black color for the title */
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 0 10px;
+  }
+  
+  .dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: small;
+    color: black; /* Default black color for dropdown items */
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: #5a4b81; /* Turn purple on hover */
+    border-radius: 4px;
+  }
+  
+  .dropdown-item:active {
+    background-color: #eaeaea; /* Optional: Slightly darker background when selected */
+    color: #5a4b81; /* Keep the purple color when clicked */
+  }
+
+  .dropdown-icon {
+     margin-right: 10px; /*Increase the space between the icon and the name */
+    }
+  
+  .dropdown-notification-item{
+    cursor: pointer;
+    padding: 0.1vw 0.1vw;
+    font-size: small;
+    color: black; /* Default black color for dropdown items */
+    transition: color 0.3s, background-color 0.3s;
+  }  
+  
+  .notification-item.read {
+    background-color: #f0f0f0; 
+  }
+
+  .notification-item.unread {
+    color:#5a4b81;
+    background-color: #fff; 
+  }
+
+  .notification-button {
+    position: relative;
+  }
+
+  .notification-count {
+    position: absolute;
+    top: -0.3rem;
+    right: -0.3rem;
+    background-color: #fff;
+    color: #5a4b81;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #5a4b81;
+    padding: 0.15rem 0.35rem;
+    font-size: medium;
+    font-weight: bold;
+  } 
+
+  .view-all-link {
+    text-align: center;
+    color: #5a4b81;
+    /* font-weight: bold; */
+    font-style: italic;
+    text-decoration: none;
+    display: block;
+    margin-top: 0.1vw;
+  }
+
+  .view-all-link:hover {
+    color: #5a4b81;
+    text-decoration: underline;
+  }

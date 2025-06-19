@@ -1,0 +1,51 @@
+.members {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds space between the assessment cards */
+  margin-top: 20px; /* Adds space between product card and assessments */
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 10px;
+}
+
+.memebers h2 {
+  margin: 0;
+}
+
+.member-list{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.add-member {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1rem;
+    border-radius: 100%;
+    background-color: #eee;
+    color: gray;
+}
+
+.pm-color {
+    color: #645394;
+}
+
+.confirm-add-member {
+    background-color: #645394;
+}
+
+.confirm-add-member:hover {
+    background-color: #4a3a6d;
+}
+
+.cancel-add-member:hover {
+    background-color: transparent;
+}
+

@@ -1,0 +1,56 @@
+[
+    {
+        "parentTaskName": "ISO/IEC TR 24029-1 - AI Assessment of the Robustness of Neural Networks",
+        "taskName": "ISO/IEC TR 24029-1 Subtask 3: Conduct Robustness Testing",
+        "taskDescription": "Conduct Robustness tests according to ISO-24029-1 or upload your own observeables.",
+        "taskItems": [
+            {
+                "id": 0,
+                "title": "Robustness Testing",
+                "description": "",
+                "tag": "Testing",
+                "implementationGuidance": "",
+                "optional": false,
+                "SDK": true,
+                "components": [
+                    {
+                        "type": "TestView",
+                        "label": "",
+                        "content": [
+                            {
+                                "id": "2032934r0v63",
+                                "name": "Perturbation Resistance: Homogeneous Noising",
+                                "standard": "ISO/IEC TR 24029-1",
+                                "automated": false,
+                                "measure": "Robustness",
+                                "metric": "Average PSNR Reduction",
+                                "result": "25dB",
+                                "status": "FAIL"
+                            },
+                            {
+                                "id": "3098475r0v64",
+                                "name": "Robustness Test: Adversarial Attack",
+                                "standard": "ISO/IEC TR 24029-1",
+                                "automated": true,
+                                "measure": "Robustness",
+                                "metric": "Adversarial Accuracy",
+                                "result": "0.65",
+                                "status": "PASS"
+                            },
+                            {
+                                "id": "4098475r0v65",
+                                "name": "Robustness Test: Noise Injection",
+                                "standard": "ISO/IEC TR 24029-1",
+                                "automated": true,
+                                "measure": "Robustness",
+                                "metric": "Accuracy under Noise",
+                                "result": "0.70",
+                                "status": "PASS"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

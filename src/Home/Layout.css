@@ -1,0 +1,6 @@
+/* src/Layout.css */
+.layout {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Hide the overflowing content */
+  }

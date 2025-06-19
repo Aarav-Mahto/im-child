@@ -1,0 +1,16 @@
+.pie-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: left;  /* Center the pie chart horizontally */
+  align-items: center;
+  position: relative;
+  width: 100%; /* fit-content; Set a fixed width for the chart */
+  height: 100%; /* fit-content; Set a fixed height for the chart */
+}

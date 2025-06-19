@@ -1,0 +1,31 @@
+.assessment-progress-card {
+    width: auto;
+    height: 80%;
+    background-color: #fff;
+    flex: 1;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .progress-circle {
+    width: 80px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .progress-info p {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #666666;
+    margin-bottom: 30px;
+  }
+
+  .assessment-progress-card h3 {
+    margin-top: 10;
+  }

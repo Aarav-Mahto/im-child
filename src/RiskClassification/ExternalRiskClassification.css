@@ -1,0 +1,87 @@
+
+
+.risk-classification-page 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.risk-classification-form 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form-group-container 
+{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group-content 
+{
+  width: 80%;
+  height: 100%;
+  padding: 30px;
+}
+
+.form-group-tag 
+{
+  display: flex;
+  padding: 4px 8px;
+  border-radius: 15px 0 0 15px;
+  background-color: #645394;
+  color: white;
+  font-size: 14px;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.risk-classification-header 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.risk-classification-footer 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+.risk-classification-footer button 
+{
+    width: 10vw;
+    padding: 10px 20px;
+    background-color: #645394;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.risk-classification-footer button:hover 
+{
+    background-color: #5d3e96;
+}
