@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaRegMessage } from "react-icons/fa6";
-import dummyThreads from "../../../Data/MessageFeed";
+import dummyThreads from "../../Data/MessageFeed";
 
 const MessageFeed = () => {
   const [selectedThread, setSelectedThread] = useState(dummyThreads[0]);
@@ -51,7 +51,7 @@ const MessageFeed = () => {
           {dummyThreads.map((thread) => (
             <div
               key={thread.id}
-              className={`flex items-center gap-3 px-4 py-2 cursor-pointer hover:bg-base-200 transition ${
+              className={`flex items-center gap-3 px-4 py-2 cursor-pointer hover:bg-gray-900 transition  ${
                 selectedThread.id === thread.id ? "bg-base-200" : ""
               }`}
               onClick={() => setSelectedThread(thread)}

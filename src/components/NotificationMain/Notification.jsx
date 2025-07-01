@@ -1,7 +1,7 @@
 import { useState } from "react";
-import LeftSidebar from "../Home/LeftSideBar/LeftSidebar";
+import LeftSidebar from "../LeftSideBar/LeftSidebar";
 import NotificationFeed from "./NotificationFeed";
-import RightSidebar from "../Home/RightSideBar/RightSidebar";
+import RightSidebar from "../RightSideBar/RightSidebar";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaRegMessage } from "react-icons/fa6";
 import dummyThreads from "../../Data/SmallMessage";

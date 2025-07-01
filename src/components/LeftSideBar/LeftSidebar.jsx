@@ -39,7 +39,7 @@ const LeftSidebar = () => {
           <SidebarItem icon={<IoMdHome size={24} />} label="Home" />
         </Link>
         <SidebarItem icon={<IoIosSearch size={24} />} label="Explore" />
-        <Link to='/notification'>
+        <Link to="/notification">
           <SidebarItem
             icon={<IoMdNotificationsOutline size={24} />}
             label="Notifications"
@@ -48,17 +48,19 @@ const LeftSidebar = () => {
         <Link to="/message">
           <SidebarItem icon={<CiMail size={24} />} label="Messages" />
         </Link>
-        <SidebarItem
-          icon={
-            <img
-              src="https://images.seeklogo.com/logo-png/61/2/grok-logo-png_seeklogo-613403.png"
-              alt="Grok"
-              width="24px"
-              className="object-contain invert"
-            />
-          }
-          label="Grok"
-        />
+        <a href="https://grok.x.ai" target="_blank" rel="noopener noreferrer">
+          <SidebarItem
+            icon={
+              <img
+                src="https://images.seeklogo.com/logo-png/61/2/grok-logo-png_seeklogo-613403.png"
+                alt="Grok"
+                width="24px"
+                className="object-contain invert"
+              />
+            }
+            label="Grok"
+          />
+        </a>
 
         {/* More */}
         <div
@@ -103,11 +105,13 @@ const LeftSidebar = () => {
         <SidebarItem icon={<IoPersonOutline size={24} />} label="Profile" />
 
         {/* Post Button */}
-        <div className="mt-4">
-          <button className="bg-white font-bold py-2 px-4 text-black rounded-full w-[80%] hover:bg-gray-800 transition duration-300">
-            Post
-          </button>
-        </div>
+        <Link to="/post">
+          <div className="mt-4">
+            <button className="bg-white font-bold py-2 px-4 text-black rounded-full w-[80%] hover:bg-gray-800 transition duration-300">
+              Post
+            </button>
+          </div>
+        </Link>
       </div>
       {/* Profile Section */}
       <div className="mt-10 mb-2">
