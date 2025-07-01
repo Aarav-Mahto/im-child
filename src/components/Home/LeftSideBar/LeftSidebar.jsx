@@ -5,6 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { CiMail } from "react-icons/ci";
 import { LiaClipboardListSolid } from "react-icons/lia";
+import { BsCheckCircleFill } from "react-icons/bs";
 import {
   IoBookmarkOutline,
   IoBagAdd,
@@ -38,10 +39,12 @@ const LeftSidebar = () => {
           <SidebarItem icon={<IoMdHome size={24} />} label="Home" />
         </Link>
         <SidebarItem icon={<IoIosSearch size={24} />} label="Explore" />
-        <SidebarItem
-          icon={<IoMdNotificationsOutline size={24} />}
-          label="Notifications"
-        />
+        <Link to='/notification'>
+          <SidebarItem
+            icon={<IoMdNotificationsOutline size={24} />}
+            label="Notifications"
+          />
+        </Link>
         <Link to="/message">
           <SidebarItem icon={<CiMail size={24} />} label="Messages" />
         </Link>
@@ -104,6 +107,26 @@ const LeftSidebar = () => {
           <button className="bg-white font-bold py-2 px-4 text-black rounded-full w-[80%] hover:bg-gray-800 transition duration-300">
             Post
           </button>
+        </div>
+      </div>
+      {/* Profile Section */}
+      <div className="mt-10 mb-2">
+        <div className="flex items-center gap-2 p-2 hover:bg-gray-300 rounded-2xl cursor-pointer">
+          <img
+            src="https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg="
+            alt="Parth"
+            className="w-6 h-6 md:w-10 md:h-10 rounded-full object-cover"
+          />
+          <div className="flex flex-col">
+            <div className="flex items-center gap-1">
+              <h1 className="text-sm md:text-md font-bold text-white flex items-center gap-1">
+                parth
+                <BsCheckCircleFill size={15} className="text-blue-600" />
+              </h1>
+            </div>
+            <p className="text-sm text-gray-500">@parth220...</p>
+          </div>
+          <div className="ml-auto text-2xl whitespace-nowrap">...</div>
         </div>
       </div>
     </div>

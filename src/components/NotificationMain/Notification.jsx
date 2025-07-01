@@ -1,26 +1,27 @@
-import React from "react";
 import { useState } from "react";
-import LeftSidebar from "./LeftSideBar/LeftSidebar";
-import Feed from "./Feed/Feed";
-import RightSidebar from "./RightSideBar/RightSidebar";
-import dummyThreads from "../../Data/SmallMessage";
+import LeftSidebar from "../Home/LeftSideBar/LeftSidebar";
+import NotificationFeed from "./NotificationFeed";
+import RightSidebar from "../Home/RightSideBar/RightSidebar";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaRegMessage } from "react-icons/fa6";
+import dummyThreads from "../../Data/SmallMessage";
 
-const Home = () => {
+const Notification = () => {
   const [selectedThread, setSelectedThread] = useState(dummyThreads[0]);
-
   return (
-    <div className="flex justify-between max-w-5xl mx-auto">
+    <div className="flex max-w-6xl mx-auto min-h-screen">
+      {/* Left Sidebar */}
       <LeftSidebar />
-      <Feed />
 
-      {/* Right Sidebar + Message Feed  */}
+      {/* Notification Feed (Center) */}
+      <NotificationFeed />
+
+      {/* Right Column: Sidebar + Message Feed */}
       <RightSidebar />
-      {/* <div className="hidden md:block mt-auto">
+      <div className="hidden md:block mt-auto">
         <div className="h-96 w-full float-start rounded-2xl border border-gray-700 flex flex-col justify-between mb-2 shadow-2xl shadow-gray-800">
           {/* Header */}
-          {/* <div className="p-2 border-b border-gray-700">
+          <div className="p-2 border-b border-gray-700">
             <div className="flex items-center justify-between gap-3">
               <h1 className="text-md text-gray-200 font-semibold">Messages</h1>
               <div className="flex items-center gap-2">
@@ -37,7 +38,7 @@ const Home = () => {
           </div>
 
           {/* Message Feed */}
-          {/* <div className="flex-1 overflow-y-auto">
+          <div className="flex-1 overflow-y-auto">
             {dummyThreads.map((thread) => (
               <div
                 key={thread.id}
@@ -72,10 +73,10 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </div> 
-      </div> */}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default Notification;

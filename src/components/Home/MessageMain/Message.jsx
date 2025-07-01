@@ -5,7 +5,7 @@ import ChatSection from './ChatSection'
 
 const Message = () => {
   return (
-    <div className='flex justify-between max-w-4xl mx-auto'>
+    <div className='flex justify-between max-w-5xl mx-auto'>
         {/* Left SideBar */}
         < LeftSidebar />
         < MessageFeed />
