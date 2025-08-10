@@ -67,7 +67,12 @@ const RevenueImpact: React.FC = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className={styles.revenueSection} id="revenue-impact">
+    <section ref={sectionRef} className="py-32 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white relative overflow-hidden" id="revenue-impact">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        backgroundImage: `radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)`
+      }}></div>
+      
       <Container>
         <div className={styles.sectionHeader}>
           <div className={styles.sectionTag}>

@@ -81,26 +81,31 @@ const AIWorkforce: React.FC = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className={styles.workforceSection} id="ai-workforce">
+    <section ref={sectionRef} className="py-32 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white relative overflow-hidden" id="ai-workforce">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        backgroundImage: `radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)`
+      }}></div>
+      
       <Container>
-        <div className={styles.sectionHeader}>
-          <div className={styles.sectionTag}>
-            <span>🤖 Your AI Team</span>
+        <div className="text-center mb-16 relative z-10">
+          <div className="inline-flex items-center px-4 py-2 bg-brand-purple/10 border border-brand-purple/20 rounded-full text-brand-purple-dark text-sm font-semibold mb-6">
+            🤖 Your AI Team
           </div>
           
-          <h2 className={styles.sectionTitle}>
-            Meet Your New <span className={styles.highlight}>Dream Team</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 font-serif">
+            Meet Your New <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">Dream Team</span>
           </h2>
           
-          <p className={styles.sectionSubtitle}>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
             Four AI specialists who work 24/7, never call in sick, and genuinely care 
             about your studio&apos;s success as much as you do.
           </p>
         </div>
 
-        <div className={styles.agentGrid}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 relative z-10">
           {aiAgents.map((agent, index) => (
-            <div key={index} className={`${styles.agentCard} fade-in`}>
+            <div key={index} className="glass-strong p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden group fade-in">
               <div className={styles.agentHeader}>
                 <div className={styles.agentAvatar}>
                   <span className={styles.avatarIcon}>{agent.avatar}</span>
