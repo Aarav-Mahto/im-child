@@ -1,5 +1,5 @@
 //src/components/ui/GlassCard.tsx
-
+"use client";
 import React from 'react'
 import styles from '@/styles/glass-card.module.css'
 

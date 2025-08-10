@@ -1,5 +1,5 @@
 //src/common/Container.tsx
-
+"use client";
 
 import React from 'react'
 import styles from '@/styles/container.module.css'
