@@ -124,27 +124,27 @@ const OSArchitecture: React.FC = () => {
         </div>
 
         {/* OS Showcase */}
-        <div className="glass-strong p-12 text-center shadow-2xl max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold text-text-primary mb-4 tracking-tight">
+        <div className="glass-strong p-6 sm:p-8 lg:p-12 text-center shadow-2xl max-w-4xl mx-auto">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-4 tracking-tight">
             From Chaos to Clarity in Minutes
           </h3>
-          <p className="text-lg text-text-secondary leading-relaxed mb-8">
+          <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-6 sm:mb-8">
             Watch your business transform from scattered tools and manual processes to a unified, intelligent system that runs itself.
           </p>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 flex-wrap">
-            <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 flex items-center gap-4 min-w-72 text-left">
-              <div className="text-3xl">📊</div>
-              <div className="text-sm leading-relaxed text-text-secondary">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
+            <div className="bg-neutral-50 border border-neutral-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 w-full sm:max-w-sm lg:min-w-72 text-left">
+              <div className="text-2xl sm:text-3xl flex-shrink-0">📊</div>
+              <div className="text-xs sm:text-sm leading-relaxed text-text-secondary">
                 <strong className="text-text-primary font-semibold">Before:</strong> Scattered data, manual reports, guessing what works
               </div>
             </div>
 
-            <div className="text-brand-purple text-2xl md:rotate-0 rotate-90">→</div>
+            <div className="text-brand-purple text-xl sm:text-2xl lg:rotate-0 rotate-90 flex-shrink-0">→</div>
 
-            <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 flex items-center gap-4 min-w-72 text-left">
-              <div className="text-3xl">🎯</div>
-              <div className="text-sm leading-relaxed text-text-secondary">
+            <div className="bg-neutral-50 border border-neutral-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 w-full sm:max-w-sm lg:min-w-72 text-left">
+              <div className="text-2xl sm:text-3xl flex-shrink-0">🎯</div>
+              <div className="text-xs sm:text-sm leading-relaxed text-text-secondary">
                 <strong className="text-text-primary font-semibold">After:</strong> Real-time insights, automated optimization, clear growth path
               </div>
             </div>

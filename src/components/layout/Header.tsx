@@ -95,40 +95,42 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         <nav 
-          className={`block absolute top-full left-0 right-0 bg-white/98 backdrop-blur-xl border-b border-white/20 shadow-xl transition-all duration-300 ease-out-cubic p-4 md:hidden ${
+          className={`block absolute top-full left-0 right-0 bg-white backdrop-blur-xl border-b border-neutral-200 shadow-2xl transition-all duration-300 ease-out-cubic md:hidden ${
             isMobileMenuOpen 
               ? 'translate-y-0 opacity-100 visible' 
               : '-translate-y-full opacity-0 invisible'
           }`}
           aria-hidden={!isMobileMenuOpen}
-        >
-          <button 
-            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer p-4 text-left transition-all duration-300 ease-in-out border-b border-black/5 hover:text-text-primary hover:bg-neutral-50"
-            onClick={() => scrollToSection('architecture')}
-          >
-            AI Modules
-          </button>
-          <button 
-            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer p-4 text-left transition-all duration-300 ease-in-out border-b border-black/5 hover:text-text-primary hover:bg-neutral-50"
-            onClick={() => scrollToSection('ai-workforce')}
-          >
-            AI Workforce
-          </button>
-          <button 
-            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer p-4 text-left transition-all duration-300 ease-in-out border-b border-black/5 hover:text-text-primary hover:bg-neutral-50"
-            onClick={() => scrollToSection('revenue-impact')}
-          >
-            Revenue Results
-          </button>
-          <button 
-            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer p-4 text-left transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-neutral-50"
-            onClick={() => scrollToSection('magic-inbox')}
-          >
-            Smart Communication
-          </button>
-          <button className="block w-full mx-4 mt-4 bg-gradient-to-br from-brand-purple to-brand-purple-dark text-white border-none px-4 py-4 rounded-xl font-semibold text-base cursor-pointer transition-all duration-300 ease-out-cubic shadow-md hover:-translate-y-0.5 hover:shadow-lg">
-            Get Started
-          </button>
+        ></nav>
+          <div className="py-2">
+            <button 
+              className="block w-full bg-white border-none text-text-secondary font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out border-b border-neutral-100 hover:text-text-primary hover:bg-neutral-50"
+              onClick={() => scrollToSection('architecture')}
+            >
+              AI Modules
+            </button>
+            <button 
+              className="block w-full bg-white border-none text-text-secondary font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out border-b border-neutral-100 hover:text-text-primary hover:bg-neutral-50"
+              onClick={() => scrollToSection('ai-workforce')}
+            >
+              AI Workforce
+            </button>
+            <button 
+              className="block w-full bg-white border-none text-text-secondary font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out border-b border-neutral-100 hover:text-text-primary hover:bg-neutral-50"
+              onClick={() => scrollToSection('revenue-impact')}
+            >
+              Revenue Results
+            </button>
+            <button 
+              className="block w-full bg-white border-none text-text-secondary font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-neutral-50"
+              onClick={() => scrollToSection('magic-inbox')}
+            >
+              Smart Communication
+            </button>
+            <button className="block w-full mx-4 mt-4 mb-2 bg-gradient-to-br from-brand-purple to-brand-purple-dark text-white border-none px-6 py-4 rounded-xl font-semibold text-base cursor-pointer transition-all duration-300 ease-out-cubic shadow-md hover:-translate-y-0.5 hover:shadow-lg">
+              Get Started
+            </button>
+          </div>
         </nav>
       </Container>
     </header>
