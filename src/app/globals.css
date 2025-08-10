@@ -210,6 +210,43 @@ img {
   box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
 }
 
+/* Custom keyframes for floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom responsive breakpoints */
+@media (max-width: 475px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 475px) and (max-width: 639px) {
+  .xs\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  .xs\:w-auto {
+    width: auto;
+  }
+  
+  .xs\:flex-row {
+    flex-direction: row;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

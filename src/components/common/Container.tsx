@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -15,13 +16,13 @@ const Container: React.FC<ContainerProps> = ({
 }) => {
   const sizeClasses = {
     sm: "max-w-2xl",
-    md: "max-w-3xl",
+    md: "max-w-4xl", 
     lg: "max-w-7xl",
     xl: "max-w-7xl",
   };
 
   const containerClasses = [
-    "w-full mx-auto px-4 sm:px-6 lg:px-8",
+    "w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12",
     sizeClasses[size],
     className,
   ]
