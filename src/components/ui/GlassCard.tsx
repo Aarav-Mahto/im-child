@@ -22,22 +22,22 @@ const GlassCard: React.FC<GlassCardProps> = ({
   onClick,
   className = ''
 }) => {
-  const baseClasses = 'rounded-2xl transition-all duration-300 ease-out-cubic relative overflow-hidden'
+  const baseClasses = 'rounded-xl sm:rounded-2xl transition-all duration-300 ease-out-cubic relative overflow-hidden'
 
   const variantClasses = {
-    default: 'bg-white/25 backdrop-blur-xl border border-white/20 shadow-glass',
-    strong: 'bg-white/40 backdrop-blur-2xl border border-white/25 shadow-xl',
-    subtle: 'bg-white/15 backdrop-blur-lg border border-white/10 shadow-lg'
+    default: 'bg-white/30 backdrop-blur-xl border border-white/30 shadow-glass',
+    strong: 'bg-white/45 backdrop-blur-2xl border border-white/35 shadow-xl',
+    subtle: 'bg-white/20 backdrop-blur-lg border border-white/20 shadow-lg'
   }
 
   const paddingClasses = {
-    sm: 'p-4',
-    md: 'p-6',
-    lg: 'p-8'
+    sm: 'p-3 sm:p-4',
+    md: 'p-4 sm:p-6',
+    lg: 'p-6 sm:p-8'
   }
 
-  const hoverClasses = hover ? 'hover:-translate-y-2 hover:shadow-2xl' : ''
-  const clickableClasses = clickable ? 'cursor-pointer border-none bg-none text-left font-inherit color-inherit w-full focus:outline-none focus-visible:outline-2 focus-visible:outline-brand-purple focus-visible:outline-offset-2 active:scale-98' : ''
+  const hoverClasses = hover ? 'hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-xl sm:hover:shadow-2xl hover:scale-[1.02] sm:hover:scale-105' : ''
+  const clickableClasses = clickable ? 'cursor-pointer border-none bg-none text-left font-inherit color-inherit w-full focus:outline-none focus-visible:outline-2 focus-visible:outline-brand-purple focus-visible:outline-offset-2 active:scale-95 sm:active:scale-98 min-h-[44px] sm:min-h-auto' : ''
 
   const classes = [
     baseClasses,

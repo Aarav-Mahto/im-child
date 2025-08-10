@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react'
@@ -153,31 +152,51 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Enhanced Floating Elements - Responsive */}
-            <div className="absolute inset-0 pointer-events-none hidden lg:block xl:block 2xl:block">
-              <div className="absolute top-1/4 -right-2 lg:-right-4 xl:-right-6 2xl:-right-8 flex items-center gap-1.5 lg:gap-2 xl:gap-3 px-2.5 lg:px-3 xl:px-4 2xl:px-5 py-1.5 lg:py-2 xl:py-3 bg-white/20 backdrop-blur-xl border border-white/30 rounded-lg xl:rounded-xl text-xs lg:text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/30">
-                <span className="text-base lg:text-lg xl:text-xl 2xl:text-2xl">📈</span>
+            {/* Enhanced Floating Elements - Desktop Only with better positioning */}
+            <div className="absolute inset-0 pointer-events-none hidden xl:block 2xl:block">
+              <div className="absolute top-1/4 -right-4 xl:-right-6 2xl:-right-8 flex items-center gap-1.5 xl:gap-2 2xl:gap-3 px-3 xl:px-4 2xl:px-5 py-2 xl:py-3 bg-white/30 backdrop-blur-xl border border-white/40 rounded-lg xl:rounded-xl text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/40">
+                <span className="text-lg xl:text-xl 2xl:text-2xl">📈</span>
                 Revenue +£2,847
               </div>
-              <div className="absolute top-1/2 -left-4 lg:-left-6 xl:-left-8 2xl:-left-12 flex items-center gap-1.5 lg:gap-2 xl:gap-3 px-2.5 lg:px-3 xl:px-4 2xl:px-5 py-1.5 lg:py-2 xl:py-3 bg-white/20 backdrop-blur-xl border border-white/30 rounded-lg xl:rounded-xl text-xs lg:text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/30" style={{ animationDelay: '1s' }}>
-                <span className="text-base lg:text-lg xl:text-xl 2xl:text-2xl">🤖</span>
+              <div className="absolute top-1/2 -left-6 xl:-left-8 2xl:-left-12 flex items-center gap-1.5 xl:gap-2 2xl:gap-3 px-3 xl:px-4 2xl:px-5 py-2 xl:py-3 bg-white/30 backdrop-blur-xl border border-white/40 rounded-lg xl:rounded-xl text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/40" style={{ animationDelay: '1s' }}>
+                <span className="text-lg xl:text-xl 2xl:text-2xl">🤖</span>
                 AI Working
               </div>
-              <div className="absolute bottom-1/4 right-4 lg:right-6 xl:right-8 2xl:right-12 flex items-center gap-1.5 lg:gap-2 xl:gap-3 px-2.5 lg:px-3 xl:px-4 2xl:px-5 py-1.5 lg:py-2 xl:py-3 bg-white/20 backdrop-blur-xl border border-white/30 rounded-lg xl:rounded-xl text-xs lg:text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/30" style={{ animationDelay: '2s' }}>
-                <span className="text-base lg:text-lg xl:text-xl 2xl:text-2xl">⚡</span>
+              <div className="absolute bottom-1/4 right-6 xl:right-8 2xl:right-12 flex items-center gap-1.5 xl:gap-2 2xl:gap-3 px-3 xl:px-4 2xl:px-5 py-2 xl:py-3 bg-white/30 backdrop-blur-xl border border-white/40 rounded-lg xl:rounded-xl text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/40" style={{ animationDelay: '2s' }}>
+                <span className="text-lg xl:text-xl 2xl:text-2xl">⚡</span>
                 Auto-pilot ON
               </div>
             </div>
 
-            {/* Mobile & Tablet Floating Elements */}
-            <div className="absolute inset-0 pointer-events-none block lg:hidden">
-              <div className="absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center gap-1 px-2 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-xl border border-white/30 rounded-lg text-xs sm:text-sm font-semibold text-text-primary shadow-lg animate-float transition-all duration-300 hover:scale-105">
-                <span className="text-sm sm:text-base">📈</span>
+            {/* Tablet Floating Elements - More visible positioning */}
+            <div className="absolute inset-0 pointer-events-none hidden md:block lg:block xl:hidden">
+              <div className="absolute top-6 right-6 flex items-center gap-2 px-3 py-2 bg-white/35 backdrop-blur-xl border border-white/50 rounded-lg text-sm font-semibold text-text-primary shadow-lg animate-float transition-all duration-300 hover:scale-105">
+                <span className="text-base">📈</span>
+                +£2K Revenue
+              </div>
+              <div className="absolute top-1/2 -translate-y-1/2 left-6 flex items-center gap-2 px-3 py-2 bg-white/35 backdrop-blur-xl border border-white/50 rounded-lg text-sm font-semibold text-text-primary shadow-lg animate-float transition-all duration-300 hover:scale-105" style={{ animationDelay: '1s' }}>
+                <span className="text-base">🤖</span>
+                AI Working
+              </div>
+              <div className="absolute bottom-6 right-6 flex items-center gap-2 px-3 py-2 bg-white/35 backdrop-blur-xl border border-white/50 rounded-lg text-sm font-semibold text-text-primary shadow-lg animate-float transition-all duration-300 hover:scale-105" style={{ animationDelay: '2s' }}>
+                <span className="text-base">⚡</span>
+                Auto-pilot
+              </div>
+            </div>
+
+            {/* Mobile Floating Elements - Simplified and More Visible */}
+            <div className="absolute inset-0 pointer-events-none block md:hidden">
+              <div className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-2 bg-white/40 backdrop-blur-xl border border-white/60 rounded-lg text-xs font-semibold text-text-primary shadow-lg animate-float transition-all duration-300 hover:scale-105 z-10">
+                <span className="text-sm">📈</span>
                 +£2K
               </div>
-              <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 flex items-center gap-1 px-2 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-xl border border-white/30 rounded-lg text-xs sm:text-sm font-semibold text-text-primary shadow-lg animate-float transition-all duration-300 hover:scale-105" style={{ animationDelay: '1s' }}>
-                <span className="text-sm sm:text-base">🤖</span>
+              <div className="absolute top-1/2 -translate-y-1/2 left-4 flex items-center gap-1.5 px-3 py-2 bg-white/40 backdrop-blur-xl border border-white/60 rounded-lg text-xs font-semibold text-text-primary shadow-lg animate-float transition-all duration-300 hover:scale-105 z-10" style={{ animationDelay: '1s' }}>
+                <span className="text-sm">🤖</span>
                 AI ON
+              </div>
+              <div className="absolute bottom-4 right-4 flex items-center gap-1.5 px-3 py-2 bg-white/40 backdrop-blur-xl border border-white/60 rounded-lg text-xs font-semibold text-text-primary shadow-lg animate-float transition-all duration-300 hover:scale-105 z-10" style={{ animationDelay: '2s' }}>
+                <span className="text-sm">⚡</span>
+                Auto
               </div>
             </div>
           </div>
