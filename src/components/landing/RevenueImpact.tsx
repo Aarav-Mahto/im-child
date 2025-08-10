@@ -89,82 +89,90 @@ const RevenueImpact: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 relative z-10"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 relative z-10">
           {revenueMetrics.map((metric, index) => (
-            <div key={index} className={`${styles.metricCard} fade-in`}>
-              <div className={styles.metricHeader}>
-                <div className={styles.metricIcon}>
+            <div key={index} className="glass-strong p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden group fade-in">
+              <div className="flex items-start justify-between mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl">
                   <span>{metric.icon}</span>
                 </div>
-                <div className={styles.metricTrend}>{metric.trend}</div>
+                <div className="bg-brand-success/10 text-brand-success px-3 py-1 rounded-full text-sm font-bold border border-brand-success/20">
+                  {metric.trend}
+                </div>
               </div>
               
-              <div className={styles.metricValue}>{metric.value}</div>
-              <h3 className={styles.metricLabel}>{metric.label}</h3>
-              <p className={styles.metricDescription}>{metric.description}</p>
+              <div className="text-4xl font-bold text-white mb-3 font-serif">{metric.value}</div>
+              <h3 className="text-xl font-bold text-white mb-4 font-serif">{metric.label}</h3>
+              <p className="text-white/80 leading-relaxed">{metric.description}</p>
             </div>
           ))}
         </div>
 
-        <div className={styles.revenueBreakdown}>
-          <div className={styles.breakdownCard}>
-            <h3 className={styles.breakdownTitle}>
-              How We Generate <span className={styles.highlight}>£14K+ Monthly</span>
+        <div className="mt-16 relative z-10">
+          <div className="glass-strong p-12 rounded-3xl">
+            <h3 className="text-3xl font-bold text-white mb-4 text-center font-serif">
+              How We Generate <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">£14K+ Monthly</span>
             </h3>
-            <p className={styles.breakdownSubtitle}>
+            <p className="text-xl text-white/80 text-center mb-12 max-w-2xl mx-auto">
               Real revenue streams, not marketing fluff
             </p>
             
-            <div className={styles.revenueStreams}>
-              <div className={styles.streamItem}>
-                <div className={styles.streamIcon}>🎯</div>
-                <div className={styles.streamContent}>
-                  <div className={styles.streamAmount}>£6,200</div>
-                  <div className={styles.streamSource}>Smart Booking Conversion</div>
-                  <div className={styles.streamDetail}>AI converts 3.2X more enquiries into paid sessions</div>
+            <div className="space-y-6 mb-12">
+              <div className="flex items-center gap-6 p-6 bg-white/5 rounded-2xl border border-white/10">
+                <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                  🎯
+                </div>
+                <div className="flex-1">
+                  <div className="text-2xl font-bold text-brand-success mb-1">£6,200</div>
+                  <div className="text-lg font-semibold text-white mb-2">Smart Booking Conversion</div>
+                  <div className="text-white/80">AI converts 3.2X more enquiries into paid sessions</div>
                 </div>
               </div>
               
-              <div className={styles.streamItem}>
-                <div className={styles.streamIcon}>💝</div>
-                <div className={styles.streamContent}>
-                  <div className={styles.streamAmount}>£4,800</div>
-                  <div className={styles.streamSource}>Retention & Re-engagement</div>
-                  <div className={styles.streamDetail}>Predictive AI prevents churn and wins back lost members</div>
+              <div className="flex items-center gap-6 p-6 bg-white/5 rounded-2xl border border-white/10">
+                <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                  💝
+                </div>
+                <div className="flex-1">
+                  <div className="text-2xl font-bold text-brand-success mb-1">£4,800</div>
+                  <div className="text-lg font-semibold text-white mb-2">Retention & Re-engagement</div>
+                  <div className="text-white/80">Predictive AI prevents churn and wins back lost members</div>
                 </div>
               </div>
               
-              <div className={styles.streamItem}>
-                <div className={styles.streamIcon}>⚡</div>
-                <div className={styles.streamContent}>
-                  <div className={styles.streamAmount}>£3,247</div>
-                  <div className={styles.streamSource}>Intelligent Upselling</div>
-                  <div className={styles.streamDetail}>Perfect timing suggestions that feel helpful, not pushy</div>
+              <div className="flex items-center gap-6 p-6 bg-white/5 rounded-2xl border border-white/10">
+                <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                  ⚡
+                </div>
+                <div className="flex-1">
+                  <div className="text-2xl font-bold text-brand-success mb-1">£3,247</div>
+                  <div className="text-lg font-semibold text-white mb-2">Intelligent Upselling</div>
+                  <div className="text-white/80">Perfect timing suggestions that feel helpful, not pushy</div>
                 </div>
               </div>
             </div>
             
-            <div className={styles.guaranteeCard}>
-              <div className={styles.guaranteeIcon}>✨</div>
-              <div className={styles.guaranteeText}>
+            <div className="flex items-center gap-4 p-6 bg-gradient-to-r from-brand-purple/20 to-brand-accent/20 rounded-2xl border border-brand-purple/30">
+              <div className="text-3xl">✨</div>
+              <div className="text-white">
                 <strong>ROI Guarantee:</strong> See measurable results within 30 days or we&apos;ll refund your investment.
               </div>
             </div>
           </div>
         </div>
 
-        <div className={styles.socialProofStats}>
-          <div className={styles.proofStat}>
-            <span className={styles.proofNumber}>200+</span>
-            <span className={styles.proofLabel}>Studios transformed</span>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 relative z-10">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-brand-accent mb-2 font-serif">200+</div>
+            <div className="text-white/80">Studios transformed</div>
           </div>
-          <div className={styles.proofStat}>
-            <span className={styles.proofNumber}>£2.3M+</span>
-            <span className={styles.proofLabel}>Extra revenue generated</span>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-brand-accent mb-2 font-serif">£2.3M+</div>
+            <div className="text-white/80">Extra revenue generated</div>
           </div>
-          <div className={styles.proofStat}>
-            <span className={styles.proofNumber}>98%</span>
-            <span className={styles.proofLabel}>Would recommend</span>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-brand-accent mb-2 font-serif">98%</div>
+            <div className="text-white/80">Would recommend</div>
           </div>
         </div>
       </Container>

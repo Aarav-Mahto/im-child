@@ -1,4 +1,3 @@
-
 //src/components/landing/MagicInbox.tsx
 
 'use client'
@@ -72,46 +71,50 @@ const MagicInbox: React.FC = () => {
       <div className="absolute inset-0 pointer-events-none" style={{
         backgroundImage: `radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)`
       }}></div>
-      
+
       <Container>
-        <div className={styles.sectionHeader}>
-          <div className={styles.sectionTag}>
-            <span>💬 Smart Communication</span>
+        <div className="text-center mb-16 relative z-10">
+          <div className="inline-flex items-center px-4 py-2 bg-brand-purple/10 border border-brand-purple/20 rounded-full text-brand-purple-dark text-sm font-semibold mb-6">
+            💬 Smart Communication
           </div>
-          
-          <h2 className={styles.sectionTitle}>
-            Every Message Feels <span className={styles.highlight}>Personal</span>
+
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 font-serif">
+            Your <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">Magic Inbox</span> That Actually Works
           </h2>
-          
-          <p className={styles.sectionSubtitle}>
-            Your AI doesn&apos;t just send messages — it creates genuine connections. 
-            See how intelligent communication transforms relationships.
+
+          <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+            No more staring at blank screens wondering what to say. Our AI crafts 
+            messages that sound exactly like you — warm, professional, and genuinely helpful.
           </p>
         </div>
 
-        <div className={styles.examplesGrid}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 relative z-10">
           {communicationExamples.map((example, index) => (
-            <div key={index} className={`${styles.exampleCard} fade-in`}>
-              <div className={styles.exampleHeader}>
-                <div className={styles.exampleIcon}>
-                  <span>{example.icon}</span>
-                </div>
-                <div className={styles.exampleOutcome}>{example.outcome}</div>
+            <div key={index} className="glass-strong p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden group fade-in">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-white mb-3 font-serif">{example.title}</h3>
+                <div className="text-brand-accent font-semibold mb-3">{example.scenario}</div>
               </div>
-              
-              <h3 className={styles.exampleTitle}>{example.title}</h3>
-              <p className={styles.exampleScenario}>{example.scenario}</p>
-              
-              <div className={styles.messagePreview}>
-                <div className={styles.messageHeader}>
-                  <div className={styles.messageDots}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+
+              <p className="text-white/70 text-sm mb-6 italic">{example.scenario}</p>
+
+              <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden mb-6">
+                <div className="flex items-center justify-between px-4 py-3 bg-white/5 border-b border-white/10">
+                  <div className="flex gap-1">
+                    <span className="w-2 h-2 bg-white/40 rounded-full"></span>
+                    <span className="w-2 h-2 bg-white/40 rounded-full"></span>
+                    <span className="w-2 h-2 bg-white/40 rounded-full"></span>
                   </div>
-                  <span className={styles.messageFrom}>Wondrous AI</span>
+                  <span className="text-xs text-white/60 font-semibold">From: Your Studio</span>
                 </div>
-                <p className={styles.messageContent}>{example.message}</p>
+                <div className="p-4 text-sm leading-relaxed text-white/90">
+                  {example.message}
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 p-4 bg-brand-success/10 rounded-2xl border border-brand-success/20">
+                <span className="text-2xl">✨</span>
+                <span className="text-brand-success font-medium">{example.outcome}</span>
               </div>
             </div>
           ))}
@@ -122,7 +125,7 @@ const MagicInbox: React.FC = () => {
             <h3 className={styles.showcaseTitle}>
               What Makes Our AI Different
             </h3>
-            
+
             <div className={styles.differentiators}>
               <div className={styles.differentiatorCard}>
                 <div className={styles.differentiatorIcon}>🧠</div>
@@ -131,7 +134,7 @@ const MagicInbox: React.FC = () => {
                   Understands context, mood, and member history to craft messages that actually resonate.
                 </p>
               </div>
-              
+
               <div className={styles.differentiatorCard}>
                 <div className={styles.differentiatorIcon}>⏰</div>
                 <h4 className={styles.differentiatorTitle}>Perfect Timing</h4>
@@ -139,7 +142,7 @@ const MagicInbox: React.FC = () => {
                   Knows when to reach out, when to follow up, and when to give space.
                 </p>
               </div>
-              
+
               <div className={styles.differentiatorCard}>
                 <div className={styles.differentiatorIcon}>❤️</div>
                 <h4 className={styles.differentiatorTitle}>Genuinely Helpful</h4>
@@ -164,7 +167,7 @@ const MagicInbox: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className={styles.testimonialCard}>
             <p className={styles.testimonialText}>
               &quot;My members constantly compliment our communication. They have no idea it&apos;s AI - it just feels like we really care about them.&quot;
