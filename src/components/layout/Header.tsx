@@ -101,7 +101,7 @@ const Header: React.FC = () => {
               : '-translate-y-full opacity-0 invisible'
           }`}
           aria-hidden={!isMobileMenuOpen}
-        ></nav>
+        >
           <div className="py-2">
             <button 
               className="block w-full bg-white border-none text-text-secondary font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out border-b border-neutral-100 hover:text-text-primary hover:bg-neutral-50"
