@@ -46,15 +46,16 @@ const Hero: React.FC = () => {
             </div>
 
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-extrabold leading-tight text-text-primary mb-3 sm:mb-4 lg:mb-6 xl:mb-8 font-serif tracking-tight">
-              Your Studio Runs{" "}
+              From Chaos to{" "}
               <span className="bg-gradient-to-r from-brand-purple via-purple-500 to-brand-accent bg-clip-text text-transparent animate-pulse">
-                Itself
-              </span>
+                Clarity
+              </span>{" "}
+              in Minutes
             </h1>
 
             <p className="text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed text-text-secondary mb-4 sm:mb-6 lg:mb-8 xl:mb-10 max-w-full lg:max-w-2xl xl:max-w-3xl mx-auto lg:mx-0">
-              Stop drowning in admin. Our AI workforce handles bookings,
-              retention, and growth while you focus on coaching.
+              Transform scattered processes into a unified system that grows your business automatically.
+              AI-powered. Human-focused. Results guaranteed.
             </p>
 
             <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 lg:gap-5 xl:gap-6 items-center justify-center lg:justify-start mb-4 sm:mb-6 lg:mb-8 xl:mb-10">
@@ -63,14 +64,14 @@ const Hero: React.FC = () => {
                 size="lg"
                 className="w-full xs:w-auto min-w-40 sm:min-w-48 lg:min-w-52 xl:min-w-56 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1 active:scale-95"
               >
-                Watch Demo →
+                Start Free Trial →
               </Button>
               <Button
                 variant="secondary"
                 size="lg"
                 className="w-full xs:w-auto min-w-40 sm:min-w-48 lg:min-w-52 xl:min-w-56 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95"
               >
-                How it works
+                See How It Works
               </Button>
             </div>
 
@@ -78,10 +79,10 @@ const Hero: React.FC = () => {
             <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 xl:gap-8 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto lg:mx-0">
               <div className="text-center lg:text-left transform transition-all duration-500 hover:scale-105 cursor-pointer p-2 sm:p-3 lg:p-4 rounded-xl hover:bg-white/10 hover:shadow-lg">
                 <div className="text-lg xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-brand-purple mb-1 leading-none">
-                  200+
+                  500+
                 </div>
                 <div className="text-text-secondary font-medium text-xs sm:text-sm lg:text-base leading-tight">
-                  Studios transformed
+                  Businesses automated
                 </div>
               </div>
               <div
@@ -89,10 +90,10 @@ const Hero: React.FC = () => {
                 style={{ transitionDelay: "100ms" }}
               >
                 <div className="text-lg xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-brand-purple mb-1 leading-none">
-                  £2.3M+
+                  98%
                 </div>
                 <div className="text-text-secondary font-medium text-xs sm:text-sm lg:text-base leading-tight">
-                  Extra revenue generated
+                  Client satisfaction
                 </div>
               </div>
             </div>
