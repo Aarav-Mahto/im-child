@@ -93,29 +93,39 @@ const AIDifference: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 relative z-10">
           {differenceFeatures.map((feature, index) => (
-            <div key={index} className="glass-strong p-8 rounded-3xl text-center transition-all duration-500 ease-out-cubic hover:-translate-y-4 hover:shadow-2xl hover:scale-105 hover:bg-white/15 hover:backdrop-blur-xl group fade-in cursor-pointer border border-white/10">
-              <div className="w-20 h-20 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-lg group-hover:shadow-brand-purple/30">
-                {feature.icon}
+            <div key={index} className="glass-strong p-8 rounded-3xl text-center transition-all duration-700 ease-out-cubic hover:-translate-y-6 hover:shadow-2xl hover:shadow-brand-purple/20 hover:scale-105 hover:bg-white/20 hover:backdrop-blur-xl group fade-in cursor-pointer border border-white/10 hover:border-brand-purple/30 relative overflow-hidden">
+              {/* Hover glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/10 to-brand-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl"></div>
+              
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 transition-all duration-700 group-hover:scale-125 group-hover:rotate-12 group-hover:shadow-xl group-hover:shadow-brand-purple/40 transform-gpu">
+                  {feature.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 font-serif transition-all duration-500 group-hover:text-brand-accent group-hover:scale-105 transform-gpu">{feature.title}</h3>
+                <p className="text-white/80 leading-relaxed transition-all duration-500 group-hover:text-white group-hover:scale-102 transform-gpu">{feature.description}</p>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 font-serif transition-all duration-300 group-hover:text-brand-accent">{feature.title}</h3>
-              <p className="text-white/80 leading-relaxed transition-all duration-300 group-hover:text-white/95">{feature.description}</p>
             </div>
           ))}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="glass-strong p-8 rounded-3xl transition-all duration-500 ease-out-cubic hover:-translate-y-3 hover:shadow-2xl hover:scale-102 hover:bg-white/15 hover:backdrop-blur-xl group fade-in cursor-pointer border border-white/10">
-              <div className="mb-6">
-                <p className="text-lg text-white/90 italic leading-relaxed transition-all duration-300 group-hover:text-white">
-                  &quot;{testimonial.quote}&quot;
-                </p>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-accent rounded-full flex items-center justify-center text-white font-bold text-sm transition-all duration-300 group-hover:scale-110">
-                  {testimonial.avatar}
+            <div key={index} className="glass-strong p-8 rounded-3xl transition-all duration-700 ease-out-cubic hover:-translate-y-4 hover:shadow-2xl hover:shadow-brand-purple/15 hover:scale-102 hover:bg-white/20 hover:backdrop-blur-xl group fade-in cursor-pointer border border-white/10 hover:border-brand-purple/30 relative overflow-hidden">
+              {/* Hover glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/5 to-brand-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl"></div>
+              
+              <div className="relative z-10">
+                <div className="mb-6">
+                  <p className="text-lg text-white/90 italic leading-relaxed transition-all duration-500 group-hover:text-white group-hover:scale-102 transform-gpu">
+                    &quot;{testimonial.quote}&quot;
+                  </p>
                 </div>
-                <div className="text-white font-semibold transition-all duration-300 group-hover:text-brand-accent">{testimonial.author}</div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-accent rounded-full flex items-center justify-center text-white font-bold text-sm transition-all duration-500 group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-brand-purple/30 transform-gpu">
+                    {testimonial.avatar}
+                  </div>
+                  <div className="text-white font-semibold transition-all duration-500 group-hover:text-brand-accent group-hover:scale-105 transform-gpu">{testimonial.author}</div>
+                </div>
               </div>
             </div>
           ))}
