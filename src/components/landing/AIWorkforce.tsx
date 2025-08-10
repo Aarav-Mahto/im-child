@@ -86,17 +86,17 @@ const AIWorkforce: React.FC = () => {
       <div className="absolute inset-0 pointer-events-none" style={{
         backgroundImage: `radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)`
       }}></div>
-      
+
       <Container>
         <div className="text-center mb-16 relative z-10">
           <div className="inline-flex items-center px-4 py-2 bg-brand-purple/10 border border-brand-purple/20 rounded-full text-brand-purple-dark text-sm font-semibold mb-6">
             🤖 Your AI Team
           </div>
-          
+
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 font-serif">
             Meet Your New <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">Dream Team</span>
           </h2>
-          
+
           <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
             Four AI specialists who work 24/7, never call in sick, and genuinely care 
             about your studio&apos;s success as much as you do.
@@ -120,13 +120,13 @@ const AIWorkforce: React.FC = () => {
                   {agent.impact}
                 </div>
               </div>
-              
+
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-white mb-2 font-serif">{agent.name}</h3>
                 <p className="text-brand-accent font-semibold text-lg mb-3">{agent.role}</p>
                 <p className="text-white/80 italic leading-relaxed">&quot;{agent.personality}&quot;</p>
               </div>
-              
+
               <div>
                 <h4 className="text-white font-semibold mb-3">Specializes in:</h4>
                 <div className="flex flex-wrap gap-2">
@@ -142,35 +142,33 @@ const AIWorkforce: React.FC = () => {
         </div>
 
         <div className="mt-16 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 glass-light rounded-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
-                ⚡
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 relative z-10">
+            <div className="glass-light p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:bg-white/20 group cursor-pointer">
+              <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                🤖
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 font-serif">Always On</h3>
-              <p className="text-white/80 leading-relaxed">
-                Your AI team works 24/7, 365 days a year. No holidays, 
-                no sick days, no bad moods.
+              <h3 className="text-xl font-bold text-white mb-4 font-serif transition-all duration-300 group-hover:text-brand-accent">Never Sleeps</h3>
+              <p className="text-white/80 leading-relaxed transition-all duration-300 group-hover:text-white/90">
+                Working 24/7 to capture leads, nurture prospects, 
+                and turn conversations into bookings while you focus on training.
               </p>
             </div>
-            
-            <div className="text-center p-8 glass-light rounded-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+            <div className="glass-light p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:bg-white/20 group cursor-pointer">
+              <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 🎯
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 font-serif">Zero Errors</h3>
-              <p className="text-white/80 leading-relaxed">
-                Perfect accuracy every time. No double bookings, 
-                no missed payments, no forgotten follow-ups.
+              <h3 className="text-xl font-bold text-white mb-4 font-serif transition-all duration-300 group-hover:text-brand-accent">Always Accurate</h3>
+              <p className="text-white/80 leading-relaxed transition-all duration-300 group-hover:text-white/90">
+                Handles member inquiries with perfect consistency, 
+                never missing details or giving wrong information.
               </p>
             </div>
-            
-            <div className="text-center p-8 glass-light rounded-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+            <div className="glass-light p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:bg-white/20 group cursor-pointer">
+              <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 💡
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 font-serif">Gets Smarter</h3>
-              <p className="text-white/80 leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-4 font-serif transition-all duration-300 group-hover:text-brand-accent">Gets Smarter</h3>
+              <p className="text-white/80 leading-relaxed transition-all duration-300 group-hover:text-white/90">
                 Learns your studio&apos;s unique patterns and preferences 
                 to serve your members better every day.
               </p>

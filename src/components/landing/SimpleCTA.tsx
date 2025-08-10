@@ -35,33 +35,33 @@ const SimpleCTA: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            <div className="glass-light p-6 rounded-2xl text-center transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl">
-              <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-accent rounded-xl flex items-center justify-center text-xl mb-4 mx-auto">
+            <div className="glass-light p-6 rounded-2xl text-center transition-all duration-300 ease-out-cubic hover:-translate-y-3 hover:shadow-2xl hover:scale-105 hover:bg-white/20 group cursor-pointer">
+              <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-accent rounded-xl flex items-center justify-center text-xl mb-4 mx-auto transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 ⚡
               </div>
-              <div className="text-lg font-bold text-white mb-1">24hr Setup</div>
-              <div className="text-sm text-white/70">Live in one day</div>
+              <div className="text-lg font-bold text-white mb-1 transition-all duration-300 group-hover:text-brand-accent">24hr Setup</div>
+              <div className="text-sm text-white/70 transition-all duration-300 group-hover:text-white/90">Live in one day</div>
             </div>
-            <div className="glass-light p-6 rounded-2xl text-center transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl">
-              <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-accent rounded-xl flex items-center justify-center text-xl mb-4 mx-auto">
+            <div className="glass-light p-6 rounded-2xl text-center transition-all duration-300 ease-out-cubic hover:-translate-y-3 hover:shadow-2xl hover:scale-105 hover:bg-white/20 group cursor-pointer">
+              <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-accent rounded-xl flex items-center justify-center text-xl mb-4 mx-auto transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 🔒
               </div>
-              <div className="text-lg font-bold text-white mb-1">Bank Security</div>
-              <div className="text-sm text-white/70">Your data stays safe</div>
+              <div className="text-lg font-bold text-white mb-1 transition-all duration-300 group-hover:text-brand-accent">Bank Security</div>
+              <div className="text-sm text-white/70 transition-all duration-300 group-hover:text-white/90">Your data stays safe</div>
             </div>
-            <div className="glass-light p-6 rounded-2xl text-center transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl">
-              <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-accent rounded-xl flex items-center justify-center text-xl mb-4 mx-auto">
+            <div className="glass-light p-6 rounded-2xl text-center transition-all duration-300 ease-out-cubic hover:-translate-y-3 hover:shadow-2xl hover:scale-105 hover:bg-white/20 group cursor-pointer">
+              <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-accent rounded-xl flex items-center justify-center text-xl mb-4 mx-auto transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 📈
               </div>
-              <div className="text-lg font-bold text-white mb-1">30-Day Results</div>
-              <div className="text-sm text-white/70">Or money back</div>
+              <div className="text-lg font-bold text-white mb-1 transition-all duration-300 group-hover:text-brand-accent">30-Day Results</div>
+              <div className="text-sm text-white/70 transition-all duration-300 group-hover:text-white/90">Or money back</div>
             </div>
-            <div className="glass-light p-6 rounded-2xl text-center transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl">
-              <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-accent rounded-xl flex items-center justify-center text-xl mb-4 mx-auto">
+            <div className="glass-light p-6 rounded-2xl text-center transition-all duration-300 ease-out-cubic hover:-translate-y-3 hover:shadow-2xl hover:scale-105 hover:bg-white/20 group cursor-pointer">
+              <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-accent rounded-xl flex items-center justify-center text-xl mb-4 mx-auto transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 💬
               </div>
-              <div className="text-lg font-bold text-white mb-1">24/7 Support</div>
-              <div className="text-sm text-white/70">We're here to help</div>
+              <div className="text-lg font-bold text-white mb-1 transition-all duration-300 group-hover:text-brand-accent">24/7 Support</div>
+              <div className="text-sm text-white/70 transition-all duration-300 group-hover:text-white/90">We're here to help</div>
             </div>
           </div>
         </div>
