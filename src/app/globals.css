@@ -134,4 +134,16 @@ img {
   .glass-subtle {
     @apply bg-white/60 backdrop-blur-lg border border-white/10 shadow-lg;
   }
+
+  .ease-out-cubic {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  .scale-102 {
+    transform: scale(1.02);
+  }
+
+  .hover\:scale-102:hover {
+    transform: scale(1.02);
+  }
 }

@@ -5,7 +5,6 @@
 
 import { useEffect, useRef } from 'react'
 import Container from '@/components/common/Container'
-import styles from '@/styles/landing.module.css'
 
 interface RevenueMetric {
   value: string;
