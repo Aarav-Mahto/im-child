@@ -4,7 +4,6 @@
 
 import { useEffect, useRef } from 'react'
 import Container from '@/components/common/Container'
-import styles from '@/styles/landing.module.css'
 
 interface CommunicationExample {
   title: string;
@@ -120,33 +119,33 @@ const MagicInbox: React.FC = () => {
           ))}
         </div>
 
-        <div className={styles.communicationShowcase}>
-          <div className={styles.showcaseContent}>
-            <h3 className={styles.showcaseTitle}>
+        <div className="py-16 relative z-10">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6 font-serif">
               What Makes Our AI Different
             </h3>
 
-            <div className={styles.differentiators}>
-              <div className={styles.differentiatorCard}>
-                <div className={styles.differentiatorIcon}>🧠</div>
-                <h4 className={styles.differentiatorTitle}>Emotional Intelligence</h4>
-                <p className={styles.differentiatorText}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="glass-strong p-8 text-center transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl">
+                <div className="text-4xl mb-4">🧠</div>
+                <h4 className="text-xl font-bold text-white mb-3">Emotional Intelligence</h4>
+                <p className="text-white/70 leading-relaxed">
                   Understands context, mood, and member history to craft messages that actually resonate.
                 </p>
               </div>
 
-              <div className={styles.differentiatorCard}>
-                <div className={styles.differentiatorIcon}>⏰</div>
-                <h4 className={styles.differentiatorTitle}>Perfect Timing</h4>
-                <p className={styles.differentiatorText}>
+              <div className="glass-strong p-8 text-center transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl">
+                <div className="text-4xl mb-4">⏰</div>
+                <h4 className="text-xl font-bold text-white mb-3">Perfect Timing</h4>
+                <p className="text-white/70 leading-relaxed">
                   Knows when to reach out, when to follow up, and when to give space.
                 </p>
               </div>
 
-              <div className={styles.differentiatorCard}>
-                <div className={styles.differentiatorIcon}>❤️</div>
-                <h4 className={styles.differentiatorTitle}>Genuinely Helpful</h4>
-                <p className={styles.differentiatorText}>
+              <div className="glass-strong p-8 text-center transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl">
+                <div className="text-4xl mb-4">❤️</div>
+                <h4 className="text-xl font-bold text-white mb-3">Genuinely Helpful</h4>
+                <p className="text-white/70 leading-relaxed">
                   Never feels like marketing. Always feels like a friend who happens to run a studio.
                 </p>
               </div>
@@ -154,29 +153,29 @@ const MagicInbox: React.FC = () => {
           </div>
         </div>
 
-        <div className={styles.testimonialsGrid}>
-          <div className={styles.testimonialCard}>
-            <p className={styles.testimonialText}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
+          <div className="glass-strong p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl">
+            <p className="text-white/90 text-lg leading-relaxed mb-6 italic">
               &quot;I actually look forward to their messages. They&apos;re helpful, never pushy, and somehow always know exactly what I need to hear.&quot;
             </p>
-            <div className={styles.testimonialAuthor}>
-              <div className={styles.authorAvatar}>SM</div>
-              <div className={styles.authorInfo}>
-                <span className={styles.authorName}>Sarah M.</span>
-                <span className={styles.authorRole}>Yoga Member, London</span>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-brand-purple to-brand-accent rounded-full flex items-center justify-center text-white font-bold text-sm">SM</div>
+              <div>
+                <span className="block text-white font-semibold">Sarah M.</span>
+                <span className="block text-white/60 text-sm">Yoga Member, London</span>
               </div>
             </div>
           </div>
 
-          <div className={styles.testimonialCard}>
-            <p className={styles.testimonialText}>
+          <div className="glass-strong p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl">
+            <p className="text-white/90 text-lg leading-relaxed mb-6 italic">
               &quot;My members constantly compliment our communication. They have no idea it&apos;s AI - it just feels like we really care about them.&quot;
             </p>
-            <div className={styles.testimonialAuthor}>
-              <div className={styles.authorAvatar}>JK</div>
-              <div className={styles.authorInfo}>
-                <span className={styles.authorName}>James K.</span>
-                <span className={styles.authorRole}>Studio Owner, Manchester</span>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-brand-purple to-brand-accent rounded-full flex items-center justify-center text-white font-bold text-sm">JK</div>
+              <div>
+                <span className="block text-white font-semibold">James K.</span>
+                <span className="block text-white/60 text-sm">Studio Owner, Manchester</span>
               </div>
             </div>
           </div>
