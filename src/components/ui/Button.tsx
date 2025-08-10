@@ -44,7 +44,8 @@ const Button: React.FC<ButtonProps> = ({
     variants[variant],
     sizeClasses[size],
     fullWidth ? 'w-full' : '',
-    loading ? 'cursor-wait' : '',
+    loading ? 'cursor-wait' : 'transform transition-all duration-300 hover:scale-105 active:scale-95',
+    disabled ? 'opacity-50 cursor-not-allowed transform-none' : '',
     className
   ].filter(Boolean).join(' ')
 
