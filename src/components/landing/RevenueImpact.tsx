@@ -74,22 +74,22 @@ const RevenueImpact: React.FC = () => {
       }}></div>
       
       <Container>
-        <div className={styles.sectionHeader}>
-          <div className={styles.sectionTag}>
-            <span>💎 Proven Results</span>
+        <div className="text-center mb-16 relative z-10">
+          <div className="inline-flex items-center px-4 py-2 bg-brand-purple/10 border border-brand-purple/20 rounded-full text-brand-purple-dark text-sm font-semibold mb-6">
+            💎 Proven Results
           </div>
           
-          <h2 className={styles.sectionTitle}>
-            Real Revenue. <span className={styles.highlight}>Real Results.</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 font-serif">
+            Real Revenue. <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">Real Results.</span>
           </h2>
           
-          <p className={styles.sectionSubtitle}>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
             Stop wondering &quot;what if&quot; and start seeing actual numbers. 
             Our AI doesn&apos;t just promise growth — it delivers it.
           </p>
         </div>
 
-        <div className={styles.metricsGrid}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 relative z-10"></div>
           {revenueMetrics.map((metric, index) => (
             <div key={index} className={`${styles.metricCard} fade-in`}>
               <div className={styles.metricHeader}>

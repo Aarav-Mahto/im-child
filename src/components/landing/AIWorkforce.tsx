@@ -106,28 +106,32 @@ const AIWorkforce: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 relative z-10">
           {aiAgents.map((agent, index) => (
             <div key={index} className="glass-strong p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden group fade-in">
-              <div className={styles.agentHeader}>
-                <div className={styles.agentAvatar}>
-                  <span className={styles.avatarIcon}>{agent.avatar}</span>
-                  <div className={styles.statusIndicator}>
-                    <span className={styles.statusDot}></span>
-                    <span className={styles.statusText}>{agent.status}</span>
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl">
+                    {agent.avatar}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-brand-success rounded-full animate-pulse"></div>
+                    <span className="text-brand-success text-sm font-medium">{agent.status}</span>
                   </div>
                 </div>
-                <div className={styles.agentImpact}>{agent.impact}</div>
+                <div className="bg-brand-success/10 text-brand-success px-3 py-1 rounded-full text-sm font-bold border border-brand-success/20">
+                  {agent.impact}
+                </div>
               </div>
               
-              <div className={styles.agentInfo}>
-                <h3 className={styles.agentName}>{agent.name}</h3>
-                <p className={styles.agentRole}>{agent.role}</p>
-                <p className={styles.agentPersonality}>&quot;{agent.personality}&quot;</p>
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-white mb-2 font-serif">{agent.name}</h3>
+                <p className="text-brand-accent font-semibold text-lg mb-3">{agent.role}</p>
+                <p className="text-white/80 italic leading-relaxed">&quot;{agent.personality}&quot;</p>
               </div>
               
-              <div className={styles.agentCapabilities}>
-                <h4 className={styles.capabilitiesTitle}>Specializes in:</h4>
-                <div className={styles.capabilityTags}>
+              <div>
+                <h4 className="text-white font-semibold mb-3">Specializes in:</h4>
+                <div className="flex flex-wrap gap-2">
                   {agent.capabilities.map((capability, capIndex) => (
-                    <span key={capIndex} className={styles.capabilityTag}>
+                    <span key={capIndex} className="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm font-medium border border-white/20 backdrop-blur-sm">
                       {capability}
                     </span>
                   ))}
@@ -137,30 +141,36 @@ const AIWorkforce: React.FC = () => {
           ))}
         </div>
 
-        <div className={styles.teamShowcase}>
-          <div className={styles.showcaseGrid}>
-            <div className={styles.showcaseCard}>
-              <div className={styles.showcaseIcon}>⚡</div>
-              <h3 className={styles.showcaseTitle}>Always On</h3>
-              <p className={styles.showcaseText}>
+        <div className="mt-16 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-8 glass-light rounded-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+                ⚡
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4 font-serif">Always On</h3>
+              <p className="text-white/80 leading-relaxed">
                 Your AI team works 24/7, 365 days a year. No holidays, 
                 no sick days, no bad moods.
               </p>
             </div>
             
-            <div className={styles.showcaseCard}>
-              <div className={styles.showcaseIcon}>🎯</div>
-              <h3 className={styles.showcaseTitle}>Zero Errors</h3>
-              <p className={styles.showcaseText}>
+            <div className="text-center p-8 glass-light rounded-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+                🎯
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4 font-serif">Zero Errors</h3>
+              <p className="text-white/80 leading-relaxed">
                 Perfect accuracy every time. No double bookings, 
                 no missed payments, no forgotten follow-ups.
               </p>
             </div>
             
-            <div className={styles.showcaseCard}>
-              <div className={styles.showcaseIcon}>💡</div>
-              <h3 className={styles.showcaseTitle}>Gets Smarter</h3>
-              <p className={styles.showcaseText}>
+            <div className="text-center p-8 glass-light rounded-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+                💡
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4 font-serif">Gets Smarter</h3>
+              <p className="text-white/80 leading-relaxed">
                 Learns your studio&apos;s unique patterns and preferences 
                 to serve your members better every day.
               </p>
