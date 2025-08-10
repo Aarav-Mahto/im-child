@@ -1,5 +1,4 @@
-
-"use client";
+'use client'
 
 import React, { useState, useEffect } from 'react'
 import Container from '../common/Container'
@@ -82,40 +81,48 @@ const Header: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
+            className="md:hidden relative w-8 h-8 flex items-center justify-center"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="flex md:hidden items-center justify-center w-10 h-10 bg-none border-none cursor-pointer p-0"
+            aria-label="Toggle menu"
           >
-            <div className={`w-6 h-4.5 relative transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'rotate-0' : 'rotate-0'}`}>
-              <span className={`block absolute h-0.5 w-full bg-text-primary rounded-sm opacity-100 left-0 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'top-2 rotate-45' : 'top-0 rotate-0'}`}></span>
-              <span className={`block absolute h-0.5 w-full bg-text-primary rounded-sm opacity-100 left-0 top-2 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'opacity-0 -left-12' : 'opacity-100'}`}></span>
-              <span className={`block absolute h-0.5 w-full bg-text-primary rounded-sm opacity-100 left-0 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'top-2 -rotate-45' : 'top-4 rotate-0'}`}></span>
+            <div className="relative w-6 h-6">
+              <span className={`absolute block h-0.5 w-full bg-text-primary rounded-sm opacity-100 left-0 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'top-3 rotate-45' : 'top-0'}`}></span>
+              <span className={`absolute block h-0.5 w-full bg-text-primary rounded-sm opacity-100 left-0 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'opacity-0 -left-12' : 'top-2'}`}></span>
+              <span className={`absolute block h-0.5 w-full bg-text-primary rounded-sm opacity-100 left-0 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'top-3 -rotate-45' : 'top-4'}`}></span>
             </div>
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        <nav className={`md:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-xl border-b border-white/20 shadow-xl transition-all duration-300 ease-out-cubic px-0 py-4 ${isMobileMenuOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'}`}>
-          <button
+        <nav 
+          className={`block absolute top-full left-0 right-0 bg-white/98 backdrop-blur-xl border-b border-white/20 shadow-xl transition-all duration-300 ease-out-cubic p-4 md:hidden ${
+            isMobileMenuOpen 
+              ? 'translate-y-0 opacity-100 visible' 
+              : '-translate-y-full opacity-0 invisible'
+          }`}
+          aria-hidden={!isMobileMenuOpen}
+        >
+          <button 
+            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer p-4 text-left transition-all duration-300 ease-in-out border-b border-black/5 hover:text-text-primary hover:bg-neutral-50"
             onClick={() => scrollToSection('architecture')}
-            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer px-8 py-4 text-left transition-all duration-300 border-b border-black/5 last:border-b-0 hover:text-brand-purple hover:bg-brand-purple/5 hover:pl-10"
           >
             AI Modules
           </button>
-          <button
+          <button 
+            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer p-4 text-left transition-all duration-300 ease-in-out border-b border-black/5 hover:text-text-primary hover:bg-neutral-50"
             onClick={() => scrollToSection('ai-workforce')}
-            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer px-8 py-4 text-left transition-all duration-300 border-b border-black/5 last:border-b-0 hover:text-brand-purple hover:bg-brand-purple/5 hover:pl-10"
           >
             AI Workforce
           </button>
-          <button
+          <button 
+            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer p-4 text-left transition-all duration-300 ease-in-out border-b border-black/5 hover:text-text-primary hover:bg-neutral-50"
             onClick={() => scrollToSection('revenue-impact')}
-            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer px-8 py-4 text-left transition-all duration-300 border-b border-black/5 last:border-b-0 hover:text-brand-purple hover:bg-brand-purple/5 hover:pl-10"
           >
             Revenue Results
           </button>
-          <button
+          <button 
+            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer p-4 text-left transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-neutral-50"
             onClick={() => scrollToSection('magic-inbox')}
-            className="block w-full bg-none border-none text-text-secondary font-medium text-base cursor-pointer px-8 py-4 text-left transition-all duration-300 border-b border-black/5 last:border-b-0 hover:text-brand-purple hover:bg-brand-purple/5 hover:pl-10"
           >
             Smart Communication
           </button>

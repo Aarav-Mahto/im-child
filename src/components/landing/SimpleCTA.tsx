@@ -1,8 +1,8 @@
-
 "use client";
 
 import React from 'react'
 import Container from '../common/Container'
+import Button from '../ui/Button'
 
 const SimpleCTA: React.FC = () => {
   return (

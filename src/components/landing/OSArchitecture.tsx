@@ -1,8 +1,8 @@
-
 "use client";
 
 import React from 'react'
 import Container from '../common/Container'
+import GlassCard from '../ui/GlassCard'
 
 interface OSModule {
   icon: string;
@@ -84,7 +84,7 @@ const OSArchitecture: React.FC = () => {
           {osModules.map((module, index) => {
             const colorClasses = {
               purple: 'from-purple-500 to-purple-600',
-              pink: 'from-pink-500 to-pink-600', 
+              pink: 'from-pink-500 to-pink-600',
               cyan: 'from-cyan-500 to-cyan-600',
               green: 'from-green-500 to-green-600',
               orange: 'from-orange-500 to-orange-600',
@@ -94,7 +94,7 @@ const OSArchitecture: React.FC = () => {
             return (
               <div key={index} className="glass-strong p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden group">
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${colorClasses[module.color as keyof typeof colorClasses]}`}></div>
-                
+
                 <div className="flex items-center justify-between mb-6">
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${colorClasses[module.color as keyof typeof colorClasses]} flex items-center justify-center text-2xl shadow-md`}>
                     {module.icon}
@@ -103,14 +103,14 @@ const OSArchitecture: React.FC = () => {
                     {module.metric}
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-text-primary mb-3 leading-tight">
                   {module.title}
                 </h3>
                 <p className="text-text-secondary leading-relaxed mb-6">
                   {module.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2">
                   {module.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="bg-neutral-100 text-text-secondary text-xs font-medium px-3 py-2 rounded-lg border border-neutral-200">
@@ -139,9 +139,9 @@ const OSArchitecture: React.FC = () => {
                 <strong className="text-text-primary font-semibold">Before:</strong> Scattered data, manual reports, guessing what works
               </div>
             </div>
-            
+
             <div className="text-brand-purple text-2xl md:rotate-0 rotate-90">→</div>
-            
+
             <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 flex items-center gap-4 min-w-72 text-left">
               <div className="text-3xl">🎯</div>
               <div className="text-sm leading-relaxed text-text-secondary">
