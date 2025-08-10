@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react'
@@ -26,13 +25,12 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   type = 'button',
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center gap-2 border-none rounded-xl font-semibold cursor-pointer transition-all duration-300 ease-out-cubic text-decoration-none font-inherit outline-none relative overflow-hidden focus-visible:outline-2 focus-visible:outline-brand-purple focus-visible:outline-offset-2 disabled:opacity-60 disabled:cursor-not-allowed active:scale-98'
+  const baseClasses = 'inline-flex items-center justify-center font-semibold transition-all duration-300 ease-out-cubic focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
 
-  const variantClasses = {
-    primary: 'bg-gradient-to-br from-brand-purple to-brand-purple-dark text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:-translate-y-px',
-    secondary: 'bg-white/90 text-text-primary shadow-lg border border-white/20 backdrop-blur-sm hover:bg-white hover:-translate-y-0.5 hover:shadow-xl',
-    outline: 'bg-transparent text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white hover:-translate-y-0.5 hover:shadow-lg',
-    ghost: 'bg-transparent text-text-primary border border-transparent hover:bg-white/10 hover:-translate-y-px'
+  const variants = {
+    primary: 'bg-gradient-to-r from-brand-purple to-brand-accent text-white hover:shadow-xl hover:-translate-y-1 focus:ring-brand-purple border-none',
+    secondary: 'bg-neutral-100 text-neutral-900 border border-neutral-200 hover:bg-neutral-200 hover:shadow-md focus:ring-neutral-500',
+    ghost: 'bg-transparent text-white border border-white/30 hover:bg-white/10 hover:border-white/50 hover:shadow-md focus:ring-white/50'
   }
 
   const sizeClasses = {
@@ -43,7 +41,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const classes = [
     baseClasses,
-    variantClasses[variant],
+    variants[variant],
     sizeClasses[size],
     fullWidth ? 'w-full' : '',
     loading ? 'cursor-wait' : '',
