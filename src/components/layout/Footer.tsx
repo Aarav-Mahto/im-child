@@ -1,132 +1,134 @@
 
-//src/components/layout/Footer.tsx
+"use client";
 
-'use client'
-
-import Container from '@/components/common/Container'
-import styles from '@/styles/footer.module.css'
+import React from 'react'
+import Container from '../common/Container'
 
 const Footer: React.FC = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
-    <footer className={styles.footer}>
+    <footer className="bg-gradient-to-br from-neutral-900 to-neutral-800 text-white pt-16 pb-8 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        backgroundImage: `radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)`
+      }}></div>
+
       <Container>
-        <div className={styles.footerContent}>
-          <div className={styles.footerMain}>
-            <div className={styles.footerBrand}>
-              <div className={styles.logo}>
-                <div className={styles.logoIcon}>✨</div>
-                <span className={styles.logoText}>Wondrous</span>
+        <div className="relative z-10">
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-16 mb-12">
+            {/* Footer Brand */}
+            <div className="md:col-span-2 flex flex-col gap-6">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-gradient-to-br from-brand-purple to-brand-accent rounded-xl flex items-center justify-center text-xl shadow-md">
+                  🚀
+                </div>
+                <span className="text-2xl font-extrabold text-white">AllWondrous</span>
               </div>
-              <p className={styles.brandDescription}>
-                The AI Operating System for Modern Fitness Studios. 
-                Transform your business while you focus on what you love.
+              <p className="text-white/80 leading-relaxed text-base max-w-72">
+                The intelligent business operating system that transforms how you work, grow, and succeed. 
+                Powered by AI, built for results.
               </p>
-              <div className={styles.socialLinks}>
-                <a href="#" className={styles.socialLink} aria-label="Twitter">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
+              <div className="flex gap-4">
+                <a
+                  href="#"
+                  className="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white/70 transition-all duration-300 ease-out-cubic no-underline hover:bg-white/20 hover:text-white hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  📧
                 </a>
-                <a href="#" className={styles.socialLink} aria-label="LinkedIn">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
+                <a
+                  href="#"
+                  className="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white/70 transition-all duration-300 ease-out-cubic no-underline hover:bg-white/20 hover:text-white hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  🐦
                 </a>
-                <a href="#" className={styles.socialLink} aria-label="YouTube">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
+                <a
+                  href="#"
+                  className="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white/70 transition-all duration-300 ease-out-cubic no-underline hover:bg-white/20 hover:text-white hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  💼
                 </a>
               </div>
             </div>
 
-            <div className={styles.footerLinks}>
-              <div className={styles.linkGroup}>
-                <h4 className={styles.linkGroupTitle}>Product</h4>
-                <button 
+            {/* Footer Links */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 md:col-span-3 gap-8 md:gap-12">
+              <div className="flex flex-col gap-4">
+                <h4 className="text-base font-bold text-white mb-2 uppercase tracking-wider">Product</h4>
+                <button
                   onClick={() => scrollToSection('architecture')}
-                  className={styles.footerLink}
+                  className="bg-none border-none text-white/70 text-sm cursor-pointer transition-all duration-300 text-left py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1"
                 >
                   AI Modules
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('ai-workforce')}
-                  className={styles.footerLink}
+                  className="bg-none border-none text-white/70 text-sm cursor-pointer transition-all duration-300 text-left py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1"
                 >
                   AI Workforce
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('revenue-impact')}
-                  className={styles.footerLink}
+                  className="bg-none border-none text-white/70 text-sm cursor-pointer transition-all duration-300 text-left py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1"
                 >
                   Revenue Results
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('magic-inbox')}
-                  className={styles.footerLink}
+                  className="bg-none border-none text-white/70 text-sm cursor-pointer transition-all duration-300 text-left py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1"
                 >
                   Smart Communication
                 </button>
               </div>
 
-              <div className={styles.linkGroup}>
-                <h4 className={styles.linkGroupTitle}>Company</h4>
-                <a href="/about" className={styles.footerLink}>About Us</a>
-                <a href="/careers" className={styles.footerLink}>Careers</a>
-                <a href="/blog" className={styles.footerLink}>Blog</a>
-                <a href="/press" className={styles.footerLink}>Press</a>
+              <div className="flex flex-col gap-4">
+                <h4 className="text-base font-bold text-white mb-2 uppercase tracking-wider">Company</h4>
+                <a href="/about" className="text-white/70 text-sm no-underline transition-all duration-300 py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1">About Us</a>
+                <a href="/careers" className="text-white/70 text-sm no-underline transition-all duration-300 py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1">Careers</a>
+                <a href="/blog" className="text-white/70 text-sm no-underline transition-all duration-300 py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1">Blog</a>
+                <a href="/press" className="text-white/70 text-sm no-underline transition-all duration-300 py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1">Press</a>
               </div>
 
-              <div className={styles.linkGroup}>
-                <h4 className={styles.linkGroupTitle}>Support</h4>
-                <a href="/help" className={styles.footerLink}>Help Center</a>
-                <a href="/contact" className={styles.footerLink}>Contact</a>
-                <button 
-                  onClick={() => scrollToSection('demo')}
-                  className={styles.footerLink}
-                >
-                  Book Demo
-                </button>
-                <a href="/status" className={styles.footerLink}>System Status</a>
+              <div className="flex flex-col gap-4">
+                <h4 className="text-base font-bold text-white mb-2 uppercase tracking-wider">Resources</h4>
+                <a href="/help" className="text-white/70 text-sm no-underline transition-all duration-300 py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1">Help Center</a>
+                <a href="/guides" className="text-white/70 text-sm no-underline transition-all duration-300 py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1">Guides</a>
+                <a href="/api" className="text-white/70 text-sm no-underline transition-all duration-300 py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1">API Docs</a>
+                <a href="/status" className="text-white/70 text-sm no-underline transition-all duration-300 py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1">System Status</a>
               </div>
 
-              <div className={styles.linkGroup}>
-                <h4 className={styles.linkGroupTitle}>Legal</h4>
-                <a href="/privacy" className={styles.footerLink}>Privacy Policy</a>
-                <a href="/terms" className={styles.footerLink}>Terms of Service</a>
-                <a href="/security" className={styles.footerLink}>Security</a>
-                <a href="/gdpr" className={styles.footerLink}>GDPR</a>
+              <div className="flex flex-col gap-4">
+                <h4 className="text-base font-bold text-white mb-2 uppercase tracking-wider">Legal</h4>
+                <a href="/privacy" className="text-white/70 text-sm no-underline transition-all duration-300 py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1">Privacy Policy</a>
+                <a href="/terms" className="text-white/70 text-sm no-underline transition-all duration-300 py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1">Terms of Service</a>
+                <a href="/cookies" className="text-white/70 text-sm no-underline transition-all duration-300 py-1 relative hover:text-white hover:pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-0 before:h-px before:bg-gradient-to-r before:from-brand-purple before:to-brand-accent before:transition-all before:duration-300 hover:before:w-1">Cookie Policy</a>
               </div>
             </div>
           </div>
 
-          <div className={styles.footerBottom}>
-            <div className={styles.bottomContent}>
-              <p className={styles.copyright}>
-                &copy; 2024 Wondrous Technologies Ltd. All rights reserved.
+          {/* Footer Bottom */}
+          <div className="border-t border-white/10 pt-8">
+            <div className="flex flex-col md:flex-row items-center gap-4 md:justify-between text-center md:text-left">
+              <p className="text-white/60 text-sm m-0">
+                © 2024 AllWondrous. All rights reserved.
               </p>
-              
-              <div className={styles.bottomLinks}>
-                <span className={styles.bottomText}>Made with ❤️ for studio owners</span>
-                <button 
+              <div className="flex items-center gap-6">
+                <span className="text-white/60 text-sm">Built with ❤️ for business growth</span>
+                <button
                   onClick={scrollToTop}
-                  className={styles.scrollToTop}
-                  aria-label="Scroll to top"
+                  className="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white/70 cursor-pointer transition-all duration-300 ease-out-cubic hover:bg-white/20 hover:text-white hover:-translate-y-0.5 hover:shadow-md active:-translate-y-0"
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="m18 15-6-6-6 6"/>
-                  </svg>
+                  ↑
                 </button>
               </div>
             </div>

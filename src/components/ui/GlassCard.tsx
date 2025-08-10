@@ -1,42 +1,57 @@
-//src/components/ui/GlassCard.tsx
+
 "use client";
+
 import React from 'react'
-import styles from '@/styles/glass-card.module.css'
 
 interface GlassCardProps {
   children: React.ReactNode;
   variant?: 'default' | 'strong' | 'subtle';
-  hover?: boolean;
   padding?: 'sm' | 'md' | 'lg';
-  className?: string;
+  hover?: boolean;
+  clickable?: boolean;
   onClick?: () => void;
+  className?: string;
 }
 
 const GlassCard: React.FC<GlassCardProps> = ({
   children,
   variant = 'default',
-  hover = true,
   padding = 'md',
-  className = '',
-  onClick
+  hover = false,
+  clickable = false,
+  onClick,
+  className = ''
 }) => {
-  const cardClasses = [
-    styles.glassCard,
-    styles[`glass${variant.charAt(0).toUpperCase()}${variant.slice(1)}`],
-    styles[`padding${padding.charAt(0).toUpperCase()}${padding.slice(1)}`],
-    hover ? styles.glassHover : '',
-    onClick ? styles.clickable : '',
+  const baseClasses = 'rounded-2xl transition-all duration-300 ease-out-cubic relative overflow-hidden'
+
+  const variantClasses = {
+    default: 'bg-white/25 backdrop-blur-xl border border-white/20 shadow-glass',
+    strong: 'bg-white/40 backdrop-blur-2xl border border-white/25 shadow-xl',
+    subtle: 'bg-white/15 backdrop-blur-lg border border-white/10 shadow-lg'
+  }
+
+  const paddingClasses = {
+    sm: 'p-4',
+    md: 'p-6',
+    lg: 'p-8'
+  }
+
+  const hoverClasses = hover ? 'hover:-translate-y-2 hover:shadow-2xl' : ''
+  const clickableClasses = clickable ? 'cursor-pointer border-none bg-none text-left font-inherit color-inherit w-full focus:outline-none focus-visible:outline-2 focus-visible:outline-brand-purple focus-visible:outline-offset-2 active:scale-98' : ''
+
+  const classes = [
+    baseClasses,
+    variantClasses[variant],
+    paddingClasses[padding],
+    hoverClasses,
+    clickableClasses,
     className
   ].filter(Boolean).join(' ')
 
-  const Component = onClick ? 'button' : 'div'
+  const Component = clickable ? 'button' : 'div'
 
   return (
-    <Component 
-      className={cardClasses} 
-      onClick={onClick}
-      type={onClick ? 'button' : undefined}
-    >
+    <Component className={classes} onClick={onClick}>
       {children}
     </Component>
   )

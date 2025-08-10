@@ -1,10 +1,8 @@
-//src/components/landing/OSArchitecture.tsx
 
-'use client'
+"use client";
 
-import { useEffect, useRef } from 'react'
-import Container from '@/components/common/Container'
-import styles from '@/styles/landing.module.css'
+import React from 'react'
+import Container from '../common/Container'
 
 interface OSModule {
   icon: string;
@@ -57,115 +55,97 @@ const osModules: OSModule[] = [
     color: 'orange'
   },
   {
-    icon: '✨',
-    title: 'Member Experience',
-    description: 'Every touchpoint perfectly timed to create moments of delight and connection.',
-    features: ['Seamless journeys', 'Surprise moments', 'Community building'],
-    metric: '94% satisfaction',
+    icon: '🎯',
+    title: 'Growth Intelligence',
+    description: 'Predict trends, identify opportunities, and stay ahead of the competition.',
+    features: ['Market analysis', 'Competitor tracking', 'Trend forecasting'],
+    metric: 'Future-proof business',
     color: 'violet'
   }
 ]
 
 const OSArchitecture: React.FC = () => {
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const cards = entry.target.querySelectorAll('.fade-in')
-            cards.forEach((card, index) => {
-              setTimeout(() => {
-                card.classList.add('visible')
-              }, index * 100)
-            })
-          }
-        })
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <section ref={sectionRef} className={styles.osSection} id="architecture">
+    <section id="architecture" className="py-32 bg-gradient-to-br from-stone-50 to-stone-100 relative">
       <Container>
-        <div className={styles.sectionHeader}>
-          <div className={styles.sectionTag}>
-            <span>🔮 Studio Intelligence</span>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 bg-brand-purple/10 border border-brand-purple/20 rounded-full text-brand-purple-dark text-sm font-semibold mb-6">
+            ⚙️ AI-Powered Operating System
           </div>
-          
-          <h2 className={styles.sectionTitle}>
-            Six AI Modules Working as <span className={styles.highlight}>One Brain</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6 font-serif">
+            Six <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">Intelligent Modules</span> That Work Together
           </h2>
-          
-          <p className={styles.sectionSubtitle}>
-            While you focus on coaching, our AI handles everything else — 
-            seamlessly, intelligently, 24/7.
+          <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            Each module learns from your business, adapts to your needs, and optimizes for maximum growth—automatically.
           </p>
         </div>
 
-        <div className={styles.moduleGrid}>
-          {osModules.map((module, index) => (
-            <div key={index} className={`${styles.moduleCard} ${styles[`module${module.color.charAt(0).toUpperCase()}${module.color.slice(1)}`]} fade-in`}>
-              <div className={styles.moduleHeader}>
-                <div className={styles.moduleIcon}>
-                  <span>{module.icon}</span>
-                </div>
-                <div className={styles.moduleMetric}>{module.metric}</div>
-              </div>
-              
-              <h3 className={styles.moduleTitle}>{module.title}</h3>
-              <p className={styles.moduleDescription}>{module.description}</p>
-              
-              <div className={styles.moduleFeatures}>
-                {module.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className={styles.featureTag}>
-                    {feature}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {osModules.map((module, index) => {
+            const colorClasses = {
+              purple: 'from-purple-500 to-purple-600',
+              pink: 'from-pink-500 to-pink-600', 
+              cyan: 'from-cyan-500 to-cyan-600',
+              green: 'from-green-500 to-green-600',
+              orange: 'from-orange-500 to-orange-600',
+              violet: 'from-violet-500 to-violet-600'
+            }
+
+            return (
+              <div key={index} className="glass-strong p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden group">
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${colorClasses[module.color as keyof typeof colorClasses]}`}></div>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${colorClasses[module.color as keyof typeof colorClasses]} flex items-center justify-center text-2xl shadow-md`}>
+                    {module.icon}
                   </div>
-                ))}
+                  <div className="bg-green-100 text-green-700 text-xs font-bold px-3 py-2 rounded-xl border border-green-200">
+                    {module.metric}
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-text-primary mb-3 leading-tight">
+                  {module.title}
+                </h3>
+                <p className="text-text-secondary leading-relaxed mb-6">
+                  {module.description}
+                </p>
+                
+                <div className="flex flex-wrap gap-2">
+                  {module.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="bg-neutral-100 text-text-secondary text-xs font-medium px-3 py-2 rounded-lg border border-neutral-200">
+                      {feature}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
-        <div className={styles.osShowcase}>
-          <div className={styles.showcaseCard}>
-            <div className={styles.showcaseContent}>
-              <h3 className={styles.showcaseTitle}>
-                From Overwhelmed to <span className={styles.highlight}>Unstoppable</span>
-              </h3>
-              <p className={styles.showcaseDescription}>
-                Join 200+ studio owners who&apos;ve transformed their businesses from 
-                stressful admin nightmares into smooth, profitable operations.
-              </p>
-              
-              <div className={styles.transformationFlow}>
-                <div className={styles.flowCard}>
-                  <div className={styles.flowIcon}>😰</div>
-                  <div className={styles.flowText}>
-                    <strong>Before:</strong> Drowning in admin, missing bookings, losing members
-                  </div>
-                </div>
-                
-                <div className={styles.flowArrow}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                
-                <div className={styles.flowCard}>
-                  <div className={styles.flowIcon}>🚀</div>
-                  <div className={styles.flowText}>
-                    <strong>After:</strong> AI handles everything, revenue grows, you focus on coaching
-                  </div>
-                </div>
+        {/* OS Showcase */}
+        <div className="glass-strong p-12 text-center shadow-2xl max-w-4xl mx-auto">
+          <h3 className="text-3xl font-bold text-text-primary mb-4 tracking-tight">
+            From Chaos to Clarity in Minutes
+          </h3>
+          <p className="text-lg text-text-secondary leading-relaxed mb-8">
+            Watch your business transform from scattered tools and manual processes to a unified, intelligent system that runs itself.
+          </p>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 flex-wrap">
+            <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 flex items-center gap-4 min-w-72 text-left">
+              <div className="text-3xl">📊</div>
+              <div className="text-sm leading-relaxed text-text-secondary">
+                <strong className="text-text-primary font-semibold">Before:</strong> Scattered data, manual reports, guessing what works
+              </div>
+            </div>
+            
+            <div className="text-brand-purple text-2xl md:rotate-0 rotate-90">→</div>
+            
+            <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 flex items-center gap-4 min-w-72 text-left">
+              <div className="text-3xl">🎯</div>
+              <div className="text-sm leading-relaxed text-text-secondary">
+                <strong className="text-text-primary font-semibold">After:</strong> Real-time insights, automated optimization, clear growth path
               </div>
             </div>
           </div>

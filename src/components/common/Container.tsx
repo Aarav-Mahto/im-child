@@ -1,8 +1,7 @@
-//src/common/Container.tsx
+
 "use client";
 
 import React from 'react'
-import styles from '@/styles/container.module.css'
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -15,9 +14,16 @@ const Container: React.FC<ContainerProps> = ({
   className = '', 
   size = 'lg' 
 }) => {
+  const sizeClasses = {
+    sm: 'max-w-2xl',
+    md: 'max-w-3xl', 
+    lg: 'max-w-4xl',
+    xl: 'max-w-5xl'
+  }
+
   const containerClasses = [
-    styles.container,
-    styles[size],
+    'w-full mx-auto px-4 sm:px-6 lg:px-8',
+    sizeClasses[size],
     className
   ].filter(Boolean).join(' ')
 
