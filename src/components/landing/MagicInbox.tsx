@@ -2,6 +2,7 @@
 
 'use client'
 
+import React from 'react'
 import { useEffect, useRef } from 'react'
 import Container from '@/components/common/Container'
 
@@ -82,7 +83,7 @@ const MagicInbox: React.FC = () => {
           </h2>
 
           <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            No more staring at blank screens wondering what to say. Our AI crafts 
+            No more staring at blank screens wondering what to say. Our AI crafts
             messages that sound exactly like you — warm, professional, and genuinely helpful.
           </p>
         </div>
