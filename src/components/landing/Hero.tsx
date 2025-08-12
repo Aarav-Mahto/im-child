@@ -15,14 +15,14 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-black/50 overflow-hidden pt-11">
 
-    <div className="z-[-1] h-full w-full absolute top-0 left-0">
-      {/* <HeroBg /> */}
-      <div
-      className="h-full w-full flex items-center bg-[#010e28]
+      <div className="z-[-1] h-full w-full absolute top-0 left-0">
+        {/* <HeroBg /> */}
+        <div
+          className="h-full w-full flex items-center bg-[#010e28]
                  bg-[linear-gradient(to_bottom,_#082740_1px,_transparent_1px),_linear-gradient(to_right,_#082740_1px,_transparent_1px)] 
                  [background-size:30px_30px] bg-center overflow-x-hidden animate-bgmove">
-    </div>
-    </div>
+        </div>
+      </div>
 
 
 
@@ -70,28 +70,29 @@ const Hero: React.FC = () => {
               Stop drowning in admin. Our AI workforce handles bookings, retention, and growth while you focus on coaching.
             </p>
 
-            <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 lg:gap-5 xl:gap-6 items-center justify-center lg:justify-start mb-4 sm:mb-6 lg:mb-8 xl:mb-10">
+            <div className="flex flex-row xs:flex-row gap-3 sm:gap-4 lg:gap-5 xl:gap-6 items-center justify-center lg:justify-start mb-4 sm:mb-6 lg:mb-8 xl:mb-10">
               <Button
                 variant="primary"
                 size="lg"
-                className="w-fit xs:w-auto min-w-40 sm:min-w-48 lg:min-w-52 xl:min-w-56 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1 active:scale-95"
+                className="w-[150px] sm:w-[200px] text-sm sm:text-md xs:w-auto min-w-40 sm:min-w-48 lg:min-w-52 xl:min-w-56 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1 active:scale-95"
               >
-                <div className="flex flex-row items-center gap-2">
-                  <span>Watch Demo</span> 
-                <FaArrowRight />
+                <div className="flex flex-row flex-nowrap items-center gap-2">
+                  <span className="whitespace-nowrap">Watch Demo</span>
+                  <FaArrowRight />
                 </div>
               </Button>
               <Button
                 variant="secondary"
                 size="lg"
-                className="w-full xs:w-auto min-w-40 sm:min-w-48 lg:min-w-52 xl:min-w-56 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95"
+                className="w-[150px] sm:w-[200px] text-sm sm:text-md bg-black/40 hover:bg-black/70 !text-neutral-50 xs:w-auto min-w-40 sm:min-w-48 lg:min-w-52 xl:min-w-56 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95"
               >
                 How it works
               </Button>
             </div>
 
             {/* Enhanced Social Proof Stats */}
-            <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 xl:gap-8 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto lg:mx-0">
+            <div className="hidden lg:flex">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 xl:gap-8 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto lg:mx-0">
               <div className="text-center lg:text-left transform transition-all duration-500 hover:scale-105 cursor-pointer p-2 sm:p-3 lg:p-4 rounded-xl hover:bg-white/10 hover:shadow-lg">
                 <div className="text-lg xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-brand-purple mb-1 leading-none">
                   200+
@@ -112,9 +113,10 @@ const Hero: React.FC = () => {
                 </div>
               </div>
             </div>
+            </div>
           </div>
 
-          {/* Enhanced Hero Visual - Fully Responsive */}
+          {/* Enhanced Hero Visual  */}
           <div className="flex justify-center items-center w-full">
             <div
               className={`relative flex justify-center w-fit items-center transition-all duration-1000 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
@@ -267,7 +269,7 @@ const Hero: React.FC = () => {
 
               {/* Mobile Floating Elements - Simplified and More Visible */}
               <div className="absolute inset-0 pointer-events-none block md:hidden">
-                <div className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-2 bg-white/40 backdrop-blur-xl border border-white/60 rounded-lg text-xs font-semibold text-text-primary shadow-lg animate-float transition-all duration-300 hover:scale-105 z-10">
+                <div className="absolute top-10 md:top-4 right-4 flex items-center gap-1.5 px-3 py-2 bg-white/40 backdrop-blur-xl border border-white/60 rounded-lg text-xs font-semibold text-text-primary shadow-lg animate-float transition-all duration-300 hover:scale-105 z-10">
                   <span className="text-sm">📈</span>
                   +£2K
                 </div>
@@ -284,6 +286,29 @@ const Hero: React.FC = () => {
                 >
                   <span className="text-sm">⚡</span>
                   Auto
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col lg:hidden">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 xl:gap-8 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto lg:mx-0">
+              <div className="text-center lg:text-left transform transition-all duration-500 hover:scale-105 cursor-pointer p-2 sm:p-3 lg:p-4 rounded-xl hover:bg-white/10 hover:shadow-lg">
+                <div className="text-lg xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-brand-purple mb-1 leading-none">
+                  200+
+                </div>
+                <div className="text-neutral-300 font-medium text-xs sm:text-sm lg:text-base leading-tight">
+                  Studios transformed
+                </div>
+              </div>
+              <div
+                className="text-center lg:text-left transform transition-all duration-500 hover:scale-105 cursor-pointer p-2 sm:p-3 lg:p-4 rounded-xl hover:bg-white/10 hover:shadow-lg"
+                style={{ transitionDelay: "100ms" }}
+              >
+                <div className="text-lg xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-brand-purple mb-1 leading-none">
+                  £2.3M+
+                </div>
+                <div className="text-neutral-300 font-medium text-xs sm:text-sm lg:text-base leading-tight">
+                  Extra revenue generated
                 </div>
               </div>
             </div>

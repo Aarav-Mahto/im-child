@@ -105,30 +105,30 @@ const Header: React.FC = () => {
         >
           <div className="py-2">
             <button
-              className="block w-full border-none font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out border-b border-neutral-100 hover:text-text-primary hover:bg-neutral-50"
+              className="block w-full border-none font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out border-b border-neutral-100 hover:text-neutral-100 hover:bg-brand-purple"
               onClick={() => scrollToSection('architecture')}
             >
               AI Modules
             </button>
             <button
-              className="block w-full border-none font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out border-b border-neutral-100 hover:text-text-primary hover:bg-neutral-50"
+              className="block w-full border-none font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out border-b border-neutral-100 hover:text-neutral-100 hover:bg-brand-purple"
               onClick={() => scrollToSection('ai-workforce')}
             >
               AI Workforce
             </button>
             <button
-              className="block w-full border-none font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out border-b border-neutral-100 hover:text-text-primary hover:bg-neutral-50"
+              className="block w-full border-none font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out border-b border-neutral-100 hover:text-neutral-100 hover:bg-brand-purple"
               onClick={() => scrollToSection('revenue-impact')}
             >
               Revenue Results
             </button>
             <button
-              className="block w-full border-none font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-neutral-50"
+              className="block w-full border-none font-medium text-base cursor-pointer py-4 px-6 text-left transition-all duration-300 ease-in-out hover:text-neutral-100 hover:bg-brand-purple"
               onClick={() => scrollToSection('magic-inbox')}
             >
               Smart Communication
             </button>
-            <div className="w-full flex justify-center">
+            <div className="w-full flex justify-center my-2">
               <button className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
                 Get Started
               </button>
