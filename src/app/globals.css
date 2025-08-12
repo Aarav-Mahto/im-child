@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -9,8 +10,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -371,4 +372,17 @@ img {
   .hover\:scale-102:hover {
     transform: scale(1.02);
   }
+}
+
+@keyframes bgmove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.animate-bgmove {
+  animation: bgmove 40s infinite linear;
 }

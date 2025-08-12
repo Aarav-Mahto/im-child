@@ -121,8 +121,8 @@ const Footer: React.FC = () => {
               <p className="text-white/60 text-sm m-0">
                 © 2024 AllWondrous. All rights reserved.
               </p>
-              <div className="flex items-center gap-6">
-                <span className="text-white/60 text-sm">Built with ❤️ for business growth</span>
+              <div className="flex items-center gap-6 fixed bottom-4 right-1 z-[999]">
+                <span className="text-white/60 text-xs">Built with ❤️ for business growth</span>
                 <button
                   onClick={scrollToTop}
                   className="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white/70 cursor-pointer transition-all duration-300 ease-out-cubic hover:bg-white/20 hover:text-white hover:-translate-y-0.5 hover:shadow-md active:-translate-y-0"

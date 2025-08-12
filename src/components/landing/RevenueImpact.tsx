@@ -66,7 +66,7 @@ const RevenueImpact: React.FC = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-32 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white relative overflow-hidden" id="revenue-impact">
+    <section ref={sectionRef} className="py-10 md:py-32 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white relative overflow-hidden" id="revenue-impact">
       {/* Background Pattern */}
       <div className="absolute inset-0 pointer-events-none" style={{
         backgroundImage: `radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)`
@@ -82,7 +82,7 @@ const RevenueImpact: React.FC = () => {
             Real Revenue. <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">Real Results.</span>
           </h2>
           
-          <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-md sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
             Stop wondering &quot;what if&quot; and start seeing actual numbers. 
             Our AI doesn&apos;t just promise growth — it delivers it.
           </p>
@@ -91,11 +91,11 @@ const RevenueImpact: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 relative z-10">
           {revenueMetrics.map((metric, index) => (
             <div key={index} className="glass-strong p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-3 hover:shadow-2xl hover:scale-105 hover:bg-white/20 relative overflow-hidden group fade-in cursor-pointer">
-              <div className="flex items-start justify-between mb-6">
+              <div className="flex items-center sm:items-start justify-between mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                   <span>{metric.icon}</span>
                 </div>
-                <div className="bg-brand-success/10 text-brand-success px-3 py-1 rounded-full text-sm font-bold border border-brand-success/20 transition-all duration-300 group-hover:bg-brand-success/20 group-hover:scale-105">
+                <div className="bg-brand-success/10 text-brand-success px-3 py-1 rounded-full text-xs font-bold border border-brand-success/20 transition-all duration-300 group-hover:bg-brand-success/20 group-hover:scale-105">
                   {metric.trend}
                 </div>
               </div>
@@ -108,52 +108,52 @@ const RevenueImpact: React.FC = () => {
         </div>
 
         <div className="mt-16 relative z-10">
-          <div className="glass-strong p-12 rounded-3xl">
+          <div className="glass-strong py-10 px-0 sm:p-12 rounded-3xl">
             <h3 className="text-3xl font-bold text-white mb-4 text-center font-serif">
               How We Generate <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">£14K+ Monthly</span>
             </h3>
-            <p className="text-xl text-white/80 text-center mb-12 max-w-2xl mx-auto">
+            <p className="text-md sm:text-xl text-white/80 text-center mb-12 max-w-2xl mx-auto">
               Real revenue streams, not marketing fluff
             </p>
             
             <div className="space-y-6 mb-12">
-              <div className="flex items-center gap-6 p-6 bg-white/5 rounded-2xl border border-white/10">
+              <div className="flex items-center flex-col sm:flex-row gap-6 mx-4 p-6 bg-white/5 rounded-2xl border border-white/10">
                 <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
                   🎯
                 </div>
                 <div className="flex-1">
-                  <div className="text-2xl font-bold text-brand-success mb-1">£6,200</div>
+                  <div className="text-2xl font-bold text-center sm:text-left text-brand-success mb-1">£6,200</div>
                   <div className="text-lg font-semibold text-white mb-2">Smart Booking Conversion</div>
                   <div className="text-white/80">AI converts 3.2X more enquiries into paid sessions</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-6 p-6 bg-white/5 rounded-2xl border border-white/10">
+              <div className="flex items-center gap-6 flex-col sm:flex-row mx-4 p-6 bg-white/5 rounded-2xl border border-white/10">
                 <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
                   💝
                 </div>
                 <div className="flex-1">
-                  <div className="text-2xl font-bold text-brand-success mb-1">£4,800</div>
+                  <div className="text-2xl font-bold text-center sm:text-left text-brand-success mb-1">£4,800</div>
                   <div className="text-lg font-semibold text-white mb-2">Retention & Re-engagement</div>
                   <div className="text-white/80">Predictive AI prevents churn and wins back lost members</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-6 p-6 bg-white/5 rounded-2xl border border-white/10">
+              <div className="flex items-center flex-col sm:flex-row gap-6 mx-4 p-6 bg-white/5 rounded-2xl border border-white/10">
                 <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
                   ⚡
                 </div>
                 <div className="flex-1">
-                  <div className="text-2xl font-bold text-brand-success mb-1">£3,247</div>
+                  <div className="text-2xl font-bold text-center sm:text-left text-brand-success mb-1">£3,247</div>
                   <div className="text-lg font-semibold text-white mb-2">Intelligent Upselling</div>
                   <div className="text-white/80">Perfect timing suggestions that feel helpful, not pushy</div>
                 </div>
               </div>
             </div>
             
-            <div className="flex items-center gap-4 p-6 bg-gradient-to-r from-brand-purple/20 to-brand-accent/20 rounded-2xl border border-brand-purple/30">
+            <div className="flex items-center gap-4 mx-4 p-6 bg-gradient-to-r from-brand-purple/20 to-brand-accent/20 rounded-2xl border border-brand-purple/30">
               <div className="text-3xl">✨</div>
-              <div className="text-white">
+              <div className="text-white text-xs sm:text-sm md:text-md">
                 <strong>ROI Guarantee:</strong> See measurable results within 30 days or we&apos;ll refund your investment.
               </div>
             </div>
