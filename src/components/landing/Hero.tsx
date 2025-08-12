@@ -81,13 +81,13 @@ const Hero: React.FC = () => {
                   <FaArrowRight />
                 </div>
               </Button>
-              <Button
+              <button
                 variant="secondary"
                 size="lg"
                 className="w-[150px] sm:w-[200px] text-sm sm:text-md bg-black/40 hover:bg-black/70 !text-neutral-50 xs:w-auto min-w-40 sm:min-w-48 lg:min-w-52 xl:min-w-56 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95"
               >
                 How it works
-              </Button>
+              </button>
             </div>
 
             {/* Enhanced Social Proof Stats */}
