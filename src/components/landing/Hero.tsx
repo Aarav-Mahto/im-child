@@ -13,14 +13,22 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center bg-black/50 overflow-hidden pt-11">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-11">
 
-      <div className="z-[-1] h-full w-full absolute top-0 left-0">
-        {/* <HeroBg /> */}
-        <div
-          className="h-full w-full flex items-center bg-[#010e28]
-                 bg-[linear-gradient(to_bottom,_#082740_1px,_transparent_1px),_linear-gradient(to_right,_#082740_1px,_transparent_1px)] 
-                 [background-size:30px_30px] bg-center overflow-x-hidden animate-bgmove">
+      <div className="z-[-1] h-full w-full bg-white absolute top-0 left-0">
+        <div className="area">
+          <ul className="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
       </div>
 
@@ -59,14 +67,14 @@ const Hero: React.FC = () => {
               ✨ AI-Powered Studio OS
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-7xl font-extrabold leading-tight text-neutral-50 mb-3 sm:mb-4 lg:mb-6 xl:mb-8 font-serif tracking-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-7xl font-extrabold leading-tight text-neutral-900 mb-3 sm:mb-4 lg:mb-6 xl:mb-8 font-serif tracking-tight">
               Your Studio Runs{" "}
               <span className="bg-gradient-to-r from-brand-purple via-purple-500 to-brand-accent bg-clip-text text-transparent animate-pulse">
                 Itself
               </span>
             </h1>
 
-            <p className="text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed text-neutral-300 mb-4 sm:mb-6 lg:mb-8 xl:mb-10 max-w-full lg:max-w-2xl xl:max-w-3xl mx-auto lg:mx-0">
+            <p className="text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed text-neutral-800 mb-4 sm:mb-6 lg:mb-8 xl:mb-10 max-w-full lg:max-w-2xl xl:max-w-3xl mx-auto lg:mx-0">
               Stop drowning in admin. Our AI workforce handles bookings, retention, and growth while you focus on coaching.
             </p>
 
@@ -81,36 +89,38 @@ const Hero: React.FC = () => {
                   <FaArrowRight />
                 </div>
               </Button>
-              <button
-                className="w-[150px] rounded-3xl sm:w-[200px] text-sm sm:text-md bg-black/40 hover:bg-black/70 !text-neutral-50 xs:w-auto min-w-40 sm:min-w-48 lg:min-w-52 xl:min-w-56 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95"
+              <Button
+                variant="secondary"
+                size="lg"
+                className="w-[150px] sm:w-[200px] text-sm sm:text-md bg-black/40 hover:bg-black/70 !text-neutral-900 xs:w-auto min-w-40 sm:min-w-48 lg:min-w-52 xl:min-w-56 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95"
               >
                 How it works
-              </button>
+              </Button>
             </div>
 
             {/* Enhanced Social Proof Stats */}
             <div className="hidden lg:flex">
               <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 xl:gap-8 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto lg:mx-0">
-              <div className="text-center lg:text-left transform transition-all duration-500 hover:scale-105 cursor-pointer p-2 sm:p-3 lg:p-4 rounded-xl hover:bg-white/10 hover:shadow-lg">
-                <div className="text-lg xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-brand-purple mb-1 leading-none">
-                  200+
+                <div className="text-center lg:text-left transform transition-all duration-500 hover:scale-105 cursor-pointer p-2 sm:p-3 lg:p-4 rounded-xl hover:bg-white/10 hover:shadow-lg">
+                  <div className="text-lg xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-brand-purple mb-1 leading-none">
+                    200+
+                  </div>
+                  <div className="text-neutral-800 font-medium text-xs sm:text-sm lg:text-base leading-tight">
+                    Studios transformed
+                  </div>
                 </div>
-                <div className="text-neutral-300 font-medium text-xs sm:text-sm lg:text-base leading-tight">
-                  Studios transformed
+                <div
+                  className="text-center lg:text-left transform transition-all duration-500 hover:scale-105 cursor-pointer p-2 sm:p-3 lg:p-4 rounded-xl hover:bg-white/10 hover:shadow-lg"
+                  style={{ transitionDelay: "100ms" }}
+                >
+                  <div className="text-lg xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-brand-purple mb-1 leading-none">
+                    £2.3M+
+                  </div>
+                  <div className="text-neutral-800 font-medium text-xs sm:text-sm lg:text-base leading-tight">
+                    Extra revenue generated
+                  </div>
                 </div>
               </div>
-              <div
-                className="text-center lg:text-left transform transition-all duration-500 hover:scale-105 cursor-pointer p-2 sm:p-3 lg:p-4 rounded-xl hover:bg-white/10 hover:shadow-lg"
-                style={{ transitionDelay: "100ms" }}
-              >
-                <div className="text-lg xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-brand-purple mb-1 leading-none">
-                  £2.3M+
-                </div>
-                <div className="text-neutral-300 font-medium text-xs sm:text-sm lg:text-base leading-tight">
-                  Extra revenue generated
-                </div>
-              </div>
-            </div>
             </div>
           </div>
 
@@ -142,12 +152,12 @@ const Hero: React.FC = () => {
                 {/* Enhanced Dashboard Content */}
                 <div className="p-3 xs:p-4 sm:p-5 lg:p-6 xl:p-8">
                   {/* Metric Cards with Enhanced Hover Effects */}
-                  <div className="bg-gradient-to-r from-bg-secondary/80 to-bg-secondary/60 backdrop-blur-sm p-3 xs:p-3.5 sm:p-4 lg:p-5 xl:p-6 rounded-lg sm:rounded-xl lg:rounded-2xl mb-3 xs:mb-3.5 sm:mb-4 lg:mb-5 flex items-center justify-between transition-all duration-500 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r hover:from-brand-purple/10 hover:to-brand-accent/10 group/card cursor-pointer">
+                  <div className="border border-neutral-100 bg-gradient-to-r from-bg-secondary/60 to-bg-secondary/40 backdrop-blur-sm p-3 xs:p-3.5 sm:p-4 lg:p-5 xl:p-6 rounded-lg sm:rounded-xl lg:rounded-2xl mb-3 xs:mb-3.5 sm:mb-4 lg:mb-5 flex items-center justify-between transition-all duration-500 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r hover:from-brand-purple/10 hover:to-brand-accent/10 group/card cursor-pointer">
                     <div>
                       <div className="text-base xs:text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-brand-purple transition-all duration-300 group-hover/card:scale-110">
                         £14,247
                       </div>
-                      <div className="text-xs xs:text-sm lg:text-base text-text-muted mt-0.5 xs:mt-1">
+                      <div className="text-xs xs:text-sm lg:text-base text-neutral-700 mt-0.5 xs:mt-1">
                         Monthly Revenue
                       </div>
                     </div>
@@ -157,14 +167,14 @@ const Hero: React.FC = () => {
                   </div>
 
                   <div
-                    className="bg-gradient-to-r from-bg-secondary/80 to-bg-secondary/60 backdrop-blur-sm p-3 xs:p-3.5 sm:p-4 lg:p-5 xl:p-6 rounded-lg sm:rounded-xl lg:rounded-2xl mb-3 xs:mb-3.5 sm:mb-4 lg:mb-5 flex items-center justify-between transition-all duration-500 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r hover:from-brand-accent/10 hover:to-brand-purple/10 group/card cursor-pointer"
+                    className="border border-neutral-100 bg-gradient-to-r from-bg-secondary/60 to-bg-secondary/40 backdrop-blur-sm p-3 xs:p-3.5 sm:p-4 lg:p-5 xl:p-6 rounded-lg sm:rounded-xl lg:rounded-2xl mb-3 xs:mb-3.5 sm:mb-4 lg:mb-5 flex items-center justify-between transition-all duration-500 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r hover:from-brand-accent/10 hover:to-brand-purple/10 group/card cursor-pointer"
                     style={{ transitionDelay: "100ms" }}
                   >
                     <div>
                       <div className="text-base xs:text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-brand-purple transition-all duration-300 group-hover/card:scale-110">
                         94%
                       </div>
-                      <div className="text-xs xs:text-sm lg:text-base text-text-muted mt-0.5 xs:mt-1">
+                      <div className="text-xs xs:text-sm lg:text-base text-neutral-700 mt-0.5 xs:mt-1">
                         Retention
                       </div>
                     </div>
@@ -179,13 +189,13 @@ const Hero: React.FC = () => {
                       <div className="text-sm xs:text-base lg:text-xl xl:text-2xl transition-all duration-300 group-hover/item:scale-125 group-hover/item:rotate-12">
                         🤖
                       </div>
-                      <div className="flex-1 text-xs xs:text-sm lg:text-base xl:text-lg text-text-secondary">
+                      <div className="flex-1 text-xs xs:text-sm lg:text-base xl:text-lg text-neutral-500">
                         <strong className="text-text-primary font-semibold transition-all duration-300 group-hover/item:text-brand-purple">
                           AI booked
                         </strong>{" "}
                         Sarah's PT session
                       </div>
-                      <div className="text-xs lg:text-sm text-text-muted">
+                      <div className="text-xs lg:text-sm text-neutral-500">
                         2m ago
                       </div>
                     </div>
@@ -193,13 +203,13 @@ const Hero: React.FC = () => {
                       <div className="text-sm xs:text-base lg:text-xl xl:text-2xl transition-all duration-300 group-hover/item:scale-125 group-hover/item:rotate-12">
                         💝
                       </div>
-                      <div className="flex-1 text-xs xs:text-sm lg:text-base xl:text-lg text-text-secondary">
+                      <div className="flex-1 text-xs xs:text-sm lg:text-base xl:text-lg text-neutral-700">
                         <strong className="text-text-primary font-semibold transition-all duration-300 group-hover/item:text-brand-accent">
                           Retention AI
                         </strong>{" "}
                         re-engaged James
                       </div>
-                      <div className="text-xs lg:text-sm text-text-muted">
+                      <div className="text-xs lg:text-sm text-neutral-500">
                         5m ago
                       </div>
                     </div>
@@ -207,13 +217,13 @@ const Hero: React.FC = () => {
                       <div className="text-sm xs:text-base lg:text-xl xl:text-2xl transition-all duration-300 group-hover/item:scale-125 group-hover/item:rotate-12">
                         📊
                       </div>
-                      <div className="flex-1 text-xs xs:text-sm lg:text-base xl:text-lg text-text-secondary">
+                      <div className="flex-1 text-xs xs:text-sm lg:text-base xl:text-lg text-neutral-700">
                         <strong className="text-text-primary font-semibold transition-all duration-300 group-hover/item:text-brand-purple">
                           Insights
                         </strong>{" "}
                         suggest Tuesday 7pm slots
                       </div>
-                      <div className="text-xs lg:text-sm text-text-muted">
+                      <div className="text-xs lg:text-sm text-neutral-500">
                         12m ago
                       </div>
                     </div>
@@ -223,19 +233,19 @@ const Hero: React.FC = () => {
 
               {/* Enhanced Floating Elements - Desktop Only with better positioning */}
               <div className="absolute inset-0 pointer-events-none hidden xl:block 2xl:block">
-                <div className="absolute top-1/4 -right-4 xl:-right-6 2xl:-right-8 flex items-center gap-1.5 xl:gap-2 2xl:gap-3 px-3 xl:px-4 2xl:px-5 py-2 xl:py-3 bg-white/30 backdrop-blur-xl border border-white/40 rounded-lg xl:rounded-xl text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/40">
+                <div className="absolute top-1/4 -right-4 xl:-right-6 2xl:-right-8 flex items-center gap-1.5 xl:gap-2 2xl:gap-3 px-3 xl:px-4 2xl:px-5 py-2 xl:py-3 bg-neutral-400/10 backdrop-blur-xl border border-white/40 rounded-lg xl:rounded-xl text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/40">
                   <span className="text-lg xl:text-xl 2xl:text-2xl">📈</span>
                   ⚡ 18hrs saved weekly
                 </div>
                 <div
-                  className="absolute top-1/2 -left-6 xl:-left-8 2xl:-left-12 flex items-center gap-1.5 xl:gap-2 2xl:gap-3 px-3 xl:px-4 2xl:px-5 py-2 xl:py-3 bg-white/30 backdrop-blur-xl border border-white/40 rounded-lg xl:rounded-xl text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/40"
+                  className="absolute top-1/2 -left-6 xl:-left-8 2xl:-left-12 flex items-center gap-1.5 xl:gap-2 2xl:gap-3 px-3 xl:px-4 2xl:px-5 py-2 xl:py-3 bg-neutral-400/10 backdrop-blur-xl border border-white/40 rounded-lg xl:rounded-xl text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/40"
                   style={{ animationDelay: "1s" }}
                 >
                   <span className="text-lg xl:text-xl 2xl:text-2xl">🤖</span>
                   🎯 Zero missed bookings
                 </div>
                 <div
-                  className="absolute bottom-1/4 right-6 xl:right-8 2xl:right-12 flex items-center gap-1.5 xl:gap-2 2xl:gap-3 px-3 xl:px-4 2xl:px-5 py-2 xl:py-3 bg-white/30 backdrop-blur-xl border border-white/40 rounded-lg xl:rounded-xl text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/40"
+                  className="absolute bottom-1/4 right-6 xl:right-8 2xl:right-12 flex items-center gap-1.5 xl:gap-2 2xl:gap-3 px-3 xl:px-4 2xl:px-5 py-2 xl:py-3 bg-neutral-400/10 backdrop-blur-xl border border-white/40 rounded-lg xl:rounded-xl text-sm xl:text-base font-semibold text-text-primary shadow-lg animate-float transition-all duration-500 hover:scale-105 hover:bg-white/40"
                   style={{ animationDelay: "2s" }}
                 >
                   <span className="text-lg xl:text-xl 2xl:text-2xl">⚡</span>
@@ -294,7 +304,7 @@ const Hero: React.FC = () => {
                 <div className="text-lg xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-brand-purple mb-1 leading-none">
                   200+
                 </div>
-                <div className="text-neutral-300 font-medium text-xs sm:text-sm lg:text-base leading-tight">
+                <div className="text-neutral-800 font-medium text-xs sm:text-sm lg:text-base leading-tight">
                   Studios transformed
                 </div>
               </div>
@@ -305,7 +315,7 @@ const Hero: React.FC = () => {
                 <div className="text-lg xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-brand-purple mb-1 leading-none">
                   £2.3M+
                 </div>
-                <div className="text-neutral-300 font-medium text-xs sm:text-sm lg:text-base leading-tight">
+                <div className="text-neutral-800 font-medium text-xs sm:text-sm lg:text-base leading-tight">
                   Extra revenue generated
                 </div>
               </div>

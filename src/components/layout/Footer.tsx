@@ -2,6 +2,8 @@
 
 import React from 'react'
 import Container from '../common/Container'
+import Image from "next/image";
+import logo from '../../assets/wondrous_logo.png';
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -29,13 +31,16 @@ const Footer: React.FC = () => {
             {/* Footer Brand */}
             <div className="md:col-span-2 flex flex-col gap-6">
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-brand-purple to-brand-accent rounded-xl flex items-center justify-center text-xl shadow-md">
-                  🚀
-                </div>
-                <span className="text-2xl font-extrabold text-white">AllWondrous</span>
+                <a
+                  href="/"
+                  className="w-fit no-underline transition-all duration-300 hover:scale-105"
+                >
+                  <Image src={logo} alt="Wondrous Logo" height={40}
+                    className='w-full h-auto object-contain' />
+                </a>
               </div>
               <p className="text-white/80 leading-relaxed text-base max-w-72">
-                The intelligent business operating system that transforms how you work, grow, and succeed. 
+                The intelligent business operating system that transforms how you work, grow, and succeed.
                 Powered by AI, built for results.
               </p>
               <div className="flex gap-4">
@@ -119,10 +124,10 @@ const Footer: React.FC = () => {
           <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col md:flex-row items-center gap-4 md:justify-between text-center md:text-left">
               <p className="text-white/60 text-sm m-0">
-                © 2024 AllWondrous. All rights reserved.
+                © 2025 All Wondrous. All rights reserved.
               </p>
-              <div className="flex items-center gap-6 fixed bottom-4 right-1 z-[999]">
-                <span className="text-white/60 text-xs">Built with ❤️ for business growth</span>
+              <div className="flex items-center gap-6">
+                <span className="text-white/60 text-xs">Built with ❤️ for studio owners.</span>
                 <button
                   onClick={scrollToTop}
                   className="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white/70 cursor-pointer transition-all duration-300 ease-out-cubic hover:bg-white/20 hover:text-white hover:-translate-y-0.5 hover:shadow-md active:-translate-y-0"

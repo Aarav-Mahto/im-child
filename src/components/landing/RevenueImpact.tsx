@@ -18,7 +18,7 @@ const revenueMetrics: RevenueMetric[] = [
   {
     value: '£14,247',
     label: 'Average Monthly Boost',
-    description: 'Extra revenue generated through intelligent booking optimization and retention.',
+    description: 'Extra revenue generated through intelligent booking Optimisation and retention.',
     icon: '💰',
     trend: '+127% vs baseline'
   },
@@ -66,7 +66,7 @@ const RevenueImpact: React.FC = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-10 md:py-32 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white relative overflow-hidden" id="revenue-impact">
+    <section ref={sectionRef} className="py-10 md:py-32 bg-gradient-to-t from-pink-50 to-white text-neutral-800 relative overflow-hidden" id="revenue-impact">
       {/* Background Pattern */}
       <div className="absolute inset-0 pointer-events-none" style={{
         backgroundImage: `radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)`
@@ -78,12 +78,12 @@ const RevenueImpact: React.FC = () => {
             💎 Proven Results
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 font-serif">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 font-serif">
             Real Revenue. <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">Real Results.</span>
           </h2>
-          
-          <p className="text-md sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            Stop wondering &quot;what if&quot; and start seeing actual numbers. 
+
+          <p className="text-md sm:text-xl text-neutral-800 max-w-2xl mx-auto leading-relaxed">
+            Stop wondering &quot;what if&quot; and start seeing actual numbers.
             Our AI doesn&apos;t just promise growth — it delivers it.
           </p>
         </div>
@@ -91,7 +91,7 @@ const RevenueImpact: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 relative z-10">
           {revenueMetrics.map((metric, index) => (
             <div key={index} className="glass-strong p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-3 hover:shadow-2xl hover:scale-105 hover:bg-white/20 relative overflow-hidden group fade-in cursor-pointer">
-              <div className="flex items-center sm:items-start justify-between mb-6">
+              <div className="flex items-center justify-between mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                   <span>{metric.icon}</span>
                 </div>
@@ -100,19 +100,19 @@ const RevenueImpact: React.FC = () => {
                 </div>
               </div>
               
-              <div className="text-4xl font-bold text-white mb-3 font-serif transition-all duration-300 group-hover:text-brand-accent">{metric.value}</div>
-              <h3 className="text-xl font-bold text-white mb-4 font-serif transition-all duration-300 group-hover:text-brand-accent">{metric.label}</h3>
-              <p className="text-white/80 leading-relaxed transition-all duration-300 group-hover:text-white/90">{metric.description}</p>
+              <div className="text-4xl font-bold text-neutral-800 mb-3 font-serif transition-all duration-300 group-hover:text-brand-accent">{metric.value}</div>
+              <h3 className="text-xl font-bold text-neutral-700 mb-4 font-serif transition-all duration-300 group-hover:text-brand-accent">{metric.label}</h3>
+              <p className="text-neutral-700 leading-relaxed transition-all duration-300 group-hover:text-neutral-800">{metric.description}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-16 relative z-10">
           <div className="glass-strong py-10 px-0 sm:p-12 rounded-3xl">
-            <h3 className="text-3xl font-bold text-white mb-4 text-center font-serif">
+            <h3 className="text-3xl font-bold text-neutral-800 mb-4 text-center font-serif">
               How We Generate <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">£14K+ Monthly</span>
             </h3>
-            <p className="text-md sm:text-xl text-white/80 text-center mb-12 max-w-2xl mx-auto">
+            <p className="text-md sm:text-xl text-neutral-700 text-center mb-12 max-w-2xl mx-auto">
               Real revenue streams, not marketing fluff
             </p>
             
@@ -123,8 +123,8 @@ const RevenueImpact: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <div className="text-2xl font-bold text-center sm:text-left text-brand-success mb-1">£6,200</div>
-                  <div className="text-lg font-semibold text-white mb-2">Smart Booking Conversion</div>
-                  <div className="text-white/80">AI converts 3.2X more enquiries into paid sessions</div>
+                  <div className="text-lg font-semibold text-neutral-800 mb-2">Smart Booking Conversion</div>
+                  <div className="text-neutral-700">AI converts 3.2X more enquiries into paid sessions</div>
                 </div>
               </div>
               
@@ -134,8 +134,8 @@ const RevenueImpact: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <div className="text-2xl font-bold text-center sm:text-left text-brand-success mb-1">£4,800</div>
-                  <div className="text-lg font-semibold text-white mb-2">Retention & Re-engagement</div>
-                  <div className="text-white/80">Predictive AI prevents churn and wins back lost members</div>
+                  <div className="text-lg font-semibold text-neutral-800 mb-2">Retention & Re-engagement</div>
+                  <div className="text-neutral-700">Predictive AI prevents churn and wins back lost members</div>
                 </div>
               </div>
               
@@ -145,15 +145,15 @@ const RevenueImpact: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <div className="text-2xl font-bold text-center sm:text-left text-brand-success mb-1">£3,247</div>
-                  <div className="text-lg font-semibold text-white mb-2">Intelligent Upselling</div>
-                  <div className="text-white/80">Perfect timing suggestions that feel helpful, not pushy</div>
+                  <div className="text-lg font-semibold text-neutral-800 mb-2">Intelligent Upselling</div>
+                  <div className="text-neutral-700">Perfect timing suggestions that feel helpful, not pushy</div>
                 </div>
               </div>
             </div>
             
             <div className="flex items-center gap-4 mx-4 p-6 bg-gradient-to-r from-brand-purple/20 to-brand-accent/20 rounded-2xl border border-brand-purple/30">
               <div className="text-3xl">✨</div>
-              <div className="text-white text-xs sm:text-sm md:text-md">
+              <div className="text-neutral-800 text-xs sm:text-sm md:text-md">
                 <strong>ROI Guarantee:</strong> See measurable results within 30 days or we&apos;ll refund your investment.
               </div>
             </div>
@@ -163,15 +163,15 @@ const RevenueImpact: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 relative z-10">
           <div className="text-center">
             <div className="text-4xl font-bold text-brand-accent mb-2 font-serif">200+</div>
-            <div className="text-white/80">Studios transformed</div>
+            <div className="text-neutral-700">Studios transformed</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-brand-accent mb-2 font-serif">£2.3M+</div>
-            <div className="text-white/80">Extra revenue generated</div>
+            <div className="text-neutral-700">Extra revenue generated</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-brand-accent mb-2 font-serif">98%</div>
-            <div className="text-white/80">Would recommend</div>
+            <div className="text-neutral-700">Would recommend</div>
           </div>
         </div>
       </Container>

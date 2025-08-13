@@ -32,9 +32,9 @@ const Button: React.FC<ButtonProps> = ({
 
   const variants = {
     primary: 'bg-gradient-to-r from-brand-purple to-brand-accent text-white hover:shadow-xl hover:-translate-y-2 hover:scale-105 focus:ring-brand-purple border-none hover:from-brand-purple-dark hover:to-brand-purple transition-all duration-300',
-    secondary: 'bg-neutral-100 text-neutral-900 border border-neutral-200 hover:bg-neutral-200 hover:shadow-lg hover:-translate-y-1 hover:scale-105 focus:ring-neutral-500 transition-all duration-300',
+    secondary: 'bg-neutral-100 text-neutral-900 border border-neutral-300 hover:bg-neutral-200 hover:shadow-lg hover:-translate-y-1 hover:scale-105 focus:ring-neutral-500 transition-all duration-300',
     outline: 'border border-current text-current bg-transparent hover:bg-neutral-100 transition-all duration-300',
-    ghost: 'bg-transparent text-white border border-white/30 hover:bg-white/20 hover:border-white/70 hover:shadow-lg hover:-translate-y-1 hover:scale-105 focus:ring-white/50 transition-all duration-300'
+    ghost: 'bg-transparent text-neutral-700 border border-neutral-300 hover:bg-white/20 hover:border-green-700 hover:shadow-lg hover:-translate-y-1 hover:scale-105 focus:ring-green-700 transition-all duration-300'
   };
 
   const sizeClasses = {

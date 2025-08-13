@@ -117,7 +117,7 @@ const FinalCTA: React.FC = () => {
             <div className={styles.successIcon}>✅</div>
             <h2 className={styles.successTitle}>Demo Request Received!</h2>
             <p className={styles.successText}>
-              Thank you! We&apos;ll be in touch within 24 hours to schedule your personalized demo.
+              Thank you! We&apos;ll be in touch within 24 hours to schedule your Personalised demo.
               Get ready to transform your studio operations!
             </p>
             <div className={styles.successStats}>
@@ -144,7 +144,7 @@ const FinalCTA: React.FC = () => {
             Ready to Transform Your <span className={styles.highlight}>Studio?</span>
           </h2>
           <p className={styles.sectionSubtitle}>
-            See Wondrous in action with a personalized demo for your studio
+            See Wondrous in action with a Personalised demo for your studio
           </p>
         </div>
 
