@@ -15,6 +15,10 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+      fontFamily: {
+        sans: 'var(--font-sans)',
+        serif: 'var(--font-serif)',
+      },
       colors: {
         // Brand colors
         'brand-purple': '#7C3AED',

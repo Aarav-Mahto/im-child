@@ -78,7 +78,7 @@ const MagicInbox: React.FC = () => {
             💬 Smart Communication
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 font-serif">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
             Every Message Feels <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">Personal</span>
           </h2>
 
@@ -99,12 +99,10 @@ const MagicInbox: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-3">
-                <h3 className="text-xl font-bold text-neutral-800 mb-3 font-serif">{example.title}</h3>
+              <div className="my-3">
+                <h3 className="text-xl font-bold text-neutral-800 mb-3">{example.title}</h3>
                 <div className="text-brand-accent font-semibold">{example.scenario}</div>
               </div>
-
-              <p className="text-neutral-700 text-sm mb-6 italic">{example.scenario}</p>
 
               <div className="bg-white text-neutral-800 border border-white/10 rounded-2xl overflow-hidden mb-6">
                 <div className="flex items-center justify-between px-4 py-3 bg-neutral-100 border-b border-neutral-200">
@@ -125,7 +123,7 @@ const MagicInbox: React.FC = () => {
 
         <div className="py-16 relative z-10">
           <div className="text-center mb-12">
-            <h3 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-6 font-serif">
+            <h3 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-6">
               What Makes Our AI Different
             </h3>
 
@@ -160,7 +158,7 @@ const MagicInbox: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
           <div className="glass-strong !bg-neutral-200 p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl">
             <p className="text-neutral-900 text-lg leading-relaxed mb-6 italic">
-              &quot;I actually look forward to their messages. They&apos;re helpful, never pushy, and somehow always know exactly what I need to hear.&quot;
+              &quot;My members constantly compliment our communication. They have no idea it&apos;s AI - it just feels like we really care about them.&quot;
             </p>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-gradient-to-br from-brand-purple to-brand-accent rounded-full flex items-center justify-center text-white font-bold text-sm">SM</div>
@@ -173,7 +171,7 @@ const MagicInbox: React.FC = () => {
 
           <div className="glass-strong !bg-neutral-300 p-8 transition-all duration-300 ease-out-cubic hover:-translate-y-2 hover:shadow-2xl">
             <p className="text-neutral-900 text-lg leading-relaxed mb-6 italic">
-              &quot;My members constantly compliment our communication. They have no idea it&apos;s AI - it just feels like we really care about them.&quot;
+              &quot;I actually look forward to their messages. They&apos;re helpful, never pushy, and somehow always know exactly what I need to hear.&quot;
             </p>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-gradient-to-br from-brand-purple to-brand-accent rounded-full flex items-center justify-center text-white font-bold text-sm">JK</div>

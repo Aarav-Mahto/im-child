@@ -40,8 +40,7 @@ const Footer: React.FC = () => {
                 </a>
               </div>
               <p className="text-white/80 leading-relaxed text-base max-w-72">
-                The intelligent business operating system that transforms how you work, grow, and succeed.
-                Powered by AI, built for results.
+                The AI Operating System for Modern Fitness Studios. Transform your business while you focus on what you love.
               </p>
               <div className="flex gap-4">
                 <a

@@ -84,7 +84,7 @@ const OSArchitecture: React.FC = () => {
                 <div className="inline-flex items-center px-4 py-2 bg-brand-purple/10 border border-brand-purple/20 rounded-full text-brand-purple-dark text-sm font-semibold mb-6">
                   🔮 Studio Intelligence
                 </div>
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 font-serif">
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
                   Six AI Modules Working as <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">One Brain</span>
                 </h2>
                 <p className="text-xl text-neutral-800 max-w-2xl mx-auto leading-relaxed">

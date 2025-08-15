@@ -63,11 +63,11 @@ const Hero: React.FC = () => {
           <div
             className={`text-center lg:text-left transition-all duration-1000 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
           >
-            <div className="inline-flex items-center px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 lg:py-3 bg-brand-purple/10 border border-brand-purple/20 rounded-full text-brand-purple-dark text-xs sm:text-sm lg:text-base font-semibold mb-4 sm:mb-6 lg:mb-8 xl:mb-10 animate-bounce hover:animate-none transition-all duration-300 hover:scale-105 cursor-pointer">
+            <div className="inline-flex  items-center px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 lg:py-3 bg-brand-purple/10 border border-brand-purple/20 rounded-full text-brand-purple-dark text-xs sm:text-sm lg:text-base font-semibold mb-4 sm:mb-6 lg:mb-8 xl:mb-10 animate-bounce hover:animate-none transition-all duration-300 hover:scale-105 cursor-pointer">
               ✨ AI-Powered Studio OS
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-7xl font-extrabold leading-tight text-neutral-900 mb-3 sm:mb-4 lg:mb-6 xl:mb-8 font-serif tracking-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-7xl font-extrabold leading-tight text-neutral-900 mb-3 sm:mb-4 lg:mb-6 xl:mb-8 tracking-tight">
               Your Studio Runs{" "}
               <span className="bg-gradient-to-r from-brand-purple via-purple-500 to-brand-accent bg-clip-text text-transparent animate-pulse">
                 Itself
@@ -85,13 +85,14 @@ const Hero: React.FC = () => {
                 className="w-[150px] sm:w-[200px] text-sm sm:text-md xs:w-auto min-w-40 sm:min-w-48 lg:min-w-52 xl:min-w-56 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1 active:scale-95"
               >
                 <div className="flex flex-row flex-nowrap items-center gap-2">
-                  <span className="whitespace-nowrap">Watch Demo</span>
+                  <span className="whitespace-nowrap">Book Demo</span>
                   <FaArrowRight />
                 </div>
               </Button>
               <Button
                 variant="secondary"
                 size="lg"
+                href="#architecture"
                 className="w-[150px] sm:w-[200px] text-sm sm:text-md bg-black/40 hover:bg-black/70 !text-neutral-900 xs:w-auto min-w-40 sm:min-w-48 lg:min-w-52 xl:min-w-56 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95"
               >
                 How it works
@@ -158,7 +159,7 @@ const Hero: React.FC = () => {
                         £14,247
                       </div>
                       <div className="text-xs xs:text-sm lg:text-base text-neutral-700 mt-0.5 xs:mt-1">
-                        Monthly Revenue
+                        This month
                       </div>
                     </div>
                     <div className="text-xs xs:text-sm sm:text-base lg:text-lg text-brand-success font-semibold transition-all duration-300 group-hover/card:scale-110 group-hover/card:text-brand-purple">

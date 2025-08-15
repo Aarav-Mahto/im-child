@@ -78,7 +78,7 @@ const RevenueImpact: React.FC = () => {
             💎 Proven Results
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 font-serif">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
             Real Revenue. <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">Real Results.</span>
           </h2>
 
@@ -100,8 +100,8 @@ const RevenueImpact: React.FC = () => {
                 </div>
               </div>
               
-              <div className="text-4xl font-bold text-neutral-800 mb-3 font-serif transition-all duration-300 group-hover:text-brand-accent">{metric.value}</div>
-              <h3 className="text-xl font-bold text-neutral-700 mb-4 font-serif transition-all duration-300 group-hover:text-brand-accent">{metric.label}</h3>
+              <div className="text-4xl font-bold text-neutral-800 mb-3 transition-all duration-300 group-hover:text-brand-accent">{metric.value}</div>
+              <h3 className="text-xl font-bold text-neutral-700 mb-4 transition-all duration-300 group-hover:text-brand-accent">{metric.label}</h3>
               <p className="text-neutral-700 leading-relaxed transition-all duration-300 group-hover:text-neutral-800">{metric.description}</p>
             </div>
           ))}
@@ -109,7 +109,7 @@ const RevenueImpact: React.FC = () => {
 
         <div className="mt-16 relative z-10">
           <div className="glass-strong py-10 px-0 sm:p-12 rounded-3xl">
-            <h3 className="text-3xl font-bold text-neutral-800 mb-4 text-center font-serif">
+            <h3 className="text-3xl font-bold text-neutral-800 mb-4 text-center">
               How We Generate <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">£14K+ Monthly</span>
             </h3>
             <p className="text-md sm:text-xl text-neutral-700 text-center mb-12 max-w-2xl mx-auto">
@@ -162,15 +162,15 @@ const RevenueImpact: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 relative z-10">
           <div className="text-center">
-            <div className="text-4xl font-bold text-brand-accent mb-2 font-serif">200+</div>
+            <div className="text-4xl font-bold text-brand-accent mb-2">200+</div>
             <div className="text-neutral-700">Studios transformed</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-brand-accent mb-2 font-serif">£2.3M+</div>
+            <div className="text-4xl font-bold text-brand-accent mb-2">£2.3M+</div>
             <div className="text-neutral-700">Extra revenue generated</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-brand-accent mb-2 font-serif">98%</div>
+            <div className="text-4xl font-bold text-brand-accent mb-2">98%</div>
             <div className="text-neutral-700">Would recommend</div>
           </div>
         </div>

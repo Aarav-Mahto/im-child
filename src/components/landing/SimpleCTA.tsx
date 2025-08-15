@@ -3,6 +3,7 @@
 import React from 'react'
 import Container from '../common/Container'
 import Button from '../ui/Button'
+import { FaArrowRight } from 'react-icons/fa';
 
 const SimpleCTA: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const SimpleCTA: React.FC = () => {
       <Container>
         <div className="text-center relative z-10">
           <div className="mb-12">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 font-serif">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
               Ready to Transform Your <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">Studio?</span>
             </h2>
 
@@ -27,7 +28,10 @@ const SimpleCTA: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button variant="primary" size="lg" href="#final-cta">
-              Watch Demo →
+              <div className="flex flex-row flex-nowrap items-center gap-2">
+                <span className="whitespace-nowrap">Book Demo</span>
+                <FaArrowRight />
+              </div>
             </Button>
             <Button variant="ghost" size="lg" href="#architecture" className='text-neutral-900'>
               Learn More

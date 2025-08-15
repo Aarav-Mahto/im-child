@@ -94,7 +94,7 @@ const AIWorkforce: React.FC = () => {
             🤖 Your AI Team
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 font-serif">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
             Meet Your New <span className="bg-gradient-to-r from-brand-purple to-brand-accent bg-clip-text text-transparent">Dream Team</span>
           </h2>
 
@@ -124,7 +124,7 @@ const AIWorkforce: React.FC = () => {
               </div>
 
               <div className="mb-6 text-center md:text-left">
-                <h3 className="text-2xl font-bold text-neutral-800 mb-2 font-serif">{agent.name}</h3>
+                <h3 className="text-2xl font-bold text-neutral-800 mb-2">{agent.name}</h3>
                 <p className="text-brand-accent font-semibold text-lg mb-3">{agent.role}</p>
                 <p className="text-neutral-600 italic leading-relaxed">&quot;{agent.personality}&quot;</p>
               </div>
@@ -152,7 +152,7 @@ const AIWorkforce: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 ⚡
               </div>
-              <h3 className="text-xl font-bold text-neutral-800 mb-4 font-serif transition-all duration-300 group-hover:text-brand-accent">Always On</h3>
+              <h3 className="text-xl font-bold text-neutral-800 mb-4 transition-all duration-300 group-hover:text-brand-accent">Always On</h3>
               <p className="text-neutral-700 leading-relaxed transition-all duration-300 group-hover:text-neutral-800">
                 Your AI team works 24/7, 365 days a year. No holidays,
                 no sick days, no bad moods.
@@ -162,7 +162,7 @@ const AIWorkforce: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 🎯
               </div>
-              <h3 className="text-xl font-bold text-neutral-800 mb-4 font-serif transition-all duration-300 group-hover:text-brand-accent">Zero Errors</h3>
+              <h3 className="text-xl font-bold text-neutral-800 mb-4 transition-all duration-300 group-hover:text-brand-accent">Zero Errors</h3>
               <p className="text-neutral-700 leading-relaxed transition-all duration-300 group-hover:text-neutral-700">
                 Perfect accuracy every time. No double bookings,
                 no missed payments, no forgotten follow-ups.
@@ -172,7 +172,7 @@ const AIWorkforce: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 💡
               </div>
-              <h3 className="text-xl font-bold text-neutral-800 mb-4 font-serif transition-all duration-300 group-hover:text-brand-accent">Gets Smarter</h3>
+              <h3 className="text-xl font-bold text-neutral-800 mb-4 transition-all duration-300 group-hover:text-brand-accent">Gets Smarter</h3>
               <p className="text-neutral-700 leading-relaxed transition-all duration-300 group-hover:text-neutral-800">
                 Learns your studio&apos;s unique patterns and preferences
                 to serve your members better every day.
